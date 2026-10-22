@@ -1,0 +1,98 @@
+[
+  {
+    "id": "q-pickup",
+    "name": "",
+    "tag": "INPUT",
+    "type": "text",
+    "required": true,
+    "value": ""
+  },
+  {
+    "id": "q-delivery",
+    "name": "",
+    "tag": "INPUT",
+    "type": "text",
+    "required": true,
+    "value": ""
+  },
+  {
+    "id": "q-material",
+    "name": "",
+    "tag": "INPUT",
+    "type": "text",
+    "required": true,
+    "value": ""
+  },
+  {
+    "id": "q-weight",
+    "name": "",
+    "tag": "INPUT",
+    "type": "text",
+    "required": false,
+    "value": ""
+  },
+  {
+    "id": "q-vehicle",
+    "name": "",
+    "tag": "SELECT",
+    "type": "select-one",
+    "required": true,
+    "value": "32 Ft SXL / MXL"
+  },
+  {
+    "id": "q-date",
+    "name": "",
+    "tag": "INPUT",
+    "type": "date",
+    "required": true,
+    "value": ""
+  },
+  {
+    "id": "q-name",
+    "name": "",
+    "tag": "INPUT",
+    "type": "text",
+    "required": true,
+    "value": ""
+  },
+  {
+    "id": "q-company",
+    "name": "",
+    "tag": "INPUT",
+    "type": "text",
+    "required": false,
+    "value": ""
+  },
+  {
+    "id": "q-phone",
+    "name": "",
+    "tag": "INPUT",
+    "type": "tel",
+    "required": true,
+    "value": ""
+  },
+  {
+    "id": "q-email",
+    "name": "",
+    "tag": "INPUT",
+    "type": "email",
+    "required": false,
+    "value": ""
+  },
+  {
+    "id": "q-details",
+    "name": "",
+    "tag": "TEXTAREA",
+    "type": "textarea",
+    "required": false,
+    "value": ""
+  },
+  {
+    "id": "",
+    "name": "website",
+    "tag": "INPUT",
+    "type": "text",
+    "required": false,
+    "value": ""
+  }
+]

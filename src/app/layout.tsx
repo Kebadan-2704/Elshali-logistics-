@@ -1,0 +1,120 @@
+import type { Metadata } from 'next';
+import { Manrope } from 'next/font/google';
+import './globals.css';
+import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
+import QuoteModal from '@/components/QuoteModal';
+import { QuoteProvider } from '@/components/QuoteProvider';
+import SmoothScroll from '@/components/SmoothScroll';
+
+const manrope = Manrope({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700', '800'],
+  variable: '--font-manrope',
+  display: 'swap',
+});
+
+export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'),
+  title: 'ELSALI LOGISTICS | LCV, HCV & Pan-India Freight Transport',
+  description:
+    'ELSALI LOGISTICS — professional LCV & HCV freight transport solutions across Tamil Nadu and Pan India. Fast vehicle placement, competitive rates, reliable delivery.',
+  keywords: [
+    'logistics',
+    'LCV transport',
+    'HCV transport',
+    'freight',
+    'Tamil Nadu',
+    'Pan India',
+    'truck',
+    'vehicle placement',
+    'ELSALI LOGISTICS',
+    'Coimbatore',
+  ],
+  authors: [{ name: 'ELSALI LOGISTICS' }],
+  creator: 'ELSALI LOGISTICS',
+  openGraph: {
+    type: 'website',
+    locale: 'en_IN',
+    siteName: 'ELSALI LOGISTICS',
+    title: 'ELSALI LOGISTICS | LCV, HCV & Pan-India Freight Transport',
+    description:
+      'Professional LCV & HCV freight transport solutions across Tamil Nadu and Pan India.',
+    images: [{ url: '/images/hero-logistics.webp', width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'ELSALI LOGISTICS | LCV, HCV & Pan-India Freight Transport',
+    description:
+      'Professional LCV & HCV freight transport solutions across Tamil Nadu and Pan India.',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  alternates: {
+    canonical: process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000',
+  },
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang="en-IN" className={manrope.variable}>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'LocalBusiness',
+              name: 'ELSALI LOGISTICS',
+              description:
+                'LCV & HCV freight transport solutions across Tamil Nadu and Pan India.',
+              telephone: '+916369844820',
+              email: 'elshalilogistics@gmail.com',
+              address: {
+                '@type': 'PostalAddress',
+                addressLocality: 'Coimbatore',
+                addressRegion: 'Tamil Nadu',
+                addressCountry: 'IN',
+              },
+              url: 'https://elsalilogistics.com',
+              sameAs: [],
+              openingHoursSpecification: {
+                '@type': 'OpeningHoursSpecification',
+                dayOfWeek: [
+                  'Monday',
+                  'Tuesday',
+                  'Wednesday',
+                  'Thursday',
+                  'Friday',
+                  'Saturday',
+                  'Sunday',
+                ],
+                opens: '00:00',
+                closes: '23:59',
+              },
+            }),
+          }}
+        />
+      </head>
+      <body>
+        <QuoteProvider>
+          <SmoothScroll>
+            <a href="#main-content" className="skip-to-main">
+              Skip to main content
+            </a>
+            <Navbar />
+            <main id="main-content">{children}</main>
+            <Footer />
+            <QuoteModal />
+          </SmoothScroll>
+        </QuoteProvider>
+      </body>
+    </html>
+  );
+}

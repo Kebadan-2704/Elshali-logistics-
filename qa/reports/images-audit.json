@@ -1,0 +1,162 @@
+{
+  "images": [
+    {
+      "src": "http://localhost:3000/_next/image?url=%2Fimages%2Felsali-logo.webp&w=48&q=75",
+      "alt": "ELSALI LOGISTICS Logo",
+      "hasAltAttr": true,
+      "naturalWidth": 48,
+      "naturalHeight": 48,
+      "renderedWidth": 44,
+      "renderedHeight": 44,
+      "isLoaded": true,
+      "loading": null,
+      "decoding": "async"
+    },
+    {
+      "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fhero-logistics.webp&w=1920&q=75",
+      "alt": "Semi-truck freight convoy on highway at sunset",
+      "hasAltAttr": true,
+      "naturalWidth": 917,
+      "naturalHeight": 512,
+      "renderedWidth": 1310,
+      "renderedHeight": 737,
+      "isLoaded": true,
+      "loading": null,
+      "decoding": "async"
+    },
+    {
+      "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fwarehouse-interior.webp&w=640&q=75",
+      "alt": "Modern logistics warehouse interior with storage racks and organized pallet goods",
+      "hasAltAttr": true,
+      "naturalWidth": 640,
+      "naturalHeight": 357,
+      "renderedWidth": 606,
+      "renderedHeight": 433,
+      "isLoaded": true,
+      "loading": "lazy",
+      "decoding": "async"
+    },
+    {
+      "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fhero-logistics.webp&w=640&q=75",
+      "alt": "Commercial freight truck fleet",
+      "hasAltAttr": true,
+      "naturalWidth": 548,
+      "naturalHeight": 306,
+      "renderedWidth": 548,
+      "renderedHeight": 470,
+      "isLoaded": true,
+      "loading": "lazy",
+      "decoding": "async"
+    },
+    {
+      "src": "http://localhost:3000/_next/image?url=%2Fvehicles%2Fv1-mini-dost.webp&w=320&q=75",
+      "alt": "SMALL COMMERCIAL - Mini / Dost",
+      "hasAltAttr": true,
+      "naturalWidth": 320,
+      "naturalHeight": 400,
+      "renderedWidth": 688,
+      "renderedHeight": 399,
+      "isLoaded": true,
+      "loading": "lazy",
+      "decoding": "async"
+    },
+    {
+      "src": "http://localhost:3000/_next/image?url=%2Fvehicles%2Fv2-tata-pickup.webp&w=320&q=75",
+      "alt": "LIGHT VEHICLE - Tata Pickup",
+      "hasAltAttr": true,
+      "naturalWidth": 320,
+      "naturalHeight": 400,
+      "renderedWidth": 172,
+      "renderedHeight": 380,
+      "isLoaded": true,
+      "loading": "lazy",
+      "decoding": "async"
+    },
+    {
+      "src": "http://localhost:3000/_next/image?url=%2Fvehicles%2Fv3-14ft.webp&w=320&q=75",
+      "alt": "LIGHT COMMERCIAL - 14 Ft",
+      "hasAltAttr": true,
+      "naturalWidth": 320,
+      "naturalHeight": 400,
+      "renderedWidth": 172,
+      "renderedHeight": 380,
+      "isLoaded": true,
+      "loading": "lazy",
+      "decoding": "async"
+    },
+    {
+      "src": "http://localhost:3000/_next/image?url=%2Fvehicles%2Fv4-17ft.webp&w=320&q=75",
+      "alt": "MEDIUM COMMERCIAL - 17 Ft",
+      "hasAltAttr": true,
+      "naturalWidth": 320,
+      "naturalHeight": 400,
+      "renderedWidth": 172,
+      "renderedHeight": 380,
+      "isLoaded": true,
+      "loading": "lazy",
+      "decoding": "async"
+    },
+    {
+      "src": "http://localhost:3000/_next/image?url=%2Fvehicles%2Fv5-20ft.webp&w=320&q=75",
+      "alt": "HEAVY COMMERCIAL - 20 Ft",
+      "hasAltAttr": true,
+      "naturalWidth": 320,
+      "naturalHeight": 400,
+      "renderedWidth": 688,
+      "renderedHeight": 438,
+      "isLoaded": true,
+      "loading": "lazy",
+      "decoding": "async"
+    },
+    {
+      "src": "http://localhost:3000/_next/image?url=%2Fvehicles%2Fv6-24ft.webp&w=320&q=75",
+      "alt": "LARGE COMMERCIAL - 24 Ft",
+      "hasAltAttr": true,
+      "naturalWidth": 320,
+      "naturalHeight": 400,
+      "renderedWidth": 172,
+      "renderedHeight": 417,
+      "isLoaded": true,
+      "loading": "lazy",
+      "decoding": "async"
+    },
+    {
+      "src": "http://localhost:3000/_next/image?url=%2Fvehicles%2Fv7-26ft.webp&w=320&q=75",
+      "alt": "HIGH CAPACITY - 26 Ft",
+      "hasAltAttr": true,
+      "naturalWidth": 320,
+      "naturalHeight": 400,
+      "renderedWidth": 172,
+      "renderedHeight": 417,
+      "isLoaded": true,
+      "loading": "lazy",
+      "decoding": "async"
+    },
+    {
+      "src": "http://localhost:3000/_next/image?url=%2Fvehicles%2Fv8-32ft.webp&w=320&q=75",
+      "alt": "HEAVY HAULAGE - 32 Ft SXL / MXL",
+      "hasAltAttr": true,
+      "naturalWidth": 320,
+      "naturalHeight": 400,
+      "renderedWidth": 172,
+      "renderedHeight": 417,
+      "isLoaded": true,
+      "loading": "lazy",
+      "decoding": "async"
+    },
+    {
+      "src": "http://localhost:3000/_next/image?url=%2Fimages%2Felsali-logo.webp&w=96&q=75",
+      "alt": "ELSALI LOGISTICS",
+      "hasAltAttr": true,
+      "naturalWidth": 96,
+      "naturalHeight": 96,
+      "renderedWidth": 80,
+      "renderedHeight": 80,
+      "isLoaded": true,
+      "loading": "lazy",
+      "decoding": "async"
+    }
+  ],
+  "backgroundImages": [],
+  "failedUrls": []
+}

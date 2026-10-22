@@ -1,0 +1,158 @@
+[
+  {
+    "viewport": 320,
+    "windowInnerWidth": 320,
+    "docScrollWidth": 320,
+    "hasOverflow": false,
+    "offenders": [
+      {
+        "tag": "ARTICLE",
+        "id": "",
+        "className": "vehicle-card active",
+        "right": 475,
+        "scrollWidth": 463
+      },
+      {
+        "tag": "DIV",
+        "id": "",
+        "className": "vehicle-card-bg",
+        "right": 475,
+        "scrollWidth": 463
+      },
+      {
+        "tag": "IMG",
+        "id": "",
+        "className": "",
+        "right": 486,
+        "scrollWidth": 451
+      },
+      {
+        "tag": "DIV",
+        "id": "",
+        "className": "vehicle-card-overlay",
+        "right": 475,
+        "scrollWidth": 451
+      },
+      {
+        "tag": "DIV",
+        "id": "",
+        "className": "vehicle-card-content",
+        "right": 475,
+        "scrollWidth": 451
+      },
+      {
+        "tag": "DIV",
+        "id": "",
+        "className": "",
+        "right": 451,
+        "scrollWidth": 403
+      },
+      {
+        "tag": "DIV",
+        "id": "",
+        "className": "",
+        "right": 451,
+        "scrollWidth": 403
+      },
+      {
+        "tag": "DIV",
+        "id": "",
+        "className": "vehicle-expanded",
+        "right": 451,
+        "scrollWidth": 403
+      },
+      {
+        "tag": "DIV",
+        "id": "",
+        "className": "vehicle-expanded-name",
+        "right": 451,
+        "scrollWidth": 403
+      },
+      {
+        "tag": "DIV",
+        "id": "",
+        "className": "vehicle-expanded-desc",
+        "right": 451,
+        "scrollWidth": 403
+      }
+    ]
+  },
+  {
+    "viewport": 360,
+    "windowInnerWidth": 360,
+    "docScrollWidth": 360,
+    "hasOverflow": false,
+    "offenders": [
+      {
+        "tag": "ARTICLE",
+        "id": "",
+        "className": "vehicle-card active",
+        "right": 475,
+        "scrollWidth": 463
+      },
+      {
+        "tag": "DIV",
+        "id": "",
+        "className": "vehicle-card-bg",
+        "right": 475,
+        "scrollWidth": 463
+      },
+      {
+        "tag": "IMG",
+        "id": "",
+        "className": "",
+        "right": 486,
+        "scrollWidth": 451
+      },
+      {
+        "tag": "DIV",
+        "id": "",
+        "className": "vehicle-card-overlay",
+        "right": 475,
+        "scrollWidth": 451
+      },
+      {
+        "tag": "DIV",
+        "id": "",
+        "className": "vehicle-card-content",
+        "right": 475,
+        "scrollWidth": 451
+      },
+      {
+        "tag": "DIV",
+        "id": "",
+        "className": "",
+        "right": 451,
+        "scrollWidth": 403
+      },
+      {
+        "tag": "DIV",
+        "id": "",
+        "className": "",
+        "right": 451,
+        "scrollWidth": 403
+      },
+      {
+        "tag": "DIV",
+        "id": "",
+        "className": "vehicle-expanded",
+        "right": 451,
+        "scrollWidth": 403
+      },
+      {
+        "tag": "DIV",
+        "id": "",
+        "className": "vehicle-expanded-name",
+        "right": 451,
+        "scrollWidth": 403
+      },
+      {
+        "tag": "DIV",
+        "id": "",
+        "className": "vehicle-expanded-desc",
+        "right": 451,
+        "scrollWidth": 403
+      }
+    ]
+  }
+]

@@ -1,0 +1,89 @@
+{
+  "initial_load": {
+    "violations": 4,
+    "details": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodes": 1,
+        "desc": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds"
+      },
+      {
+        "id": "heading-order",
+        "impact": "moderate",
+        "nodes": 2,
+        "desc": "Ensure the order of headings is semantically correct"
+      },
+      {
+        "id": "label-content-name-mismatch",
+        "impact": "serious",
+        "nodes": 9,
+        "desc": "Ensure that elements labelled through their content must have their visible text as part of their accessible name"
+      },
+      {
+        "id": "nested-interactive",
+        "impact": "serious",
+        "nodes": 2,
+        "desc": "Ensure interactive controls are not nested as they are not always announced by screen readers or can cause focus problems for assistive technologies"
+      }
+    ]
+  },
+  "modal_open": {
+    "violations": 4,
+    "details": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodes": 2,
+        "desc": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds"
+      },
+      {
+        "id": "heading-order",
+        "impact": "moderate",
+        "nodes": 2,
+        "desc": "Ensure the order of headings is semantically correct"
+      },
+      {
+        "id": "label-content-name-mismatch",
+        "impact": "serious",
+        "nodes": 9,
+        "desc": "Ensure that elements labelled through their content must have their visible text as part of their accessible name"
+      },
+      {
+        "id": "nested-interactive",
+        "impact": "serious",
+        "nodes": 2,
+        "desc": "Ensure interactive controls are not nested as they are not always announced by screen readers or can cause focus problems for assistive technologies"
+      }
+    ]
+  },
+  "modal_with_validation_errors": {
+    "violations": 4,
+    "details": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodes": 2,
+        "desc": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds"
+      },
+      {
+        "id": "heading-order",
+        "impact": "moderate",
+        "nodes": 2,
+        "desc": "Ensure the order of headings is semantically correct"
+      },
+      {
+        "id": "label-content-name-mismatch",
+        "impact": "serious",
+        "nodes": 9,
+        "desc": "Ensure that elements labelled through their content must have their visible text as part of their accessible name"
+      },
+      {
+        "id": "nested-interactive",
+        "impact": "serious",
+        "nodes": 2,
+        "desc": "Ensure interactive controls are not nested as they are not always announced by screen readers or can cause focus problems for assistive technologies"
+      }
+    ]
+  }
+}
