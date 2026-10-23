@@ -7,6 +7,7 @@ import QuoteModal from '@/components/QuoteModal';
 import { QuoteProvider } from '@/components/QuoteProvider';
 import SmoothScroll from '@/components/SmoothScroll';
 import Chatbot from '@/components/Chatbot';
+import SplashScreen from '@/components/SplashScreen';
 
 const outfit = Outfit({
   subsets: ['latin'],
@@ -122,6 +123,7 @@ export default function RootLayout({
         />
       </head>
       <body>
+        <SplashScreen />
         <QuoteProvider>
           <SmoothScroll>
             <a href="#main-content" className="skip-to-main">
