@@ -141,7 +141,12 @@ export default function Navbar() {
       </nav>
 
       {/* Mobile sheet */}
-      <div className={`mobile-sheet ${mobileOpen ? 'open' : ''}`} role="dialog" aria-modal="true">
+      <div
+        className={`mobile-sheet ${mobileOpen ? 'open' : ''}`}
+        data-lenis-prevent="true"
+        role="dialog"
+        aria-modal="true"
+      >
         {navLinks.map((link) => (
           <a
             key={link.href}

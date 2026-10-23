@@ -209,6 +209,7 @@ export default function Chatbot() {
             <button
               className="chatbot-action-chip primary"
               onClick={() => {
+                setIsOpen(false);
                 openQuote();
               }}
             >
@@ -249,6 +250,9 @@ export default function Chatbot() {
       {isOpen && (
         <div
           className="chatbot-panel"
+          data-lenis-prevent="true"
+          data-lenis-prevent-wheel="true"
+          data-lenis-prevent-touch="true"
           ref={panelRef}
           role="dialog"
           aria-modal="false"
@@ -286,7 +290,12 @@ export default function Chatbot() {
           </div>
 
           {/* Messages */}
-          <div className="chatbot-messages">
+          <div
+            className="chatbot-messages"
+            data-lenis-prevent="true"
+            data-lenis-prevent-wheel="true"
+            data-lenis-prevent-touch="true"
+          >
             {messages.map((msg, i) => (
               <div
                 key={i}

@@ -135,6 +135,7 @@ export default function QuoteModal() {
   return (
     <div
       className="modal-overlay"
+      data-lenis-prevent="true"
       onClick={(e) => {
         if (e.target === e.currentTarget) handleClose();
       }}
@@ -142,7 +143,7 @@ export default function QuoteModal() {
       aria-modal="true"
       aria-labelledby="quote-modal-title"
     >
-      <div className="modal-panel" ref={panelRef}>
+      <div className="modal-panel" data-lenis-prevent="true" ref={panelRef}>
         {/* Header */}
         <div className="modal-header">
           <div className="modal-header-icon">
