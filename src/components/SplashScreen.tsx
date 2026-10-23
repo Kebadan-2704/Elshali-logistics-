@@ -17,7 +17,7 @@ export default function SplashScreen() {
     setIsExiting(true);
     setTimeout(() => {
       setMounted(false);
-    }, 600);
+    }, 500);
   }, [isExiting]);
 
   useEffect(() => {
@@ -49,7 +49,7 @@ export default function SplashScreen() {
 
         timerRef.current = setTimeout(() => {
           handleDismiss();
-        }, 400);
+        }, 200);
       }
     }, 30);
 
@@ -73,6 +73,7 @@ export default function SplashScreen() {
   return (
     <div
       className={`splash-overlay ${isExiting ? 'splash-exiting' : ''}`}
+      data-lenis-prevent="true"
       role="dialog"
       aria-modal="true"
       aria-label="Welcome to ELSALI LOGISTICS"
