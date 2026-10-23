@@ -33,7 +33,7 @@ export default function Footer() {
             {siteConfig.description}
           </p>
           <div className="footer-brand-tag">
-            PAN INDIA TRANSPORTATION SERVICES
+            PAN INDIA FREIGHT &amp; LOGISTICS
           </div>
         </div>
 

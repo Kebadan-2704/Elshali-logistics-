@@ -99,7 +99,6 @@ export default function Navbar() {
             <div className="navbar-brand-name">
               ELSALI <span>LOGISTICS</span>
             </div>
-            <div className="navbar-brand-sub">TRANSPORT SERVICES</div>
           </div>
         </a>
 

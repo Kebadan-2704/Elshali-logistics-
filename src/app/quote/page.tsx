@@ -53,7 +53,7 @@ export default function QuotePage() {
                 </div>
                 <div>
                   <h3 style={{ fontFamily: "'Outfit', sans-serif", fontSize: '22px', fontWeight: 700 }}>Request Freight Rate Quote</h3>
-                  <p style={{ fontSize: '12px', color: 'var(--text-muted)' }}>ELSALI LOGISTICS Pan-India Commercial Transport Services</p>
+                  <p style={{ fontSize: '12px', color: 'var(--text-muted)' }}>ELSALI LOGISTICS Pan-India Commercial Freight Solutions</p>
                 </div>
               </div>
               <div style={{ height: '1px', background: 'rgba(255,255,255,0.1)', margin: '20px 0' }}></div>

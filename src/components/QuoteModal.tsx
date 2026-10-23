@@ -150,7 +150,7 @@ export default function QuoteModal() {
           </div>
           <div className="modal-header-text">
             <h2 id="quote-modal-title">Request Freight Rate Quote</h2>
-            <p>ELSALI LOGISTICS Pan-India Commercial Transport Services</p>
+            <p>ELSALI LOGISTICS Pan-India Commercial Freight Solutions</p>
           </div>
           <button
             className="modal-close"

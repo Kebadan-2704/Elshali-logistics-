@@ -5,7 +5,7 @@ import { siteConfig } from '@/data/site';
 
 export const metadata: Metadata = {
   title: 'Privacy Policy | ELSALI LOGISTICS',
-  description: 'Privacy Policy and data governance practices for ELSALI LOGISTICS freight transport services.',
+  description: 'Privacy Policy and data governance practices for ELSALI LOGISTICS freight and logistics solutions.',
 };
 
 export default function PrivacyPage() {

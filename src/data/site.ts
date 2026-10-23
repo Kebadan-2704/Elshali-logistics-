@@ -1,9 +1,9 @@
 export const siteConfig = {
   name: 'ELSALI LOGISTICS',
-  tagline: 'AND TRANSPORT',
-  subTagline: 'TRANSPORT SERVICES',
+  tagline: 'FREIGHT & SUPPLY CHAIN',
+  subTagline: 'PAN INDIA FREIGHT SOLUTIONS',
   description:
-    'LCV & HCV transportation solutions with fast vehicle placement, competitive freight rates and reliable delivery across India.',
+    'LCV & HCV logistics and freight solutions with fast vehicle placement, competitive freight rates and reliable delivery across India.',
   phone: '6369844820',
   phone2: '8667049878',
   phone3: '8610814831',

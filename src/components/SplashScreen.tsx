@@ -117,9 +117,7 @@ export default function SplashScreen() {
         <div className="splash-brand-group">
           <div className="splash-pill-tag">
             <span className="splash-dot-pulse" />
-            <span>TRANSPORT SERVICES</span>
-            <span className="splash-tag-bullet">•</span>
-            <span className="splash-tag-accent">PAN INDIA</span>
+            <span>PAN INDIA FREIGHT SOLUTIONS</span>
           </div>
 
           <h1 className="splash-brand-title">
@@ -127,7 +125,7 @@ export default function SplashScreen() {
           </h1>
 
           <p className="splash-brand-tagline">
-            Reliable Transportation. Professional Service. Pan-India Reach.
+            Reliable Logistics. Professional Service. Pan-India Reach.
           </p>
         </div>
 
