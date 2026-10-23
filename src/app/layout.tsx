@@ -6,6 +6,7 @@ import Footer from '@/components/Footer';
 import QuoteModal from '@/components/QuoteModal';
 import { QuoteProvider } from '@/components/QuoteProvider';
 import SmoothScroll from '@/components/SmoothScroll';
+import Chatbot from '@/components/Chatbot';
 
 const manrope = Manrope({
   subsets: ['latin'],
@@ -123,6 +124,7 @@ export default function RootLayout({
             <main id="main-content">{children}</main>
             <Footer />
             <QuoteModal />
+            <Chatbot />
           </SmoothScroll>
         </QuoteProvider>
       </body>

@@ -14,6 +14,12 @@ const Routes = dynamic(() => import('@/components/Routes'), {
 const WhyChooseUs = dynamic(() => import('@/components/WhyChooseUs'), {
   loading: () => <div style={{ minHeight: '500px', background: '#ffffff' }} />,
 });
+const Process = dynamic(() => import('@/components/Process'), {
+  loading: () => <div style={{ minHeight: '400px', background: 'var(--color-navy-950)' }} />,
+});
+const BusinessSolutions = dynamic(() => import('@/components/BusinessSolutions'), {
+  loading: () => <div style={{ minHeight: '400px', background: '#ffffff' }} />,
+});
 const Contact = dynamic(() => import('@/components/Contact'), {
   loading: () => <div style={{ minHeight: '500px', background: 'var(--color-navy-950)' }} />,
 });
@@ -28,6 +34,8 @@ export default function Home() {
       <Vehicles />
       <Routes />
       <WhyChooseUs />
+      <Process />
+      <BusinessSolutions />
       <Contact />
       <CtaBanner />
     </>

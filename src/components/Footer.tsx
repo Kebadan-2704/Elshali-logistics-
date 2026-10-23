@@ -41,9 +41,11 @@ export default function Footer() {
         <div>
           <h4 className="footer-col-title">COMPANY</h4>
           <ul className="footer-links">
-            <li><a href="#about">About Us</a></li>
-            <li><a href="#why-choose-us">Why Choose Us</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><Link href="/about">About Us</Link></li>
+            <li><Link href="/company">Company Profile</Link></li>
+            <li><Link href="/process">10-Step Process</Link></li>
+            <li><Link href="/why-choose-us">Why Choose Us</Link></li>
+            <li><Link href="/documentation">Transport Documentation</Link></li>
           </ul>
         </div>
 
@@ -51,23 +53,24 @@ export default function Footer() {
         <div>
           <h4 className="footer-col-title">SERVICES</h4>
           <ul className="footer-links">
-            <li><a href="#services">LCV Transportation</a></li>
-            <li><a href="#services">HCV Transportation</a></li>
-            <li><a href="#services">Mini Truck / Pickup</a></li>
-            <li><a href="#services">Container Transport</a></li>
-            <li><a href="#services">Part Load / Full Load</a></li>
+            <li><Link href="/services">LCV &amp; HCV Freight</Link></li>
+            <li><Link href="/business-solutions">Business Solutions</Link></li>
+            <li><Link href="/regular-transport">Regular &amp; Dedicated</Link></li>
+            <li><Link href="/industrial">Industrial &amp; Machinery</Link></li>
+            <li><Link href="/pan-india">Pan-India Network</Link></li>
+            <li><Link href="/routes">Corridors &amp; Hubs</Link></li>
           </ul>
         </div>
 
-        {/* Col 4 — Vehicles */}
+        {/* Col 4 — Vehicles & Quote */}
         <div>
-          <h4 className="footer-col-title">VEHICLES</h4>
+          <h4 className="footer-col-title">FLEET &amp; QUOTE</h4>
           <ul className="footer-links">
-            <li><span>Mini / Dost</span></li>
-            <li><span>Tata Pickup</span></li>
-            <li><span>14 Ft / 17 Ft</span></li>
-            <li><span>20 Ft / 24 Ft</span></li>
-            <li><span>26 Ft / 32 Ft SXL/MXL</span></li>
+            <li><Link href="/vehicles">All Fleet Vehicles</Link></li>
+            <li><Link href="/vehicles">Mini / Dost (1.5–2.5 T)</Link></li>
+            <li><Link href="/vehicles">Tata Pickup (2.5–3.5 T)</Link></li>
+            <li><Link href="/vehicles">Container (14–32 Ft)</Link></li>
+            <li><Link href="/quote">Request a Transport Quote</Link></li>
           </ul>
         </div>
 
@@ -76,8 +79,19 @@ export default function Footer() {
           <h4 className="footer-col-title">CONTACT</h4>
           <ul className="footer-links">
             <li>
+              <span className="footer-contact-label">Contact Person</span><br />
+              <span className="footer-contact-value">{siteConfig.contactPerson}</span>
+            </li>
+            <li>
               <span className="footer-contact-label">Phone</span><br />
               <a href={`tel:${siteConfig.phone}`} className="footer-contact-value">{siteConfig.phone}</a>
+            </li>
+            <li>
+              <span className="footer-contact-label">Additional Numbers</span><br />
+              <a href={`tel:${siteConfig.phone2}`} className="footer-contact-value">{siteConfig.phone2}</a><br />
+              <a href={`tel:${siteConfig.phone3}`} className="footer-contact-value">{siteConfig.phone3}</a><br />
+              <a href={`tel:${siteConfig.phone4}`} className="footer-contact-value">{siteConfig.phone4}</a><br />
+              <a href={`tel:${siteConfig.phone5}`} className="footer-contact-value">{siteConfig.phone5}</a>
             </li>
             <li>
               <span className="footer-contact-label">WhatsApp</span><br />
@@ -93,6 +107,10 @@ export default function Footer() {
             <li>
               <span className="footer-contact-label">Email</span><br />
               <a href={`mailto:${siteConfig.email}`} className="footer-contact-value">{siteConfig.email}</a>
+            </li>
+            <li>
+              <span className="footer-contact-label">GSTIN</span><br />
+              <span className="footer-contact-value">{siteConfig.gstin}</span>
             </li>
             <li>
               <span className="footer-contact-label">Address</span><br />

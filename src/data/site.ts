@@ -6,6 +6,10 @@ export const siteConfig = {
     'LCV & HCV transportation solutions with fast vehicle placement, competitive freight rates and reliable delivery across India.',
   phone: '6369844820',
   phone2: '8667049878',
+  phone3: '8610814831',
+  phone4: '9667225840',
+  phone5: '9442444820',
+  contactPerson: 'C. ARUN KUMAR',
   whatsapp: '6369844820',
   email: 'elshalilogistics@gmail.com',
   // TODO: Replace with actual office address before production deploy
@@ -22,3 +26,4 @@ export const navLinks = [
   { href: '#routes', label: 'ROUTES' },
   { href: '#contact', label: 'CONTACT' },
 ] as const;
+
