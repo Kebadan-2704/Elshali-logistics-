@@ -9,6 +9,33 @@ export default function SmoothScroll({ children }: { children: React.ReactNode }
   const { isOpen } = useQuote();
 
   useEffect(() => {
+    // 1. Disable browser scroll restoration so reloads don't jump down the page
+    if ('scrollRestoration' in window.history) {
+      window.history.scrollRestoration = 'manual';
+    }
+
+    // 2. Reset scroll immediately to top of Home
+    window.scrollTo(0, 0);
+
+    // 3. If reloaded, directly navigate to home ('/')
+    try {
+      const navEntries = performance.getEntriesByType('navigation');
+      const isReload =
+        navEntries.length > 0 &&
+        (navEntries[0] as PerformanceNavigationTiming).type === 'reload';
+
+      if (isReload) {
+        if (window.location.pathname !== '/' || window.location.hash) {
+          window.location.replace('/');
+          return;
+        }
+      } else if (window.location.hash) {
+        window.history.replaceState(null, '', window.location.pathname);
+      }
+    } catch {
+      // Fallback
+    }
+
     // Only enable smooth scrolling on desktop devices with fine pointer
     const isTouch = window.matchMedia('(pointer: coarse)').matches;
     if (isTouch) return;
