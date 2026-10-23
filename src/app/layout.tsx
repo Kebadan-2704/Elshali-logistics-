@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Manrope } from 'next/font/google';
+import { Outfit, Plus_Jakarta_Sans } from 'next/font/google';
 import './globals.css';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -7,11 +7,19 @@ import QuoteModal from '@/components/QuoteModal';
 import { QuoteProvider } from '@/components/QuoteProvider';
 import SmoothScroll from '@/components/SmoothScroll';
 import Chatbot from '@/components/Chatbot';
+import SplashScreen from '@/components/SplashScreen';
 
-const manrope = Manrope({
+const outfit = Outfit({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700', '800', '900'],
+  variable: '--font-outfit',
+  display: 'swap',
+});
+
+const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ['latin'],
   weight: ['400', '500', '600', '700', '800'],
-  variable: '--font-manrope',
+  variable: '--font-sans',
   display: 'swap',
 });
 
@@ -75,7 +83,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en-IN" className={manrope.variable}>
+    <html lang="en-IN" className={`${outfit.variable} ${plusJakartaSans.variable}`}>
       <head>
         <script
           type="application/ld+json"
@@ -115,6 +123,7 @@ export default function RootLayout({
         />
       </head>
       <body>
+        <SplashScreen />
         <QuoteProvider>
           <SmoothScroll>
             <a href="#main-content" className="skip-to-main">
