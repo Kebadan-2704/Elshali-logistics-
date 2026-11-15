@@ -66,7 +66,7 @@ export default function ClientMarquee() {
     const sectors = [
       { name: 'Automotive & Heavy Engineering', count: '15+ OEM Corridors', desc: 'Plant-to-plant component movement, chassis transfer & casting transport.' },
       { name: 'Industrial Machinery & Pumps', count: 'Daily Coimbatore Hubs', desc: 'Precision CNC tooling, textile machinery, electric motors & submersible pump haulage.' },
-      { name: 'Infrastructure, Metals & Steel', count: 'Multi-Axle HCV Fleet', desc: 'TMT bars, structural steel, coiled sheets, cement & industrial fabrication loads.' },
+      { name: 'Infrastructure, Metals & Steel', count: 'Heavy Cargo Solutions', desc: 'TMT bars, structural steel, coiled sheets, cement & industrial fabrication loads.' },
       { name: 'Electrical & Power Systems', count: 'Containerized Movement', desc: 'Switchgear, solar transformers, panels, and heavy electrical assemblies.' },
       { name: 'FMCG & Consumer Goods', count: 'Dedicated PTL / FTL', desc: 'Primary factory dispatch and regional DC distribution with verified delivery receipts.' },
     ];

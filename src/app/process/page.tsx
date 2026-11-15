@@ -28,7 +28,7 @@ export const metadata: Metadata = {
 
 const steps = [
   { step: '01', title: 'Requirement Intake', text: 'Shipper shares origin, destination, cargo classification, estimated weight, and target loading date.' },
-  { step: '02', title: 'Route & Sizing Analysis', text: 'Our dispatch team evaluates route topography, highway tolls, and optimal vehicle sizing (LCV / HCV).' },
+  { step: '02', title: 'Route & Sizing Analysis', text: 'Our dispatch team evaluates route topography, highway tolls, and optimal vehicle sizing for cargo solutions.' },
   { step: '03', title: 'Competitive Freight Proposal', text: 'We provide a transparent, all-inclusive freight rate quote tailored to your cargo schedule.' },
   { step: '04', title: 'Booking & Rate Confirmation', text: 'Upon confirmation, vehicle assignment is initiated and confirmed with driver details.' },
   { step: '05', title: 'Placement at Pickup Bay', text: 'The verified vehicle reports at the sender loading dock as scheduled with verified driver credentials.' },

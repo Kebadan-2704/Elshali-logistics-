@@ -1,6 +1,6 @@
-# ELSALI LOGISTICS — Commercial Freight & Logistics Platform
+# ELSHALI LOGISTICS — Commercial Freight & Logistics Platform
 
-> High-performance digital platform for **ELSALI LOGISTICS**, specializing in LCV, HCV, and Pan-India freight transportation. Built with Next.js 16 (App Router), Tailwind CSS v4, and Motion.
+> High-performance digital platform for **ELSHALI LOGISTICS**, specializing in cargo solutions and Pan-India freight transportation. Built with Next.js 16 (App Router), Tailwind CSS v4, and Motion.
 
 ---
 

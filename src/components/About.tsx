@@ -9,7 +9,7 @@ const values = [
     label: 'MISSION',
     icon: Target,
     title: 'Our Mission',
-    body: 'Fast & reliable LCV & HCV freight transport across India.',
+    body: 'Fast & reliable cargo solutions and freight transport across India.',
   },
   {
     label: 'VISION',
@@ -92,7 +92,7 @@ export default function About() {
               <span className="magenta">One Delivery at a Time.</span>
             </h2>
             <p>
-              Dependable LCV &amp; HCV freight solutions across Tamil Nadu and Pan India.
+              Dependable cargo solutions and freight services across Tamil Nadu and Pan India.
               We arrange suitable vehicles based on customer requirements, route, material,
               capacity and vehicle size — ensuring every shipment reaches its destination
               safely and on time.

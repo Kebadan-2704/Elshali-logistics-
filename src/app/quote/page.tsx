@@ -13,13 +13,13 @@ import QuoteForm from '@/components/forms/QuoteForm';
 export const metadata: Metadata = {
   title: 'Request Freight Rate Quote | ELSHALI LOGISTICS',
   description:
-    'Get competitive commercial freight rates for LCV and HCV road transport across India. Fast vehicle placement and transparent pricing.',
+    'Get competitive commercial freight rates for cargo solutions and road transport across India. Fast vehicle placement and transparent pricing.',
   alternates: {
     canonical: getCanonicalUrl('/quote'),
   },
   openGraph: {
     title: 'Request Freight Rate Quote | ELSHALI LOGISTICS',
-    description: 'Get competitive commercial freight rates for LCV and HCV road transport across India.',
+    description: 'Get competitive commercial freight rates for cargo solutions and road transport across India.',
     url: getCanonicalUrl('/quote'),
     siteName: siteConfig.name,
     images: [{ url: getOgImageUrl(), width: 800, height: 600, alt: 'ELSHALI LOGISTICS' }],

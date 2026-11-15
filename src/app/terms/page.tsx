@@ -66,7 +66,7 @@ export default function TermsPage() {
                 1. Carriage &amp; Service Engagement
               </h2>
               <p>
-                By booking freight carriage or requesting vehicle placement with {siteConfig.name}, the shipper or consignor accepts the operational terms detailed herein. {siteConfig.name} facilitates commercial road transportation via light commercial vehicles (LCV) and heavy commercial vehicles (HCV) across Tamil Nadu and pan-India transit corridors.
+                By booking freight carriage or requesting vehicle placement with {siteConfig.name}, the shipper or consignor accepts the operational terms detailed herein. {siteConfig.name} facilitates commercial road transportation and cargo solutions across Tamil Nadu and pan-India transit corridors.
               </p>
             </div>
 

@@ -13,7 +13,7 @@ export const whyItems: WhyItem[] = [
   {
     icon: 'zap',
     title: 'Quick Vehicle Placement',
-    body: 'Rapid response time to place the required LCV or HCV vehicle at your pickup location without delay.',
+    body: 'Rapid response time to place the required cargo solutions vehicle at your pickup location without delay.',
   },
   {
     icon: 'shield-check',
@@ -43,6 +43,6 @@ export const whyItems: WhyItem[] = [
   {
     icon: 'lock',
     title: 'Safe & Weatherproof Freight',
-    body: 'Protected LCV & HCV vehicle options ensuring maximum cargo integrity during transit.',
+    body: 'Protected cargo solutions ensuring maximum cargo integrity during transit.',
   },
 ];

@@ -53,7 +53,7 @@ export default function Footer() {
         <div>
           <h3 className="footer-col-title">SERVICES</h3>
           <ul className="footer-links">
-            <li><Link href="/services">LCV &amp; HCV Freight</Link></li>
+            <li><Link href="/services">Cargo Solutions</Link></li>
             <li><Link href="/business-solutions">Business Solutions</Link></li>
             <li><Link href="/regular-transport">Regular &amp; Dedicated</Link></li>
             <li><Link href="/industrial">Industrial &amp; Machinery</Link></li>

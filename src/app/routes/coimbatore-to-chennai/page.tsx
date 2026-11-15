@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Coimbatore to Chennai Commercial Truck Transport | ELSHALI LOGISTICS',
     description:
-      'Direct freight transport corridor linking Coimbatore industrial dispatch with Chennai delivery zones. LCV and HCV vehicles available on demand.',
+      'Direct freight transport corridor linking Coimbatore industrial dispatch with Chennai delivery zones. Comprehensive cargo solutions and vehicles available on demand.',
     url: getCanonicalUrl('/routes/coimbatore-to-chennai'),
     siteName: siteConfig.name,
     images: [{ url: getOgImageUrl(), width: 800, height: 600, alt: 'ELSHALI LOGISTICS Coimbatore to Chennai Transport' }],
@@ -176,7 +176,7 @@ export default function CoimbatoreToChennaiPage() {
                   'Point-to-point direct Full Truckload (FTL) transport',
                   'Origin placement from SMT Casting Line / Kondaswamy Nagar hub',
                   'Comprehensive coverage across Chennai industrial delivery belts',
-                  'LCV, HCV, container, and open-body truck availability',
+                  'Cargo solutions, container, and open-body truck availability',
                   'Pre-dispatch vehicle inspection and driver verification',
                   'Dedicated commercial coordination with Arun Kumar',
                 ].map((item, idx) => (

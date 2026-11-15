@@ -14,13 +14,13 @@ import { getCanonicalUrl, getOgImageUrl } from '@/lib/siteUrl';
 export const metadata: Metadata = {
   title: 'Commercial Freight & Transport Services | ELSHALI LOGISTICS',
   description:
-    'Comprehensive road transport services: LCV/HCV haulage, mini trucks, open vehicles, full & part load freight, container transport, and express delivery.',
+    'Comprehensive road transport services: cargo solutions, mini trucks, open vehicles, full & part load freight, container transport, and express delivery.',
   alternates: {
     canonical: getCanonicalUrl('/services'),
   },
   openGraph: {
     title: 'Commercial Freight & Transport Services | ELSHALI LOGISTICS',
-    description: 'Comprehensive road transport services: LCV/HCV haulage, mini trucks, containers, and express delivery across India.',
+    description: 'Comprehensive road transport services: cargo solutions, mini trucks, containers, and express delivery across India.',
     url: getCanonicalUrl('/services'),
     siteName: siteConfig.name,
     images: [{ url: getOgImageUrl(), width: 800, height: 600, alt: 'ELSHALI LOGISTICS' }],
@@ -76,7 +76,7 @@ export default function ServicesPage() {
         badgeIcon={<Truck size={14} />}
         title="Freight & Road Transport"
         highlight="Services"
-        subtitle={`From nimble intra-city LCV delivery to pan-India heavy commercial haulage, ${siteConfig.name} delivers scalable freight solutions for modern enterprise.`}
+        subtitle={`From nimble intra-city deliveries to pan-India heavy commercial haulage, ${siteConfig.name} delivers scalable cargo solutions for modern enterprise.`}
       />
 
       <Section>

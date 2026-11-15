@@ -8,7 +8,7 @@ export const siteConfig = {
   tagline: 'LOGISTICS & TRANSPORT',
   subTagline: 'PAN INDIA FREIGHT SOLUTIONS',
   description:
-    'LCV & HCV logistics and freight solutions with fast vehicle placement, competitive freight rates and reliable delivery across India.',
+    'Cargo solutions and freight logistics with fast vehicle placement, competitive freight rates and reliable delivery across India.',
   contactPerson: 'ARUN KUMAR',
   phone: '6369844820',
   phone2: '8667049878',

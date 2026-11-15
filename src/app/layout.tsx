@@ -29,16 +29,16 @@ export const metadata: Metadata = {
     canonical: getCanonicalUrl('/'),
   },
   title: {
-    default: 'ELSHALI LOGISTICS | LCV, HCV & Pan-India Freight Transport',
+    default: 'ELSHALI LOGISTICS | Cargo Solutions & Pan-India Freight Transport',
     template: '%s | ELSHALI LOGISTICS',
   },
   description:
-    'ELSHALI LOGISTICS — professional LCV & HCV freight transport solutions across Tamil Nadu and Pan India. Fast vehicle placement, competitive rates, reliable delivery.',
+    'ELSHALI LOGISTICS — professional cargo solutions and freight transport across Tamil Nadu and Pan India. Fast vehicle placement, competitive rates, reliable delivery.',
   keywords: [
     'logistics',
-    'LCV transport',
-    'HCV transport',
-    'freight',
+    'cargo solutions',
+    'freight transport',
+    'road freight Coimbatore',
     'Tamil Nadu',
     'Pan India',
     'truck',
@@ -52,17 +52,17 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_IN',
     siteName: 'ELSHALI LOGISTICS',
-    title: 'ELSHALI LOGISTICS | LCV, HCV & Pan-India Freight Transport',
+    title: 'ELSHALI LOGISTICS | Cargo Solutions & Pan-India Freight Transport',
     description:
-      'Professional LCV & HCV freight transport solutions across Tamil Nadu and Pan India.',
+      'Professional cargo solutions and freight transport across Tamil Nadu and Pan India.',
     images: [{ url: getOgImageUrl('hero-logistics.webp'), width: 1200, height: 630 }],
     url: getCanonicalUrl('/'),
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'ELSHALI LOGISTICS | LCV, HCV & Pan-India Freight Transport',
+    title: 'ELSHALI LOGISTICS | Cargo Solutions & Pan-India Freight Transport',
     description:
-      'Professional LCV & HCV freight transport solutions across Tamil Nadu and Pan India.',
+      'Professional cargo solutions and freight transport across Tamil Nadu and Pan India.',
     images: [getOgImageUrl('hero-logistics.webp')],
   },
   robots: {
@@ -113,7 +113,7 @@ export default function RootLayout({
                   logo: getOgImageUrl('elshali-logo.webp'),
                   image: getOgImageUrl('hero-logistics.webp'),
                   description:
-                    'Professional LCV & HCV freight transport solutions across Tamil Nadu and Pan India. Fast vehicle placement, competitive rates, reliable delivery.',
+                    'Professional cargo solutions and freight transport across Tamil Nadu and Pan India. Fast vehicle placement, competitive rates, reliable delivery.',
                   telephone: '+916369844820',
                   email: 'elshalilogistics@gmail.com',
                   address: {

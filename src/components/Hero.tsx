@@ -54,7 +54,7 @@ export default function Hero() {
             letterSpacing: 'normal',
           }}
         >
-          LCV &amp; HCV Road Freight Transport in Coimbatore, Tamil Nadu and Pan-India
+          Cargo Solutions &amp; Road Freight Transport in Coimbatore, Tamil Nadu and Pan-India
         </p>
 
         {/* Buttons */}

@@ -11,9 +11,9 @@ export interface Service {
 export const services: Service[] = [
   {
     id: '01',
-    title: 'LCV TRANSPORTATION',
+    title: 'CARGO SOLUTIONS',
     description:
-      'Fast and reliable transportation for local and regional freight.',
+      'Fast and reliable transportation for local and regional cargo freight.',
     features: [
       'Fast vehicle placement',
       'Flexible freight rates',
@@ -23,7 +23,7 @@ export const services: Service[] = [
   },
   {
     id: '02',
-    title: 'HCV TRANSPORTATION',
+    title: 'HEAVY CARGO SOLUTIONS',
     description:
       'Heavy-duty transportation for long-haul and nationwide cargo movement.',
     features: [

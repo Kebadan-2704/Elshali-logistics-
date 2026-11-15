@@ -13,13 +13,13 @@ import { getCanonicalUrl, getOgImageUrl } from '@/lib/siteUrl';
 export const metadata: Metadata = {
   title: 'About Us | ELSHALI LOGISTICS Commercial Freight',
   description:
-    'Learn about ELSHALI LOGISTICS, a professional transport service provider focused on reliable road freight solutions, LCV/HCV fleets, and pan-India reach.',
+    'Learn about ELSHALI LOGISTICS, a professional transport service provider focused on reliable road freight solutions, cargo solutions fleets, and pan-India reach.',
   alternates: {
     canonical: getCanonicalUrl('/about'),
   },
   openGraph: {
     title: 'About Us | ELSHALI LOGISTICS Commercial Freight',
-    description: 'Learn about ELSHALI LOGISTICS: road transportation, LCV/HCV fleets, and pan-India reach.',
+    description: 'Learn about ELSHALI LOGISTICS: road transportation, cargo solutions, and pan-India reach.',
     url: getCanonicalUrl('/about'),
     siteName: siteConfig.name,
     images: [{ url: getOgImageUrl(), width: 800, height: 600, alt: 'ELSHALI LOGISTICS' }],
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
 
 const approachItems = [
   { icon: Map, label: 'Freight Route & Toll Optimization' },
-  { icon: Truck, label: 'Precise Vehicle Sizing (LCV / HCV)' },
+  { icon: Truck, label: 'Precise Vehicle Sizing (Cargo Solutions)' },
   { icon: Scale, label: 'Payload & Weight Distribution' },
   { icon: Box, label: 'Commodity & Packaging Care' },
   { icon: MapPin, label: 'Loading Dock & Pickup Coordination' },
