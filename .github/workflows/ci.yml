@@ -24,6 +24,9 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Install Playwright Chromium
+        run: npx playwright install --with-deps chromium
+
       - name: Verify zero ESLint errors & warnings
         run: npm run lint
 
@@ -37,5 +40,8 @@ jobs:
           STRICT_LEAD_CONFIG: 'false'
 
       - name: Run Playwright lead capture resilience tests
+        run: npx playwright test qa/lead-capture.spec.ts --project=chromium
+
+      - name: Run Playwright comprehensive QA audit suite
         run: npx playwright test qa/full-audit.spec.ts --project=chromium
 
