@@ -2,13 +2,12 @@
   "config": {
     "argv": [
       "C:\\Program Files\\nodejs\\node.exe",
-      "C:\\Users\\Keba\\Desktop\\Elshali\\elsali-web\\node_modules\\@playwright\\test\\cli.js",
+      "C:\\Users\\Keba\\Desktop\\Elshali-logistics-\\node_modules\\@playwright\\test\\cli.js",
       "test",
-      "qa/viewport-sweep.spec.ts",
-      "--project=chromium"
+      "qa/lead-capture.spec.ts"
     ],
-    "configFile": "C:\\Users\\Keba\\Desktop\\Elshali\\elsali-web\\playwright.config.ts",
-    "rootDir": "C:/Users/Keba/Desktop/Elshali/elsali-web/qa",
+    "configFile": "C:\\Users\\Keba\\Desktop\\Elshali-logistics-\\playwright.config.ts",
+    "rootDir": "C:/Users/Keba/Desktop/Elshali-logistics-/qa",
     "failOnFlakyTests": false,
     "forbidOnly": false,
     "fullyParallel": false,
@@ -19,75 +18,75 @@
     "grepInvert": null,
     "maxFailures": 0,
     "metadata": {
-      "actualWorkers": 1
+      "actualWorkers": 3
     },
     "preserveOutput": "always",
     "projects": [
       {
-        "outputDir": "C:/Users/Keba/Desktop/Elshali/elsali-web/test-results",
+        "outputDir": "C:/Users/Keba/Desktop/Elshali-logistics-/test-results",
         "repeatEach": 1,
         "retries": 0,
         "metadata": {
-          "actualWorkers": 1
+          "actualWorkers": 3
         },
         "id": "chromium",
         "name": "chromium",
-        "testDir": "C:/Users/Keba/Desktop/Elshali/elsali-web/qa",
+        "testDir": "C:/Users/Keba/Desktop/Elshali-logistics-/qa",
         "testIgnore": [],
         "testMatch": [
           "**/*.@(spec|test).?(c|m)[jt]s?(x)"
         ],
-        "timeout": 30000
+        "timeout": 60000
       },
       {
-        "outputDir": "C:/Users/Keba/Desktop/Elshali/elsali-web/test-results",
+        "outputDir": "C:/Users/Keba/Desktop/Elshali-logistics-/test-results",
         "repeatEach": 1,
         "retries": 0,
         "metadata": {
-          "actualWorkers": 1
+          "actualWorkers": 3
         },
         "id": "firefox",
         "name": "firefox",
-        "testDir": "C:/Users/Keba/Desktop/Elshali/elsali-web/qa",
+        "testDir": "C:/Users/Keba/Desktop/Elshali-logistics-/qa",
         "testIgnore": [],
         "testMatch": [
           "**/*.@(spec|test).?(c|m)[jt]s?(x)"
         ],
-        "timeout": 30000
+        "timeout": 60000
       },
       {
-        "outputDir": "C:/Users/Keba/Desktop/Elshali/elsali-web/test-results",
+        "outputDir": "C:/Users/Keba/Desktop/Elshali-logistics-/test-results",
         "repeatEach": 1,
         "retries": 0,
         "metadata": {
-          "actualWorkers": 1
+          "actualWorkers": 3
         },
         "id": "webkit",
         "name": "webkit",
-        "testDir": "C:/Users/Keba/Desktop/Elshali/elsali-web/qa",
+        "testDir": "C:/Users/Keba/Desktop/Elshali-logistics-/qa",
         "testIgnore": [],
         "testMatch": [
           "**/*.@(spec|test).?(c|m)[jt]s?(x)"
         ],
-        "timeout": 30000
+        "timeout": 60000
       }
     ],
     "filteredProjects": [
       {
         "grep": {},
         "grepInvert": null,
-        "outputDir": "C:\\Users\\Keba\\Desktop\\Elshali\\elsali-web\\test-results",
+        "outputDir": "C:\\Users\\Keba\\Desktop\\Elshali-logistics-\\test-results",
         "repeatEach": 1,
         "retries": 0,
         "metadata": {
-          "actualWorkers": 1
+          "actualWorkers": 3
         },
         "name": "chromium",
-        "testDir": "C:\\Users\\Keba\\Desktop\\Elshali\\elsali-web\\qa",
-        "snapshotDir": "C:\\Users\\Keba\\Desktop\\Elshali\\elsali-web\\qa",
+        "testDir": "C:\\Users\\Keba\\Desktop\\Elshali-logistics-\\qa",
+        "snapshotDir": "C:\\Users\\Keba\\Desktop\\Elshali-logistics-\\qa",
         "testIgnore": [],
         "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
-        "timeout": 30000,
+        "timeout": 60000,
         "use": {
           "baseURL": "http://localhost:3000",
           "trace": "on-first-retry",
@@ -108,6 +107,78 @@
         "dependencies": [],
         "ignoreSnapshots": false,
         "__projectId": "chromium"
+      },
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "C:\\Users\\Keba\\Desktop\\Elshali-logistics-\\test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 3
+        },
+        "name": "firefox",
+        "testDir": "C:\\Users\\Keba\\Desktop\\Elshali-logistics-\\qa",
+        "snapshotDir": "C:\\Users\\Keba\\Desktop\\Elshali-logistics-\\qa",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 60000,
+        "use": {
+          "baseURL": "http://localhost:3000",
+          "trace": "on-first-retry",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:157.0) Gecko/20100101 Firefox/157.0",
+          "viewport": {
+            "width": 1280,
+            "height": 720
+          },
+          "screen": {
+            "width": 1920,
+            "height": 1080
+          },
+          "deviceScaleFactor": 1,
+          "isMobile": false,
+          "hasTouch": false,
+          "defaultBrowserType": "firefox"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "firefox"
+      },
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "C:\\Users\\Keba\\Desktop\\Elshali-logistics-\\test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 3
+        },
+        "name": "webkit",
+        "testDir": "C:\\Users\\Keba\\Desktop\\Elshali-logistics-\\qa",
+        "snapshotDir": "C:\\Users\\Keba\\Desktop\\Elshali-logistics-\\qa",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 60000,
+        "use": {
+          "baseURL": "http://localhost:3000",
+          "trace": "on-first-retry",
+          "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/27.2 Safari/605.1.15",
+          "viewport": {
+            "width": 1280,
+            "height": 720
+          },
+          "screen": {
+            "width": 1792,
+            "height": 1120
+          },
+          "deviceScaleFactor": 2,
+          "isMobile": false,
+          "hasTouch": false,
+          "defaultBrowserType": "webkit"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "webkit"
       }
     ],
     "quiet": false,
@@ -137,25 +208,25 @@
   },
   "suites": [
     {
-      "title": "viewport-sweep.spec.ts",
-      "file": "viewport-sweep.spec.ts",
+      "title": "lead-capture.spec.ts",
+      "file": "lead-capture.spec.ts",
       "column": 0,
       "line": 0,
       "specs": [],
       "suites": [
         {
-          "title": "Viewport Matrix Audit",
-          "file": "viewport-sweep.spec.ts",
-          "line": 60,
+          "title": "Phase 1: Lead Capture & Multi-Channel Resilience API",
+          "file": "lead-capture.spec.ts",
+          "line": 3,
           "column": 6,
           "specs": [
             {
-              "title": "Viewport 320x568 (phone-320)",
+              "title": "Contact API: returns 503 with fallback phone and WhatsApp when all channels fail",
               "ok": true,
               "tags": [],
               "tests": [
                 {
-                  "timeout": 30000,
+                  "timeout": 60000,
                   "annotations": [],
                   "expectedStatus": "passed",
                   "projectId": "chromium",
@@ -165,12 +236,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 7332,
+                      "duration": 154,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-22T07:03:10.410Z",
+                      "startTime": "2026-11-15T18:46:37.747Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -178,18 +249,18 @@
                   "status": "expected"
                 }
               ],
-              "id": "02edbee5e2d85d431b22-635e7a197a462384de8b",
-              "file": "viewport-sweep.spec.ts",
-              "line": 62,
-              "column": 9
+              "id": "cee9473b0eb8e9472d62-33ae887f418ff1d46c16",
+              "file": "lead-capture.spec.ts",
+              "line": 25,
+              "column": 7
             },
             {
-              "title": "Viewport 360x640 (phone-360)",
+              "title": "Contact API: returns 200 when at least one durable channel succeeds",
               "ok": true,
               "tags": [],
               "tests": [
                 {
-                  "timeout": 30000,
+                  "timeout": 60000,
                   "annotations": [],
                   "expectedStatus": "passed",
                   "projectId": "chromium",
@@ -199,12 +270,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 5769,
+                      "duration": 60,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-22T07:03:18.011Z",
+                      "startTime": "2026-11-15T18:46:37.994Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -212,18 +283,18 @@
                   "status": "expected"
                 }
               ],
-              "id": "02edbee5e2d85d431b22-67156f34994ab947390a",
-              "file": "viewport-sweep.spec.ts",
-              "line": 62,
-              "column": 9
+              "id": "cee9473b0eb8e9472d62-e01f37ac21b8d4fe3b61",
+              "file": "lead-capture.spec.ts",
+              "line": 45,
+              "column": 7
             },
             {
-              "title": "Viewport 375x667 (phone-375)",
+              "title": "Contact API: rejects invalid payload with 400",
               "ok": true,
               "tags": [],
               "tests": [
                 {
-                  "timeout": 30000,
+                  "timeout": 60000,
                   "annotations": [],
                   "expectedStatus": "passed",
                   "projectId": "chromium",
@@ -233,12 +304,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 5599,
+                      "duration": 38,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-22T07:03:23.792Z",
+                      "startTime": "2026-11-15T18:46:38.104Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -246,18 +317,18 @@
                   "status": "expected"
                 }
               ],
-              "id": "02edbee5e2d85d431b22-31a24a97622698e7f552",
-              "file": "viewport-sweep.spec.ts",
+              "id": "cee9473b0eb8e9472d62-5b1767a6bb25cc646701",
+              "file": "lead-capture.spec.ts",
               "line": 62,
-              "column": 9
+              "column": 7
             },
             {
-              "title": "Viewport 390x844 (phone-390)",
+              "title": "Contact API: rejects honeypot spam with 400",
               "ok": true,
               "tags": [],
               "tests": [
                 {
-                  "timeout": 30000,
+                  "timeout": 60000,
                   "annotations": [],
                   "expectedStatus": "passed",
                   "projectId": "chromium",
@@ -267,12 +338,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 4851,
+                      "duration": 32,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-22T07:03:29.411Z",
+                      "startTime": "2026-11-15T18:46:38.172Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -280,18 +351,18 @@
                   "status": "expected"
                 }
               ],
-              "id": "02edbee5e2d85d431b22-8329464655871080e623",
-              "file": "viewport-sweep.spec.ts",
-              "line": 62,
-              "column": 9
+              "id": "cee9473b0eb8e9472d62-33572d75df4e45ae7549",
+              "file": "lead-capture.spec.ts",
+              "line": 80,
+              "column": 7
             },
             {
-              "title": "Viewport 393x852 (phone-393)",
+              "title": "Quote API: returns 503 with fallback phone and WhatsApp when all channels fail",
               "ok": true,
               "tags": [],
               "tests": [
                 {
-                  "timeout": 30000,
+                  "timeout": 60000,
                   "annotations": [],
                   "expectedStatus": "passed",
                   "projectId": "chromium",
@@ -301,12 +372,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 4738,
+                      "duration": 51,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-22T07:03:34.297Z",
+                      "startTime": "2026-11-15T18:46:38.237Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -314,18 +385,18 @@
                   "status": "expected"
                 }
               ],
-              "id": "02edbee5e2d85d431b22-65f8e7b3a985d46ba163",
-              "file": "viewport-sweep.spec.ts",
-              "line": 62,
-              "column": 9
+              "id": "cee9473b0eb8e9472d62-5fa4e1f1e5429ed24631",
+              "file": "lead-capture.spec.ts",
+              "line": 95,
+              "column": 7
             },
             {
-              "title": "Viewport 412x915 (phone-412)",
+              "title": "Quote API: returns 200 when at least one durable channel succeeds",
               "ok": true,
               "tags": [],
               "tests": [
                 {
-                  "timeout": 30000,
+                  "timeout": 60000,
                   "annotations": [],
                   "expectedStatus": "passed",
                   "projectId": "chromium",
@@ -335,12 +406,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 4584,
+                      "duration": 37,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-22T07:03:39.055Z",
+                      "startTime": "2026-11-15T18:46:38.316Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -348,18 +419,18 @@
                   "status": "expected"
                 }
               ],
-              "id": "02edbee5e2d85d431b22-460719f88e77382ecec1",
-              "file": "viewport-sweep.spec.ts",
-              "line": 62,
-              "column": 9
+              "id": "cee9473b0eb8e9472d62-6e9c17065366940be14f",
+              "file": "lead-capture.spec.ts",
+              "line": 113,
+              "column": 7
             },
             {
-              "title": "Viewport 414x896 (phone-414)",
+              "title": "Quote API: rejects invalid payload with 400",
               "ok": true,
               "tags": [],
               "tests": [
                 {
-                  "timeout": 30000,
+                  "timeout": 60000,
                   "annotations": [],
                   "expectedStatus": "passed",
                   "projectId": "chromium",
@@ -369,12 +440,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 4697,
+                      "duration": 40,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-22T07:03:43.654Z",
+                      "startTime": "2026-11-15T18:46:38.382Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -382,18 +453,18 @@
                   "status": "expected"
                 }
               ],
-              "id": "02edbee5e2d85d431b22-155f87aae049befba3ee",
-              "file": "viewport-sweep.spec.ts",
-              "line": 62,
-              "column": 9
+              "id": "cee9473b0eb8e9472d62-f7825736933165eeb2af",
+              "file": "lead-capture.spec.ts",
+              "line": 130,
+              "column": 7
             },
             {
-              "title": "Viewport 428x926 (phone-428)",
+              "title": "Rate Limiting: triggers 429 after 5 requests from same IP within window",
               "ok": true,
               "tags": [],
               "tests": [
                 {
-                  "timeout": 30000,
+                  "timeout": 60000,
                   "annotations": [],
                   "expectedStatus": "passed",
                   "projectId": "chromium",
@@ -403,12 +474,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 4566,
+                      "duration": 78,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-22T07:03:48.365Z",
+                      "startTime": "2026-11-15T18:46:38.452Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -416,33 +487,33 @@
                   "status": "expected"
                 }
               ],
-              "id": "02edbee5e2d85d431b22-1990a2199d12ed19c21d",
-              "file": "viewport-sweep.spec.ts",
-              "line": 62,
-              "column": 9
+              "id": "cee9473b0eb8e9472d62-229fcc68e193dd3447ff",
+              "file": "lead-capture.spec.ts",
+              "line": 147,
+              "column": 7
             },
             {
-              "title": "Viewport 430x932 (phone-430)",
+              "title": "Contact API: returns 503 with fallback phone and WhatsApp when all channels fail",
               "ok": true,
               "tags": [],
               "tests": [
                 {
-                  "timeout": 30000,
+                  "timeout": 60000,
                   "annotations": [],
                   "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
                   "results": [
                     {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 4553,
+                      "duration": 153,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-22T07:03:52.943Z",
+                      "startTime": "2026-11-15T18:46:37.781Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -450,33 +521,33 @@
                   "status": "expected"
                 }
               ],
-              "id": "02edbee5e2d85d431b22-a1cfa8b81e5aa141369e",
-              "file": "viewport-sweep.spec.ts",
-              "line": 62,
-              "column": 9
+              "id": "cee9473b0eb8e9472d62-7fd6068328e56ef83ff9",
+              "file": "lead-capture.spec.ts",
+              "line": 25,
+              "column": 7
             },
             {
-              "title": "Viewport 568x320 (phone-land-568)",
+              "title": "Contact API: returns 200 when at least one durable channel succeeds",
               "ok": true,
               "tags": [],
               "tests": [
                 {
-                  "timeout": 30000,
+                  "timeout": 60000,
                   "annotations": [],
                   "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
                   "results": [
                     {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 8980,
+                      "duration": 60,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-22T07:03:57.511Z",
+                      "startTime": "2026-11-15T18:46:38.037Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -484,33 +555,33 @@
                   "status": "expected"
                 }
               ],
-              "id": "02edbee5e2d85d431b22-1828ee618aafb85c92df",
-              "file": "viewport-sweep.spec.ts",
-              "line": 62,
-              "column": 9
+              "id": "cee9473b0eb8e9472d62-2dd284ef4ac6cacedd99",
+              "file": "lead-capture.spec.ts",
+              "line": 45,
+              "column": 7
             },
             {
-              "title": "Viewport 667x375 (phone-land-667)",
+              "title": "Contact API: rejects invalid payload with 400",
               "ok": true,
               "tags": [],
               "tests": [
                 {
-                  "timeout": 30000,
+                  "timeout": 60000,
                   "annotations": [],
                   "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
                   "results": [
                     {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 8100,
+                      "duration": 41,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-22T07:04:06.506Z",
+                      "startTime": "2026-11-15T18:46:38.140Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -518,33 +589,33 @@
                   "status": "expected"
                 }
               ],
-              "id": "02edbee5e2d85d431b22-ab37f9a99902013dda70",
-              "file": "viewport-sweep.spec.ts",
+              "id": "cee9473b0eb8e9472d62-59e942a43757453150a0",
+              "file": "lead-capture.spec.ts",
               "line": 62,
-              "column": 9
+              "column": 7
             },
             {
-              "title": "Viewport 844x390 (phone-land-844)",
+              "title": "Contact API: rejects honeypot spam with 400",
               "ok": true,
               "tags": [],
               "tests": [
                 {
-                  "timeout": 30000,
+                  "timeout": 60000,
                   "annotations": [],
                   "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
                   "results": [
                     {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 7139,
+                      "duration": 32,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-22T07:04:14.623Z",
+                      "startTime": "2026-11-15T18:46:38.217Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -552,33 +623,33 @@
                   "status": "expected"
                 }
               ],
-              "id": "02edbee5e2d85d431b22-efe51a08844ce902ef3b",
-              "file": "viewport-sweep.spec.ts",
-              "line": 62,
-              "column": 9
+              "id": "cee9473b0eb8e9472d62-62e1d388ba59ed49b3a2",
+              "file": "lead-capture.spec.ts",
+              "line": 80,
+              "column": 7
             },
             {
-              "title": "Viewport 915x412 (phone-land-915)",
+              "title": "Quote API: returns 503 with fallback phone and WhatsApp when all channels fail",
               "ok": true,
               "tags": [],
               "tests": [
                 {
-                  "timeout": 30000,
+                  "timeout": 60000,
                   "annotations": [],
                   "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
                   "results": [
                     {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 6839,
+                      "duration": 44,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-22T07:04:21.784Z",
+                      "startTime": "2026-11-15T18:46:38.277Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -586,33 +657,33 @@
                   "status": "expected"
                 }
               ],
-              "id": "02edbee5e2d85d431b22-7f5c6f04cda2fd0d6213",
-              "file": "viewport-sweep.spec.ts",
-              "line": 62,
-              "column": 9
+              "id": "cee9473b0eb8e9472d62-5c42d30c9381132e6596",
+              "file": "lead-capture.spec.ts",
+              "line": 95,
+              "column": 7
             },
             {
-              "title": "Viewport 932x430 (phone-land-932)",
+              "title": "Quote API: returns 200 when at least one durable channel succeeds",
               "ok": true,
               "tags": [],
               "tests": [
                 {
-                  "timeout": 30000,
+                  "timeout": 60000,
                   "annotations": [],
                   "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
                   "results": [
                     {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 6738,
+                      "duration": 37,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-22T07:04:28.638Z",
+                      "startTime": "2026-11-15T18:46:38.359Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -620,33 +691,33 @@
                   "status": "expected"
                 }
               ],
-              "id": "02edbee5e2d85d431b22-794e7ef65fdaa601cdf8",
-              "file": "viewport-sweep.spec.ts",
-              "line": 62,
-              "column": 9
+              "id": "cee9473b0eb8e9472d62-7b7f3dc1de24b1b4c56f",
+              "file": "lead-capture.spec.ts",
+              "line": 113,
+              "column": 7
             },
             {
-              "title": "Viewport 540x720 (foldable-540)",
+              "title": "Quote API: rejects invalid payload with 400",
               "ok": true,
               "tags": [],
               "tests": [
                 {
-                  "timeout": 30000,
+                  "timeout": 60000,
                   "annotations": [],
                   "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
                   "results": [
                     {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 5257,
+                      "duration": 53,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-22T07:04:35.389Z",
+                      "startTime": "2026-11-15T18:46:38.423Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -654,33 +725,33 @@
                   "status": "expected"
                 }
               ],
-              "id": "02edbee5e2d85d431b22-e6d2865483f1ecfb1c0c",
-              "file": "viewport-sweep.spec.ts",
-              "line": 62,
-              "column": 9
+              "id": "cee9473b0eb8e9472d62-bafc737c12cee78ff1f5",
+              "file": "lead-capture.spec.ts",
+              "line": 130,
+              "column": 7
             },
             {
-              "title": "Viewport 600x960 (tablet-600)",
+              "title": "Rate Limiting: triggers 429 after 5 requests from same IP within window",
               "ok": true,
               "tags": [],
               "tests": [
                 {
-                  "timeout": 30000,
+                  "timeout": 60000,
                   "annotations": [],
                   "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
                   "results": [
                     {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 4457,
+                      "duration": 28,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-22T07:04:40.662Z",
+                      "startTime": "2026-11-15T18:46:38.506Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -688,33 +759,33 @@
                   "status": "expected"
                 }
               ],
-              "id": "02edbee5e2d85d431b22-5798a8c3b0ffbff1499f",
-              "file": "viewport-sweep.spec.ts",
-              "line": 62,
-              "column": 9
+              "id": "cee9473b0eb8e9472d62-a17ffe70ad2ca8decf64",
+              "file": "lead-capture.spec.ts",
+              "line": 147,
+              "column": 7
             },
             {
-              "title": "Viewport 712x1024 (foldable-712)",
+              "title": "Contact API: returns 503 with fallback phone and WhatsApp when all channels fail",
               "ok": true,
               "tags": [],
               "tests": [
                 {
-                  "timeout": 30000,
+                  "timeout": 60000,
                   "annotations": [],
                   "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
                   "results": [
                     {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 4573,
+                      "duration": 162,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-22T07:04:45.131Z",
+                      "startTime": "2026-11-15T18:46:37.776Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -722,33 +793,33 @@
                   "status": "expected"
                 }
               ],
-              "id": "02edbee5e2d85d431b22-40c435e78aa3e131ef99",
-              "file": "viewport-sweep.spec.ts",
-              "line": 62,
-              "column": 9
+              "id": "cee9473b0eb8e9472d62-177da79569e81dee32f2",
+              "file": "lead-capture.spec.ts",
+              "line": 25,
+              "column": 7
             },
             {
-              "title": "Viewport 639x800 (edge-639)",
+              "title": "Contact API: returns 200 when at least one durable channel succeeds",
               "ok": true,
               "tags": [],
               "tests": [
                 {
-                  "timeout": 30000,
+                  "timeout": 60000,
                   "annotations": [],
                   "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
                   "results": [
                     {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 4860,
+                      "duration": 52,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-22T07:04:49.718Z",
+                      "startTime": "2026-11-15T18:46:38.049Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -756,33 +827,33 @@
                   "status": "expected"
                 }
               ],
-              "id": "02edbee5e2d85d431b22-1bd7e1a2ee3a5801ef88",
-              "file": "viewport-sweep.spec.ts",
-              "line": 62,
-              "column": 9
+              "id": "cee9473b0eb8e9472d62-c45d46d993c8faa8e91e",
+              "file": "lead-capture.spec.ts",
+              "line": 45,
+              "column": 7
             },
             {
-              "title": "Viewport 640x800 (edge-640)",
+              "title": "Contact API: rejects invalid payload with 400",
               "ok": true,
               "tags": [],
               "tests": [
                 {
-                  "timeout": 30000,
+                  "timeout": 60000,
                   "annotations": [],
                   "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
                   "results": [
                     {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 4890,
+                      "duration": 44,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-22T07:04:54.591Z",
+                      "startTime": "2026-11-15T18:46:38.140Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -790,33 +861,33 @@
                   "status": "expected"
                 }
               ],
-              "id": "02edbee5e2d85d431b22-c170c4871eb0cacf89bb",
-              "file": "viewport-sweep.spec.ts",
+              "id": "cee9473b0eb8e9472d62-e1145429ca637f40aa80",
+              "file": "lead-capture.spec.ts",
               "line": 62,
-              "column": 9
+              "column": 7
             },
             {
-              "title": "Viewport 767x800 (edge-767)",
+              "title": "Contact API: rejects honeypot spam with 400",
               "ok": true,
               "tags": [],
               "tests": [
                 {
-                  "timeout": 30000,
+                  "timeout": 60000,
                   "annotations": [],
                   "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
                   "results": [
                     {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 5119,
+                      "duration": 32,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-22T07:04:59.492Z",
+                      "startTime": "2026-11-15T18:46:38.218Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -824,33 +895,33 @@
                   "status": "expected"
                 }
               ],
-              "id": "02edbee5e2d85d431b22-ecc21a7f99cd75b757c5",
-              "file": "viewport-sweep.spec.ts",
-              "line": 62,
-              "column": 9
+              "id": "cee9473b0eb8e9472d62-ecaf33f89b1d345dd406",
+              "file": "lead-capture.spec.ts",
+              "line": 80,
+              "column": 7
             },
             {
-              "title": "Viewport 768x800 (edge-768)",
+              "title": "Quote API: returns 503 with fallback phone and WhatsApp when all channels fail",
               "ok": true,
               "tags": [],
               "tests": [
                 {
-                  "timeout": 30000,
+                  "timeout": 60000,
                   "annotations": [],
                   "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
                   "results": [
                     {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 4773,
+                      "duration": 44,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-22T07:05:04.625Z",
+                      "startTime": "2026-11-15T18:46:38.276Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -858,33 +929,33 @@
                   "status": "expected"
                 }
               ],
-              "id": "02edbee5e2d85d431b22-cbf91997644d4e36d880",
-              "file": "viewport-sweep.spec.ts",
-              "line": 62,
-              "column": 9
+              "id": "cee9473b0eb8e9472d62-0e0e95cecc821bd4f7de",
+              "file": "lead-capture.spec.ts",
+              "line": 95,
+              "column": 7
             },
             {
-              "title": "Viewport 1023x800 (edge-1023)",
+              "title": "Quote API: returns 200 when at least one durable channel succeeds",
               "ok": true,
               "tags": [],
               "tests": [
                 {
-                  "timeout": 30000,
+                  "timeout": 60000,
                   "annotations": [],
                   "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
                   "results": [
                     {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 5044,
+                      "duration": 40,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-22T07:05:09.409Z",
+                      "startTime": "2026-11-15T18:46:38.358Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -892,33 +963,33 @@
                   "status": "expected"
                 }
               ],
-              "id": "02edbee5e2d85d431b22-ec28ec9176bc7bdcedfd",
-              "file": "viewport-sweep.spec.ts",
-              "line": 62,
-              "column": 9
+              "id": "cee9473b0eb8e9472d62-05cfa968001ce98eb91f",
+              "file": "lead-capture.spec.ts",
+              "line": 113,
+              "column": 7
             },
             {
-              "title": "Viewport 1024x800 (edge-1024)",
+              "title": "Quote API: rejects invalid payload with 400",
               "ok": true,
               "tags": [],
               "tests": [
                 {
-                  "timeout": 30000,
+                  "timeout": 60000,
                   "annotations": [],
                   "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
                   "results": [
                     {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 4480,
+                      "duration": 55,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-22T07:05:14.470Z",
+                      "startTime": "2026-11-15T18:46:38.421Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -926,33 +997,33 @@
                   "status": "expected"
                 }
               ],
-              "id": "02edbee5e2d85d431b22-525e989b22a7b86e31a7",
-              "file": "viewport-sweep.spec.ts",
-              "line": 62,
-              "column": 9
+              "id": "cee9473b0eb8e9472d62-5b52ce702328e9425d04",
+              "file": "lead-capture.spec.ts",
+              "line": 130,
+              "column": 7
             },
             {
-              "title": "Viewport 1279x800 (edge-1279)",
+              "title": "Rate Limiting: triggers 429 after 5 requests from same IP within window",
               "ok": true,
               "tags": [],
               "tests": [
                 {
-                  "timeout": 30000,
+                  "timeout": 60000,
                   "annotations": [],
                   "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
                   "results": [
                     {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 4529,
+                      "duration": 39,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-22T07:05:18.976Z",
+                      "startTime": "2026-11-15T18:46:38.502Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -960,690 +1031,10 @@
                   "status": "expected"
                 }
               ],
-              "id": "02edbee5e2d85d431b22-b449a3f4ea5aa4547305",
-              "file": "viewport-sweep.spec.ts",
-              "line": 62,
-              "column": 9
-            },
-            {
-              "title": "Viewport 1280x800 (edge-1280)",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 4498,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-10-22T07:05:23.520Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "02edbee5e2d85d431b22-2ef29d202689cf54b9c0",
-              "file": "viewport-sweep.spec.ts",
-              "line": 62,
-              "column": 9
-            },
-            {
-              "title": "Viewport 768x1024 (tablet-768)",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 4226,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-10-22T07:05:28.038Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "02edbee5e2d85d431b22-db327d5f01b2fed8ce8a",
-              "file": "viewport-sweep.spec.ts",
-              "line": 62,
-              "column": 9
-            },
-            {
-              "title": "Viewport 810x1080 (tablet-810)",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 4189,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-10-22T07:05:32.290Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "02edbee5e2d85d431b22-f001e793fe50acdcb979",
-              "file": "viewport-sweep.spec.ts",
-              "line": 62,
-              "column": 9
-            },
-            {
-              "title": "Viewport 820x1180 (tablet-820)",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 4246,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-10-22T07:05:36.499Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "02edbee5e2d85d431b22-b512a00876c165bae951",
-              "file": "viewport-sweep.spec.ts",
-              "line": 62,
-              "column": 9
-            },
-            {
-              "title": "Viewport 834x1194 (tablet-834)",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 4302,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-10-22T07:05:40.767Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "02edbee5e2d85d431b22-28d5b37651db67895f84",
-              "file": "viewport-sweep.spec.ts",
-              "line": 62,
-              "column": 9
-            },
-            {
-              "title": "Viewport 912x1368 (tablet-912)",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 4103,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-10-22T07:05:45.093Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "02edbee5e2d85d431b22-2acd8ec3458e515bb780",
-              "file": "viewport-sweep.spec.ts",
-              "line": 62,
-              "column": 9
-            },
-            {
-              "title": "Viewport 1024x768 (tablet-land-1024)",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 4384,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-10-22T07:05:49.218Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "02edbee5e2d85d431b22-a9c44216c5c59675f7dd",
-              "file": "viewport-sweep.spec.ts",
-              "line": 62,
-              "column": 9
-            },
-            {
-              "title": "Viewport 1112x834 (tablet-land-1112)",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 4251,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-10-22T07:05:53.626Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "02edbee5e2d85d431b22-fd582b0d10e4b388b3d1",
-              "file": "viewport-sweep.spec.ts",
-              "line": 62,
-              "column": 9
-            },
-            {
-              "title": "Viewport 1180x820 (tablet-land-1180)",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 4310,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-10-22T07:05:57.902Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "02edbee5e2d85d431b22-dee9af17b967f4a7650d",
-              "file": "viewport-sweep.spec.ts",
-              "line": 62,
-              "column": 9
-            },
-            {
-              "title": "Viewport 1366x1024 (tablet-land-1366)",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 4194,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-10-22T07:06:02.230Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "02edbee5e2d85d431b22-d2c39f673307e5550f9f",
-              "file": "viewport-sweep.spec.ts",
-              "line": 62,
-              "column": 9
-            },
-            {
-              "title": "Viewport 1280x720 (desktop-1280)",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 4378,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-10-22T07:06:06.436Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "02edbee5e2d85d431b22-f296cf8abc8f547da4fd",
-              "file": "viewport-sweep.spec.ts",
-              "line": 62,
-              "column": 9
-            },
-            {
-              "title": "Viewport 1366x768 (desktop-1366)",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 4447,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-10-22T07:06:10.827Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "02edbee5e2d85d431b22-146a811d770f00550689",
-              "file": "viewport-sweep.spec.ts",
-              "line": 62,
-              "column": 9
-            },
-            {
-              "title": "Viewport 1440x900 (desktop-1440)",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 4223,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-10-22T07:06:15.288Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "02edbee5e2d85d431b22-d5d7155ff6ecf5730070",
-              "file": "viewport-sweep.spec.ts",
-              "line": 62,
-              "column": 9
-            },
-            {
-              "title": "Viewport 1536x864 (desktop-1536)",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 4550,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-10-22T07:06:19.532Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "02edbee5e2d85d431b22-ca4de87d0a7a79859d70",
-              "file": "viewport-sweep.spec.ts",
-              "line": 62,
-              "column": 9
-            },
-            {
-              "title": "Viewport 1680x1050 (desktop-1680)",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 4517,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-10-22T07:06:24.103Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "02edbee5e2d85d431b22-06150586f6717fe87410",
-              "file": "viewport-sweep.spec.ts",
-              "line": 62,
-              "column": 9
-            },
-            {
-              "title": "Viewport 1920x1080 (desktop-1920)",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 4739,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-10-22T07:06:28.641Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "02edbee5e2d85d431b22-df3b0eae456accf02ef0",
-              "file": "viewport-sweep.spec.ts",
-              "line": 62,
-              "column": 9
-            },
-            {
-              "title": "Viewport 2048x1152 (desktop-2048)",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 4850,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-10-22T07:06:33.397Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "02edbee5e2d85d431b22-9cacfc229efb05d80511",
-              "file": "viewport-sweep.spec.ts",
-              "line": 62,
-              "column": 9
-            },
-            {
-              "title": "Viewport 2560x1440 (ultrawide-2560)",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 5590,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-10-22T07:06:38.265Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "02edbee5e2d85d431b22-d0c8b82010b394731357",
-              "file": "viewport-sweep.spec.ts",
-              "line": 62,
-              "column": 9
-            },
-            {
-              "title": "Viewport 3440x1440 (ultrawide-3440)",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 5938,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-10-22T07:06:43.877Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "02edbee5e2d85d431b22-63cf99dca1956954eb92",
-              "file": "viewport-sweep.spec.ts",
-              "line": 62,
-              "column": 9
-            },
-            {
-              "title": "Viewport 3840x2160 (ultrawide-3840)",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 6396,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-10-22T07:06:49.834Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "02edbee5e2d85d431b22-25f298d38008ccd21a69",
-              "file": "viewport-sweep.spec.ts",
-              "line": 62,
-              "column": 9
+              "id": "cee9473b0eb8e9472d62-86d915b12caaff02de31",
+              "file": "lead-capture.spec.ts",
+              "line": 147,
+              "column": 7
             }
           ]
         }
@@ -1652,9 +1043,9 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-10-22T07:03:09.469Z",
-    "duration": 227871.916,
-    "expected": 44,
+    "startTime": "2026-11-15T18:46:36.692Z",
+    "duration": 1904.861,
+    "expected": 24,
     "skipped": 0,
     "unexpected": 0,
     "flaky": 0

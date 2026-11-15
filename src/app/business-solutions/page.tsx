@@ -1,66 +1,133 @@
-'use client';
-import Link from 'next/link';
-import { useScrollAnimation } from '@/hooks/useScrollAnimation';
-import CTASection from '@/components/CTASection';
-import { Factory, Cog, BarChart3, Store, Truck, Building2 } from 'lucide-react';
+import type { Metadata } from 'next';
+import { Factory, Cog, BarChart3, Store, Truck, Building2, CheckCircle2 } from 'lucide-react';
+import Breadcrumb from '@/components/ui/Breadcrumb';
+import PageHero from '@/components/ui/PageHero';
+import Section from '@/components/ui/Section';
+import Card from '@/components/ui/Card';
+import Button from '@/components/ui/Button';
+import CtaBand from '@/components/ui/CtaBand';
+import ClientMarquee from '@/components/ClientMarquee';
+import { siteConfig } from '@/data/site';
+import { getCanonicalUrl, getOgImageUrl } from '@/lib/siteUrl';
+
+export const metadata: Metadata = {
+  title: 'Business Solutions | Commercial Road Logistics | ELSHALI',
+  description:
+    'Tailored transportation solutions for manufacturers, industrial plants, traders, distributors, and corporate supply chains across India.',
+  alternates: {
+    canonical: getCanonicalUrl('/business-solutions'),
+  },
+  openGraph: {
+    title: 'Business Solutions | Commercial Road Logistics | ELSHALI',
+    description: 'Tailored transportation solutions for manufacturers, industrial plants, traders, and distributors across India.',
+    url: getCanonicalUrl('/business-solutions'),
+    siteName: siteConfig.name,
+    images: [{ url: getOgImageUrl(), width: 800, height: 600, alt: 'ELSHALI LOGISTICS' }],
+    locale: 'en_IN',
+    type: 'website',
+  },
+};
 
 const solutions = [
-  { icon: Factory, title: 'Manufacturers', text: 'Regular movement of raw materials, components and finished goods.', features: ['Raw material transport', 'Component delivery', 'Finished goods movement'] },
-  { icon: Cog, title: 'Industries', text: 'Transportation of industrial materials and equipment.', features: ['Heavy equipment handling', 'Industrial compliance', 'Factory-to-factory'] },
-  { icon: BarChart3, title: 'Traders', text: 'Movement of goods between suppliers, warehouses and customers.', features: ['Multi-point delivery', 'Warehouse transit', 'Supplier pickup'] },
-  { icon: Store, title: 'Distributors', text: 'Regular delivery and distribution transportation.', features: ['Distribution routes', 'Regular scheduling', 'Last-mile delivery'] },
-  { icon: Truck, title: 'Logistics Companies', text: 'Vehicle placement support for additional transportation requirements.', features: ['Fleet augmentation', 'Overflow capacity', 'Partner support'] },
-  { icon: Building2, title: 'Corporate Companies', text: 'Dedicated transportation arrangements based on business requirements.', features: ['Dedicated vehicles', 'SLA compliance', 'Custom solutions'] },
+  {
+    icon: Factory,
+    title: 'Manufacturing & Production',
+    text: 'Regular scheduled movement of raw materials, assembly components, and finished commercial inventory.',
+    features: ['Inbound raw material supply', 'Assembly line part dispatch', 'Finished goods warehouse distribution'],
+  },
+  {
+    icon: Cog,
+    title: 'Heavy Industry & Engineering',
+    text: 'Specialized vehicle placement for heavy equipment, machinery, fabricated metal goods, and industrial parts.',
+    features: ['High-capacity trailer placement', 'Specialized lashing & securing', 'Factory-to-project-site transport'],
+  },
+  {
+    icon: BarChart3,
+    title: 'Traders & Wholesale Merchants',
+    text: 'Flexible inter-city transport linking wholesale suppliers, regional stockyards, and commercial buyers.',
+    features: ['Interstate wholesale movement', 'Multi-point pickup/drop options', 'Reliable commercial billing & POD'],
+  },
+  {
+    icon: Store,
+    title: 'Distributors & Retail Chains',
+    text: 'Predictable regional delivery schedules ensuring stock availability across commercial dealer networks.',
+    features: ['Regional distribution corridors', 'Daily & weekly dispatch cycles', 'Safe weatherproof container options'],
+  },
+  {
+    icon: Truck,
+    title: '3PL & Logistics Operators',
+    text: 'Vehicle placement augmentation to support overflow volume, peak seasons, and dedicated route contracts.',
+    features: ['Spot vehicle placement', 'Seasonal peak fleet expansion', 'Direct driver coordination'],
+  },
+  {
+    icon: Building2,
+    title: 'Corporate Enterprises',
+    text: 'Structured freight agreements with agreed pricing terms, dedicated vehicle allocation, and priority support.',
+    features: ['Dedicated vehicle contracts', 'SLA-backed transit timings', 'Senior dispatch desk point-of-contact'],
+  },
 ];
 
 export default function BusinessSolutionsPage() {
-  const scrollRef = useScrollAnimation();
-
   return (
-    <div ref={scrollRef}>
-      <section className="page-hero">
-        <div className="page-hero-glow"></div>
-        <span className="section-badge">Business Solutions</span>
-        <h1 className="page-hero-title">
-          Transportation Solutions <span className="highlight">For Businesses</span>
-        </h1>
-        <p className="page-hero-subtitle">
-          ELSALI LOGISTICS can support manufacturers, industries, traders, distributors, logistics companies and corporate companies.
-        </p>
-      </section>
+    <div className="subpage-wrapper" style={{ minHeight: '100vh', paddingTop: '100px' }}>
+      <Breadcrumb items={[{ label: 'Business Solutions' }]} />
 
-      <section className="section section-dark">
-        <div className="container">
-          <div className="grid-3 animate-fade-up">
-            {solutions.map((s, i) => (
-              <div key={i} className="service-card glass-card-premium hover-lift" style={{ transitionDelay: `${i * 0.05}s` }}>
-                <div className="card-icon" style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)' }}>
-                  <s.icon size={28} color="var(--accent)" strokeWidth={1.5} />
-                </div>
-                <h3 className="service-card-title" style={{ fontSize: '20px' }}>{s.title}</h3>
-                <p className="service-card-text">{s.text}</p>
-                <div className="service-card-features">
-                  {s.features.map((f, j) => (
-                    <div key={j} className="service-card-feature">
-                      <div className="service-card-feature-icon">&#10003;</div>
-                      <span>{f}</span>
-                    </div>
-                  ))}
-                </div>
+      <PageHero
+        badge="Enterprise Freight"
+        badgeIcon={<Building2 size={14} />}
+        title="Commercial Logistics Solutions"
+        highlight="For Modern Business"
+        subtitle={`${siteConfig.name} empowers manufacturers, industrial enterprises, wholesale traders, and logistics operators with placement-ready road transportation.`}
+      />
+
+      <Section>
+        <div className="grid-3">
+          {solutions.map((s, i) => (
+            <Card key={i} variant="glass" style={{ display: 'flex', flexDirection: 'column' }}>
+              <div
+                style={{
+                  width: '52px',
+                  height: '52px',
+                  borderRadius: '14px',
+                  background: 'rgba(236, 72, 153, 0.1)',
+                  border: '1px solid rgba(236, 72, 153, 0.25)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  color: '#EC4899',
+                  marginBottom: '20px',
+                }}
+              >
+                <s.icon size={26} />
               </div>
-            ))}
-          </div>
-
-          <div style={{ textAlign: 'center', marginTop: '48px' }} className="animate-fade-up">
-            <Link href="/quote" className="btn btn-primary btn-lg">
-              Discuss Your Requirements
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-            </Link>
-          </div>
+              <h2 style={{ fontSize: '20px', fontWeight: 700, color: '#FFFFFF', marginBottom: '10px' }}>
+                {s.title}
+              </h2>
+              <p style={{ fontSize: '14px', color: '#94A3B8', lineHeight: 1.6, marginBottom: '20px', flexGrow: 1 }}>
+                {s.text}
+              </p>
+              <div style={{ borderTop: '1px solid rgba(255, 255, 255, 0.08)', paddingTop: '16px', display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                {s.features.map((f, j) => (
+                  <div key={j} style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '13px', color: '#CBD5E1' }}>
+                    <CheckCircle2 size={14} color="#EC4899" />
+                    <span>{f}</span>
+                  </div>
+                ))}
+              </div>
+            </Card>
+          ))}
         </div>
-      </section>
 
-      <CTASection />
+        <div style={{ textAlign: 'center', marginTop: '48px' }}>
+          <Button href="/quote" variant="primary" size="lg">
+            Discuss Your Enterprise Requirements
+          </Button>
+        </div>
+      </Section>
+
+      <ClientMarquee />
+
+      <CtaBand />
     </div>
   );
 }

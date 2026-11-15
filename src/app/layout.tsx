@@ -1,33 +1,39 @@
 import type { Metadata } from 'next';
-import { Outfit, Plus_Jakarta_Sans } from 'next/font/google';
+import localFont from 'next/font/local';
 import './globals.css';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import QuoteModal from '@/components/QuoteModal';
 import { QuoteProvider } from '@/components/QuoteProvider';
 import SmoothScroll from '@/components/SmoothScroll';
-import Chatbot from '@/components/Chatbot';
 import SplashScreen from '@/components/SplashScreen';
+import IdleWidgets from '@/components/IdleWidgets';
+import { siteConfig, getSiteUrl, getCanonicalUrl, getOgImageUrl } from '@/data/site';
 
-const outfit = Outfit({
-  subsets: ['latin'],
-  weight: ['400', '500', '600', '700', '800', '900'],
+const outfit = localFont({
+  src: '../../public/fonts/Outfit-Bold.ttf',
   variable: '--font-outfit',
   display: 'swap',
+  weight: '700',
 });
 
-const plusJakartaSans = Plus_Jakarta_Sans({
-  subsets: ['latin'],
-  weight: ['400', '500', '600', '700', '800'],
+const plusJakartaSans = localFont({
+  src: '../../public/fonts/PlusJakartaSans-Regular.ttf',
   variable: '--font-sans',
   display: 'swap',
+  weight: '400',
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'),
-  title: 'ELSALI LOGISTICS | LCV, HCV & Pan-India Freight Transport',
+  metadataBase: new URL(getSiteUrl()),
+  alternates: {
+    canonical: getCanonicalUrl('/'),
+  },
+  title: {
+    default: 'ELSHALI LOGISTICS | LCV, HCV & Pan-India Freight Transport',
+    template: '%s | ELSHALI LOGISTICS',
+  },
   description:
-    'ELSALI LOGISTICS — professional LCV & HCV freight transport solutions across Tamil Nadu and Pan India. Fast vehicle placement, competitive rates, reliable delivery.',
+    'ELSHALI LOGISTICS — professional LCV & HCV freight transport solutions across Tamil Nadu and Pan India. Fast vehicle placement, competitive rates, reliable delivery.',
   keywords: [
     'logistics',
     'LCV transport',
@@ -37,32 +43,31 @@ export const metadata: Metadata = {
     'Pan India',
     'truck',
     'vehicle placement',
-    'ELSALI LOGISTICS',
+    'ELSHALI LOGISTICS',
     'Coimbatore',
   ],
-  authors: [{ name: 'ELSALI LOGISTICS' }],
-  creator: 'ELSALI LOGISTICS',
+  authors: [{ name: 'ELSHALI LOGISTICS' }],
+  creator: 'ELSHALI LOGISTICS',
   openGraph: {
     type: 'website',
     locale: 'en_IN',
-    siteName: 'ELSALI LOGISTICS',
-    title: 'ELSALI LOGISTICS | LCV, HCV & Pan-India Freight Transport',
+    siteName: 'ELSHALI LOGISTICS',
+    title: 'ELSHALI LOGISTICS | LCV, HCV & Pan-India Freight Transport',
     description:
       'Professional LCV & HCV freight transport solutions across Tamil Nadu and Pan India.',
-    images: [{ url: '/images/hero-logistics.webp', width: 1200, height: 630 }],
+    images: [{ url: getOgImageUrl('hero-logistics.webp'), width: 1200, height: 630 }],
+    url: getCanonicalUrl('/'),
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'ELSALI LOGISTICS | LCV, HCV & Pan-India Freight Transport',
+    title: 'ELSHALI LOGISTICS | LCV, HCV & Pan-India Freight Transport',
     description:
       'Professional LCV & HCV freight transport solutions across Tamil Nadu and Pan India.',
+    images: [getOgImageUrl('hero-logistics.webp')],
   },
   robots: {
     index: true,
     follow: true,
-  },
-  alternates: {
-    canonical: process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000',
   },
   icons: {
     icon: [
@@ -85,39 +90,73 @@ export default function RootLayout({
   return (
     <html lang="en-IN" className={`${outfit.variable} ${plusJakartaSans.variable}`}>
       <head>
+        <link
+          rel="preload"
+          as="image"
+          href="/images/hero-logistics.webp"
+          media="(min-width: 769px)"
+          type="image/webp"
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               '@context': 'https://schema.org',
-              '@type': 'LocalBusiness',
-              name: 'ELSALI LOGISTICS',
-              description:
-                'LCV & HCV freight transport solutions across Tamil Nadu and Pan India.',
-              telephone: '+916369844820',
-              email: 'elshalilogistics@gmail.com',
-              address: {
-                '@type': 'PostalAddress',
-                addressLocality: 'Coimbatore',
-                addressRegion: 'Tamil Nadu',
-                addressCountry: 'IN',
-              },
-              url: 'https://elsalilogistics.com',
-              sameAs: [],
-              openingHoursSpecification: {
-                '@type': 'OpeningHoursSpecification',
-                dayOfWeek: [
-                  'Monday',
-                  'Tuesday',
-                  'Wednesday',
-                  'Thursday',
-                  'Friday',
-                  'Saturday',
-                  'Sunday',
-                ],
-                opens: '00:00',
-                closes: '23:59',
-              },
+              '@graph': [
+                {
+                  '@type': 'LocalBusiness',
+                  '@id': `${getSiteUrl()}/#organization`,
+                  name: 'ELSHALI LOGISTICS',
+                  legalName: 'ELSHALI LOGISTICS AND TRANSPORT',
+                  taxID: '33DQAPA3611N1Z8',
+                  url: getSiteUrl(),
+                  logo: getOgImageUrl('elshali-logo.webp'),
+                  image: getOgImageUrl('hero-logistics.webp'),
+                  description:
+                    'Professional LCV & HCV freight transport solutions across Tamil Nadu and Pan India. Fast vehicle placement, competitive rates, reliable delivery.',
+                  telephone: '+916369844820',
+                  email: 'elshalilogistics@gmail.com',
+                  address: {
+                    '@type': 'PostalAddress',
+                    streetAddress: '71B SMT Casting Line, St 2 Kondaswamy Nagar, 3-5, Veerapandi Road',
+                    addressLocality: 'Coimbatore',
+                    postalCode: '641047',
+                    addressRegion: 'Tamil Nadu',
+                    addressCountry: 'IN',
+                  },
+                  geo: {
+                    '@type': 'GeoCoordinates',
+                    latitude: 11.0168,
+                    longitude: 76.9558,
+                  },
+                  areaServed: {
+                    '@type': 'Country',
+                    name: 'India',
+                  },
+                  sameAs: siteConfig.sameAs,
+                  openingHoursSpecification: {
+                    '@type': 'OpeningHoursSpecification',
+                    dayOfWeek: [
+                      'Monday',
+                      'Tuesday',
+                      'Wednesday',
+                      'Thursday',
+                      'Friday',
+                      'Saturday',
+                      'Sunday',
+                    ],
+                    opens: '00:00',
+                    closes: '23:59',
+                  },
+                },
+                {
+                  '@type': 'WebSite',
+                  '@id': `${getSiteUrl()}/#website`,
+                  url: getSiteUrl(),
+                  name: 'ELSHALI LOGISTICS',
+                  publisher: { '@id': `${getSiteUrl()}/#organization` },
+                },
+              ],
             }),
           }}
         />
@@ -132,8 +171,7 @@ export default function RootLayout({
             <Navbar />
             <main id="main-content">{children}</main>
             <Footer />
-            <QuoteModal />
-            <Chatbot />
+            <IdleWidgets />
           </SmoothScroll>
         </QuoteProvider>
       </body>

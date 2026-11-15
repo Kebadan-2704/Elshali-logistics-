@@ -16,6 +16,7 @@ import {
   ShieldCheck,
 } from 'lucide-react';
 import { useQuote } from './QuoteProvider';
+import { siteConfig } from '@/data/site';
 
 interface ChatMessage {
   role: 'user' | 'assistant';
@@ -24,27 +25,10 @@ interface ChatMessage {
   hasQuotePrompt?: boolean;
 }
 
-const SYSTEM_PROMPT = `You are ELSALI LOGISTICS AI Assistant. ELSALI LOGISTICS provides professional road transportation solutions across North India, South India, and Pan-India.
-
-Key Facts:
-- Managing Director / Contact Person: C. ARUN KUMAR
-- Primary Phone & WhatsApp: 6369844820
-- Additional Phone Numbers: 8667049878, 8610814831, 9667225840, 9442444820
-- Email: elshalilogistics@gmail.com
-- GSTIN: 33DQAPA3611N1Z8
-- Location: Coimbatore, Tamil Nadu, India (with Pan-India transport network)
-- Vehicles: Mini/Dost (1.5-2.5 Ton), Tata Pickup / 407 (2.5-3.5 Ton), 14 Ft (4-5 Ton), 17 Ft (6-7 Ton), 20 Ft (8-10 Ton), 24 Ft (10-12 Ton), 26 Ft (12-15 Ton), 32 Ft SXL/MXL (15-25 Ton)
-- Services: LCV & HCV transport, Full Truck Load (FTL), Part Load (PTL), Regular & Dedicated Vehicle Placement, Industrial & Machinery transport, Door-to-Door delivery.
-
-Tone Instructions:
-- Format responses with clean paragraphs and line breaks.
-- When sharing phone or email, place them on separate lines.
-- Be courteous, professional, and concise. Encourage customers to use the quote button or call 6369844820.`;
-
 const INITIAL_MESSAGE: ChatMessage = {
   role: 'assistant',
   content:
-    'Hello! 👋 Welcome to ELSALI LOGISTICS.\n\nHow can I help you today? I can assist with freight quotes, vehicle capacities, transport routes, and dispatch details.',
+    'Hello! 👋 Welcome to ELSHALI LOGISTICS.\n\nHow can I help you today? I can assist with freight rate quotes, vehicle capacities, transport routes, and dispatch details.',
   timestamp: new Date(),
 };
 
@@ -74,8 +58,16 @@ export default function Chatbot() {
     }
   }, [isOpen]);
 
+  // ESC key closes chat
   useEffect(() => {
-    if (isOpen) setShowPulse(false);
+    if (!isOpen) return;
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        setIsOpen(false);
+      }
+    };
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown);
   }, [isOpen]);
 
   const handleReset = () => {
@@ -101,26 +93,25 @@ export default function Chatbot() {
     setIsLoading(true);
 
     try {
-      const fullPrompt = `${SYSTEM_PROMPT}\n\nUser: ${trimmed}\nAssistant:`;
-      const encodedPrompt = encodeURIComponent(fullPrompt);
-      const res = await fetch(
-        `https://chatbot.codexapi.workers.dev/?prompt=${encodedPrompt}&model=gpt-5.1`
-      );
+      const historyPayload = messages
+        .filter((m) => m !== INITIAL_MESSAGE)
+        .slice(-6)
+        .map((m) => ({ role: m.role, content: m.content }));
+
+      const res = await fetch('/api/chat', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ message: trimmed, history: historyPayload }),
+      });
       const data = await res.json();
 
-      let answerText =
+      const answerText =
         data?.answer ||
-        data?.response ||
-        data?.message ||
-        (typeof data === 'string' ? data : '') ||
-        'I apologize, I could not process your request. Please call us at 6369844820 or use the quote form for immediate assistance.';
-
-      // Clean up common joined strings like "Phone: 6369844820 Email: elshalilogistics@gmail.com"
-      answerText = answerText
-        .replace(/Phone:\s*(\d{10})\s*Email:/gi, 'Phone: $1\nEmail:')
-        .replace(/Email:\s*([^\s]+)\s*Phone:/gi, 'Email: $1\nPhone:');
+        data?.error ||
+        `I apologize, I could not process your request. Please call us at +91 ${siteConfig.phone} or use the quote form for immediate assistance.`;
 
       const isQuoteRelated =
+        data?.configured === false ||
         /quote|price|pricing|rate|freight|cost|booking|book|vehicle|placement|transport/i.test(
           trimmed + ' ' + answerText
         );
@@ -137,8 +128,7 @@ export default function Chatbot() {
         ...prev,
         {
           role: 'assistant',
-          content:
-            "Sorry, I'm having trouble connecting right now.\n\nPlease call us directly at 6369844820 or email elshalilogistics@gmail.com for immediate dispatch assistance.",
+          content: `Sorry, I'm having trouble connecting right now.\n\nPlease call us directly at +91 ${siteConfig.phone} or message on WhatsApp for immediate dispatch assistance.`,
           timestamp: new Date(),
           hasQuotePrompt: true,
         },
@@ -232,7 +222,13 @@ export default function Chatbot() {
       {/* Floating toggle button */}
       <button
         className={`chatbot-toggle ${isOpen ? 'open' : ''} ${showPulse ? 'pulse' : ''}`}
-        onClick={() => setIsOpen(!isOpen)}
+        onClick={() => {
+          setIsOpen((prev) => {
+            const next = !prev;
+            if (next) setShowPulse(false);
+            return next;
+          });
+        }}
         aria-label={isOpen ? 'Close chat' : 'Open AI chat assistant'}
         aria-expanded={isOpen}
       >
@@ -264,10 +260,10 @@ export default function Chatbot() {
               <Sparkles size={18} />
             </div>
             <div className="chatbot-header-info">
-              <h3>ELSALI AI Assistant</h3>
+              <h3>ELSHALI AI Assistant</h3>
               <span className="chatbot-status">
                 <span className="chatbot-status-dot" />
-                Online • GPT-5.1
+                Online • Logistics Desk
               </span>
             </div>
             <div className="chatbot-header-btns">
@@ -295,6 +291,9 @@ export default function Chatbot() {
             data-lenis-prevent="true"
             data-lenis-prevent-wheel="true"
             data-lenis-prevent-touch="true"
+            role="log"
+            aria-live="polite"
+            aria-label="Chat messages history"
           >
             {messages.map((msg, i) => (
               <div
@@ -376,9 +375,12 @@ export default function Chatbot() {
             </button>
           </div>
 
-          {/* Footer note */}
-          <div className="chatbot-footer-note">
-            <span>POWERED BY ELSALI LOGISTICS AI</span>
+          {/* Footer note & Privacy Notice */}
+          <div className="chatbot-footer-note" style={{ flexDirection: 'column', gap: '3px', padding: '6px 12px 8px' }}>
+            <span>POWERED BY ELSHALI LOGISTICS AI</span>
+            <span style={{ fontSize: '10px', color: 'rgba(255, 255, 255, 0.4)', textTransform: 'none', letterSpacing: 'normal' }}>
+              Privacy note: Automated assistant. Do not enter confidential or financial details.
+            </span>
           </div>
         </div>
       )}

@@ -1,0 +1,71 @@
+{
+  "testName": "suspect-b-no-preloads",
+  "mobileMedian": {
+    "perf": 77,
+    "fcp": 1844,
+    "lcp": 5146,
+    "tbt": 84,
+    "cls": 0,
+    "lcpDisplay": "5.1 s"
+  },
+  "desktopMedian": {
+    "perf": 64,
+    "fcp": 1274,
+    "lcp": 5137,
+    "tbt": 244,
+    "cls": 0,
+    "lcpDisplay": "5.1 s"
+  },
+  "mobileRuns": [
+    {
+      "perf": 76,
+      "fcp": 1845,
+      "lcp": 5256,
+      "tbt": 136,
+      "cls": 0,
+      "lcpDisplay": "5.3 s"
+    },
+    {
+      "perf": 77,
+      "fcp": 1844,
+      "lcp": 5146,
+      "tbt": 84,
+      "cls": 0,
+      "lcpDisplay": "5.1 s"
+    },
+    {
+      "perf": 77,
+      "fcp": 1818,
+      "lcp": 5135,
+      "tbt": 70,
+      "cls": 0,
+      "lcpDisplay": "5.1 s"
+    }
+  ],
+  "desktopRuns": [
+    {
+      "perf": 72,
+      "fcp": 1091,
+      "lcp": 5138,
+      "tbt": 140,
+      "cls": 0,
+      "lcpDisplay": "5.1 s"
+    },
+    {
+      "perf": 64,
+      "fcp": 1274,
+      "lcp": 5137,
+      "tbt": 244,
+      "cls": 0,
+      "lcpDisplay": "5.1 s"
+    },
+    {
+      "perf": 72,
+      "fcp": 1115,
+      "lcp": 5135,
+      "tbt": 125,
+      "cls": 0,
+      "lcpDisplay": "5.1 s"
+    }
+  ]
+}

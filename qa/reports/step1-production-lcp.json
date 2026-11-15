@@ -1,0 +1,1846 @@
+{
+  "mobileRuns": [
+    {
+      "perf": 75,
+      "a11y": 100,
+      "bp": 100,
+      "seo": 100,
+      "fcp": 1789,
+      "lcp": 5058,
+      "tbt": 197,
+      "cls": 0,
+      "lcpDisplay": "5.1 s",
+      "lcpElement": {
+        "selector": "main#main-content > section#hero > div.hero-content > h1",
+        "snippet": "<h1 style=\"font-size:clamp(2.5rem, 5.5vw, 4.5rem);line-height:1.1\">",
+        "nodeLabel": "Reliable\nTransportation.\nTimely Delivery.\nLCV & HCV Road Freight Transport in C…"
+      },
+      "subparts": [
+        {
+          "subpart": "timeToFirstByte",
+          "label": "Time to first byte",
+          "duration": 10.732999969482423
+        },
+        {
+          "subpart": "elementRenderDelay",
+          "label": "Element render delay",
+          "duration": 2240.5500000305174
+        }
+      ],
+      "waterfallFirst3s": [
+        {
+          "url": "/",
+          "startTime": 0,
+          "duration": 11,
+          "transferSize": 23924,
+          "resourceType": "Document",
+          "mimeType": "text/html"
+        },
+        {
+          "url": "/_next/static/media/Outfit_Bold-s.p.1fcw18se4-gfj.ttf",
+          "startTime": 24,
+          "duration": 21,
+          "transferSize": 57832,
+          "resourceType": "Font",
+          "mimeType": "font/ttf"
+        },
+        {
+          "url": "/_next/static/media/PlusJakartaSans_Bold-s.p.0qnuojqj60ziw.ttf",
+          "startTime": 24,
+          "duration": 24,
+          "transferSize": 80771,
+          "resourceType": "Font",
+          "mimeType": "font/ttf"
+        },
+        {
+          "url": "/_next/static/media/PlusJakartaSans_Medium-s.p.0qnuojqj60ziw.ttf",
+          "startTime": 24,
+          "duration": 22,
+          "transferSize": 80771,
+          "resourceType": "Font",
+          "mimeType": "font/ttf"
+        },
+        {
+          "url": "/_next/static/media/PlusJakartaSans_Regular-s.p.0qnuojqj60ziw.ttf",
+          "startTime": 24,
+          "duration": 22,
+          "transferSize": 80771,
+          "resourceType": "Font",
+          "mimeType": "font/ttf"
+        },
+        {
+          "url": "/_next/image?url=%2Fimages%2Felshali-logo.webp&w=96&q=75",
+          "startTime": 25,
+          "duration": 34,
+          "transferSize": 2910,
+          "resourceType": "Image",
+          "mimeType": "image/avif"
+        },
+        {
+          "url": "/_next/static/chunks/1y49m84vx01ux.css",
+          "startTime": 25,
+          "duration": 33,
+          "transferSize": 14314,
+          "resourceType": "Stylesheet",
+          "mimeType": "text/css"
+        },
+        {
+          "url": "/_next/static/chunks/1pcw6gskne7pf.js",
+          "startTime": 25,
+          "duration": 36,
+          "transferSize": 2811,
+          "resourceType": "Script",
+          "mimeType": "application/javascript"
+        },
+        {
+          "url": "/_next/static/chunks/0li7vzj18bfpo.js",
+          "startTime": 25,
+          "duration": 41,
+          "transferSize": 9830,
+          "resourceType": "Script",
+          "mimeType": "application/javascript"
+        },
+        {
+          "url": "/_next/static/chunks/092r-mewpaf3q.js",
+          "startTime": 25,
+          "duration": 72,
+          "transferSize": 72506,
+          "resourceType": "Script",
+          "mimeType": "application/javascript"
+        },
+        {
+          "url": "/_next/static/chunks/0iumlkwknlbd6.js",
+          "startTime": 25,
+          "duration": 65,
+          "transferSize": 45941,
+          "resourceType": "Script",
+          "mimeType": "application/javascript"
+        },
+        {
+          "url": "/_next/static/chunks/turbopack-2u1d16houkiyo.js",
+          "startTime": 25,
+          "duration": 53,
+          "transferSize": 4686,
+          "resourceType": "Script",
+          "mimeType": "application/javascript"
+        },
+        {
+          "url": "/_next/static/chunks/3txeb5avg2gl-.js",
+          "startTime": 25,
+          "duration": 60,
+          "transferSize": 10348,
+          "resourceType": "Script",
+          "mimeType": "application/javascript"
+        },
+        {
+          "url": "/_next/static/chunks/0ugcga0s-041h.js",
+          "startTime": 25,
+          "duration": 62,
+          "transferSize": 21149,
+          "resourceType": "Script",
+          "mimeType": "application/javascript"
+        },
+        {
+          "url": "/_next/static/chunks/3dx5yid4z8qt4.js",
+          "startTime": 25,
+          "duration": 72,
+          "transferSize": 23649,
+          "resourceType": "Script",
+          "mimeType": "application/javascript"
+        },
+        {
+          "url": "/_next/static/chunks/3xcl8729rerp2.js",
+          "startTime": 25,
+          "duration": 81,
+          "transferSize": 49651,
+          "resourceType": "Script",
+          "mimeType": "application/javascript"
+        },
+        {
+          "url": "/images/hero-logistics-mobile.webp",
+          "startTime": 26,
+          "duration": 34,
+          "transferSize": 26679,
+          "resourceType": "Image",
+          "mimeType": "image/webp"
+        },
+        {
+          "url": "/manifest.webmanifest",
+          "startTime": 35,
+          "duration": 38,
+          "transferSize": 1109,
+          "resourceType": "Manifest",
+          "mimeType": "application/manifest+json"
+        },
+        {
+          "url": "/favicon.ico",
+          "startTime": 338,
+          "duration": 5,
+          "transferSize": 2220,
+          "resourceType": "Other",
+          "mimeType": "image/x-icon"
+        },
+        {
+          "url": "/apple-icon.png",
+          "startTime": 344,
+          "duration": 5,
+          "transferSize": 19618,
+          "resourceType": "Other",
+          "mimeType": "image/png"
+        },
+        {
+          "url": "/_next/image?url=%2Fimages%2Fwarehouse-interior.webp&w=750&q=80",
+          "startTime": 1262,
+          "duration": 10,
+          "transferSize": 39683,
+          "resourceType": "Image",
+          "mimeType": "image/avif"
+        },
+        {
+          "url": "/_next/image?url=%2Fimages%2Fhero-logistics.webp&w=750&q=80",
+          "startTime": 1262,
+          "duration": 6,
+          "transferSize": 19460,
+          "resourceType": "Image",
+          "mimeType": "image/avif"
+        },
+        {
+          "url": "/?_rsc=5CB68i4pnAekjehf",
+          "startTime": 1267,
+          "duration": 6,
+          "transferSize": 1140,
+          "resourceType": "Fetch",
+          "mimeType": "text/x-component"
+        },
+        {
+          "url": "/?_rsc=yIp22O3xgPPxC28X",
+          "startTime": 1277,
+          "duration": 6,
+          "transferSize": 4316,
+          "resourceType": "Fetch",
+          "mimeType": "text/x-component"
+        },
+        {
+          "url": "/?_rsc=8nTjltbQWvg6NcbE",
+          "startTime": 1277,
+          "duration": 6,
+          "transferSize": 3269,
+          "resourceType": "Fetch",
+          "mimeType": "text/x-component"
+        }
+      ]
+    },
+    {
+      "perf": 74,
+      "a11y": 100,
+      "bp": 100,
+      "seo": 100,
+      "fcp": 1796,
+      "lcp": 5064,
+      "tbt": 228,
+      "cls": 0,
+      "lcpDisplay": "5.1 s",
+      "lcpElement": {
+        "selector": "main#main-content > section#hero > div.hero-content > h1",
+        "snippet": "<h1 style=\"font-size:clamp(2.5rem, 5.5vw, 4.5rem);line-height:1.1\">",
+        "nodeLabel": "Reliable\nTransportation.\nTimely Delivery.\nLCV & HCV Road Freight Transport in C…"
+      },
+      "subparts": [
+        {
+          "subpart": "timeToFirstByte",
+          "label": "Time to first byte",
+          "duration": 9.607
+        },
+        {
+          "subpart": "elementRenderDelay",
+          "label": "Element render delay",
+          "duration": 2249.711
+        }
+      ],
+      "waterfallFirst3s": [
+        {
+          "url": "/",
+          "startTime": 0,
+          "duration": 10,
+          "transferSize": 23924,
+          "resourceType": "Document",
+          "mimeType": "text/html"
+        },
+        {
+          "url": "/_next/static/media/Outfit_Bold-s.p.1fcw18se4-gfj.ttf",
+          "startTime": 23,
+          "duration": 23,
+          "transferSize": 57832,
+          "resourceType": "Font",
+          "mimeType": "font/ttf"
+        },
+        {
+          "url": "/_next/static/media/PlusJakartaSans_Bold-s.p.0qnuojqj60ziw.ttf",
+          "startTime": 23,
+          "duration": 32,
+          "transferSize": 80771,
+          "resourceType": "Font",
+          "mimeType": "font/ttf"
+        },
+        {
+          "url": "/_next/static/media/PlusJakartaSans_Medium-s.p.0qnuojqj60ziw.ttf",
+          "startTime": 24,
+          "duration": 34,
+          "transferSize": 80771,
+          "resourceType": "Font",
+          "mimeType": "font/ttf"
+        },
+        {
+          "url": "/_next/static/media/PlusJakartaSans_Regular-s.p.0qnuojqj60ziw.ttf",
+          "startTime": 24,
+          "duration": 33,
+          "transferSize": 80771,
+          "resourceType": "Font",
+          "mimeType": "font/ttf"
+        },
+        {
+          "url": "/_next/image?url=%2Fimages%2Felshali-logo.webp&w=96&q=75",
+          "startTime": 24,
+          "duration": 44,
+          "transferSize": 2910,
+          "resourceType": "Image",
+          "mimeType": "image/avif"
+        },
+        {
+          "url": "/_next/static/chunks/1y49m84vx01ux.css",
+          "startTime": 24,
+          "duration": 29,
+          "transferSize": 14314,
+          "resourceType": "Stylesheet",
+          "mimeType": "text/css"
+        },
+        {
+          "url": "/_next/static/chunks/1pcw6gskne7pf.js",
+          "startTime": 24,
+          "duration": 65,
+          "transferSize": 2811,
+          "resourceType": "Script",
+          "mimeType": "application/javascript"
+        },
+        {
+          "url": "/_next/static/chunks/0li7vzj18bfpo.js",
+          "startTime": 24,
+          "duration": 66,
+          "transferSize": 9830,
+          "resourceType": "Script",
+          "mimeType": "application/javascript"
+        },
+        {
+          "url": "/_next/static/chunks/092r-mewpaf3q.js",
+          "startTime": 24,
+          "duration": 93,
+          "transferSize": 72506,
+          "resourceType": "Script",
+          "mimeType": "application/javascript"
+        },
+        {
+          "url": "/_next/static/chunks/0iumlkwknlbd6.js",
+          "startTime": 25,
+          "duration": 85,
+          "transferSize": 45941,
+          "resourceType": "Script",
+          "mimeType": "application/javascript"
+        },
+        {
+          "url": "/_next/static/chunks/turbopack-2u1d16houkiyo.js",
+          "startTime": 25,
+          "duration": 74,
+          "transferSize": 4686,
+          "resourceType": "Script",
+          "mimeType": "application/javascript"
+        },
+        {
+          "url": "/_next/static/chunks/3txeb5avg2gl-.js",
+          "startTime": 25,
+          "duration": 80,
+          "transferSize": 10348,
+          "resourceType": "Script",
+          "mimeType": "application/javascript"
+        },
+        {
+          "url": "/_next/static/chunks/0ugcga0s-041h.js",
+          "startTime": 25,
+          "duration": 90,
+          "transferSize": 21149,
+          "resourceType": "Script",
+          "mimeType": "application/javascript"
+        },
+        {
+          "url": "/_next/static/chunks/3dx5yid4z8qt4.js",
+          "startTime": 25,
+          "duration": 99,
+          "transferSize": 23649,
+          "resourceType": "Script",
+          "mimeType": "application/javascript"
+        },
+        {
+          "url": "/_next/static/chunks/3xcl8729rerp2.js",
+          "startTime": 25,
+          "duration": 106,
+          "transferSize": 49651,
+          "resourceType": "Script",
+          "mimeType": "application/javascript"
+        },
+        {
+          "url": "/images/hero-logistics-mobile.webp",
+          "startTime": 25,
+          "duration": 13,
+          "transferSize": 26679,
+          "resourceType": "Image",
+          "mimeType": "image/webp"
+        },
+        {
+          "url": "/manifest.webmanifest",
+          "startTime": 37,
+          "duration": 44,
+          "transferSize": 1109,
+          "resourceType": "Manifest",
+          "mimeType": "application/manifest+json"
+        },
+        {
+          "url": "/favicon.ico",
+          "startTime": 412,
+          "duration": 7,
+          "transferSize": 2220,
+          "resourceType": "Other",
+          "mimeType": "image/x-icon"
+        },
+        {
+          "url": "/apple-icon.png",
+          "startTime": 421,
+          "duration": 7,
+          "transferSize": 19618,
+          "resourceType": "Other",
+          "mimeType": "image/png"
+        },
+        {
+          "url": "/_next/image?url=%2Fimages%2Fwarehouse-interior.webp&w=750&q=80",
+          "startTime": 1270,
+          "duration": 9,
+          "transferSize": 39683,
+          "resourceType": "Image",
+          "mimeType": "image/avif"
+        },
+        {
+          "url": "/_next/image?url=%2Fimages%2Fhero-logistics.webp&w=750&q=80",
+          "startTime": 1270,
+          "duration": 7,
+          "transferSize": 19460,
+          "resourceType": "Image",
+          "mimeType": "image/avif"
+        },
+        {
+          "url": "/?_rsc=5CB68i4pnAekjehf",
+          "startTime": 1276,
+          "duration": 5,
+          "transferSize": 1140,
+          "resourceType": "Fetch",
+          "mimeType": "text/x-component"
+        },
+        {
+          "url": "/?_rsc=yIp22O3xgPPxC28X",
+          "startTime": 1285,
+          "duration": 5,
+          "transferSize": 4316,
+          "resourceType": "Fetch",
+          "mimeType": "text/x-component"
+        },
+        {
+          "url": "/?_rsc=8nTjltbQWvg6NcbE",
+          "startTime": 1286,
+          "duration": 5,
+          "transferSize": 3269,
+          "resourceType": "Fetch",
+          "mimeType": "text/x-component"
+        }
+      ]
+    },
+    {
+      "perf": 76,
+      "a11y": 100,
+      "bp": 100,
+      "seo": 100,
+      "fcp": 1790,
+      "lcp": 5056,
+      "tbt": 154,
+      "cls": 0,
+      "lcpDisplay": "5.1 s",
+      "lcpElement": {
+        "selector": "main#main-content > section#hero > div.hero-content > h1",
+        "snippet": "<h1 style=\"font-size:clamp(2.5rem, 5.5vw, 4.5rem);line-height:1.1\">",
+        "nodeLabel": "Reliable\nTransportation.\nTimely Delivery.\nLCV & HCV Road Freight Transport in C…"
+      },
+      "subparts": [
+        {
+          "subpart": "timeToFirstByte",
+          "label": "Time to first byte",
+          "duration": 9.779
+        },
+        {
+          "subpart": "elementRenderDelay",
+          "label": "Element render delay",
+          "duration": 2270.28
+        }
+      ],
+      "waterfallFirst3s": [
+        {
+          "url": "/",
+          "startTime": 0,
+          "duration": 10,
+          "transferSize": 23924,
+          "resourceType": "Document",
+          "mimeType": "text/html"
+        },
+        {
+          "url": "/_next/static/media/Outfit_Bold-s.p.1fcw18se4-gfj.ttf",
+          "startTime": 24,
+          "duration": 23,
+          "transferSize": 57832,
+          "resourceType": "Font",
+          "mimeType": "font/ttf"
+        },
+        {
+          "url": "/_next/static/media/PlusJakartaSans_Bold-s.p.0qnuojqj60ziw.ttf",
+          "startTime": 24,
+          "duration": 30,
+          "transferSize": 80771,
+          "resourceType": "Font",
+          "mimeType": "font/ttf"
+        },
+        {
+          "url": "/_next/static/media/PlusJakartaSans_Medium-s.p.0qnuojqj60ziw.ttf",
+          "startTime": 24,
+          "duration": 31,
+          "transferSize": 80771,
+          "resourceType": "Font",
+          "mimeType": "font/ttf"
+        },
+        {
+          "url": "/_next/static/media/PlusJakartaSans_Regular-s.p.0qnuojqj60ziw.ttf",
+          "startTime": 24,
+          "duration": 29,
+          "transferSize": 80771,
+          "resourceType": "Font",
+          "mimeType": "font/ttf"
+        },
+        {
+          "url": "/_next/image?url=%2Fimages%2Felshali-logo.webp&w=96&q=75",
+          "startTime": 25,
+          "duration": 43,
+          "transferSize": 2910,
+          "resourceType": "Image",
+          "mimeType": "image/avif"
+        },
+        {
+          "url": "/_next/static/chunks/1y49m84vx01ux.css",
+          "startTime": 25,
+          "duration": 23,
+          "transferSize": 14314,
+          "resourceType": "Stylesheet",
+          "mimeType": "text/css"
+        },
+        {
+          "url": "/_next/static/chunks/1pcw6gskne7pf.js",
+          "startTime": 25,
+          "duration": 45,
+          "transferSize": 2811,
+          "resourceType": "Script",
+          "mimeType": "application/javascript"
+        },
+        {
+          "url": "/_next/static/chunks/0li7vzj18bfpo.js",
+          "startTime": 25,
+          "duration": 47,
+          "transferSize": 9830,
+          "resourceType": "Script",
+          "mimeType": "application/javascript"
+        },
+        {
+          "url": "/_next/static/chunks/092r-mewpaf3q.js",
+          "startTime": 25,
+          "duration": 79,
+          "transferSize": 72506,
+          "resourceType": "Script",
+          "mimeType": "application/javascript"
+        },
+        {
+          "url": "/_next/static/chunks/0iumlkwknlbd6.js",
+          "startTime": 25,
+          "duration": 64,
+          "transferSize": 45941,
+          "resourceType": "Script",
+          "mimeType": "application/javascript"
+        },
+        {
+          "url": "/_next/static/chunks/turbopack-2u1d16houkiyo.js",
+          "startTime": 25,
+          "duration": 55,
+          "transferSize": 4686,
+          "resourceType": "Script",
+          "mimeType": "application/javascript"
+        },
+        {
+          "url": "/_next/static/chunks/3txeb5avg2gl-.js",
+          "startTime": 25,
+          "duration": 62,
+          "transferSize": 10348,
+          "resourceType": "Script",
+          "mimeType": "application/javascript"
+        },
+        {
+          "url": "/_next/static/chunks/0ugcga0s-041h.js",
+          "startTime": 25,
+          "duration": 68,
+          "transferSize": 21149,
+          "resourceType": "Script",
+          "mimeType": "application/javascript"
+        },
+        {
+          "url": "/_next/static/chunks/3dx5yid4z8qt4.js",
+          "startTime": 26,
+          "duration": 79,
+          "transferSize": 23649,
+          "resourceType": "Script",
+          "mimeType": "application/javascript"
+        },
+        {
+          "url": "/_next/static/chunks/3xcl8729rerp2.js",
+          "startTime": 26,
+          "duration": 88,
+          "transferSize": 49651,
+          "resourceType": "Script",
+          "mimeType": "application/javascript"
+        },
+        {
+          "url": "/images/hero-logistics-mobile.webp",
+          "startTime": 26,
+          "duration": 15,
+          "transferSize": 26679,
+          "resourceType": "Image",
+          "mimeType": "image/webp"
+        },
+        {
+          "url": "/manifest.webmanifest",
+          "startTime": 35,
+          "duration": 21,
+          "transferSize": 1109,
+          "resourceType": "Manifest",
+          "mimeType": "application/manifest+json"
+        },
+        {
+          "url": "/favicon.ico",
+          "startTime": 382,
+          "duration": 3,
+          "transferSize": 2220,
+          "resourceType": "Other",
+          "mimeType": "image/x-icon"
+        },
+        {
+          "url": "/apple-icon.png",
+          "startTime": 388,
+          "duration": 3,
+          "transferSize": 19618,
+          "resourceType": "Other",
+          "mimeType": "image/png"
+        },
+        {
+          "url": "/_next/image?url=%2Fimages%2Fwarehouse-interior.webp&w=750&q=80",
+          "startTime": 1290,
+          "duration": 8,
+          "transferSize": 39683,
+          "resourceType": "Image",
+          "mimeType": "image/avif"
+        },
+        {
+          "url": "/_next/image?url=%2Fimages%2Fhero-logistics.webp&w=750&q=80",
+          "startTime": 1290,
+          "duration": 6,
+          "transferSize": 19460,
+          "resourceType": "Image",
+          "mimeType": "image/avif"
+        },
+        {
+          "url": "/?_rsc=5CB68i4pnAekjehf",
+          "startTime": 1296,
+          "duration": 5,
+          "transferSize": 1140,
+          "resourceType": "Fetch",
+          "mimeType": "text/x-component"
+        },
+        {
+          "url": "/?_rsc=yIp22O3xgPPxC28X",
+          "startTime": 1305,
+          "duration": 5,
+          "transferSize": 4316,
+          "resourceType": "Fetch",
+          "mimeType": "text/x-component"
+        },
+        {
+          "url": "/?_rsc=8nTjltbQWvg6NcbE",
+          "startTime": 1305,
+          "duration": 5,
+          "transferSize": 3269,
+          "resourceType": "Fetch",
+          "mimeType": "text/x-component"
+        }
+      ]
+    }
+  ],
+  "desktopRuns": [
+    {
+      "perf": 72,
+      "a11y": 100,
+      "bp": 100,
+      "seo": 100,
+      "fcp": 1085,
+      "lcp": 4820,
+      "tbt": 140,
+      "cls": 0,
+      "lcpDisplay": "4.8 s",
+      "lcpElement": {
+        "selector": "main#main-content > section#hero > div.hero-content > h1",
+        "snippet": "<h1 style=\"font-size:clamp(2.5rem, 5.5vw, 4.5rem);line-height:1.1\">",
+        "nodeLabel": "Reliable\nTransportation.\nTimely Delivery.\nLCV & HCV Road Freight Transport in C…"
+      },
+      "subparts": [
+        {
+          "subpart": "timeToFirstByte",
+          "label": "Time to first byte",
+          "duration": 8.245000030517579
+        },
+        {
+          "subpart": "elementRenderDelay",
+          "label": "Element render delay",
+          "duration": 267.90999996948244
+        }
+      ],
+      "waterfallFirst3s": [
+        {
+          "url": "/",
+          "startTime": 0,
+          "duration": 8,
+          "transferSize": 23924,
+          "resourceType": "Document",
+          "mimeType": "text/html"
+        },
+        {
+          "url": "/_next/static/media/Outfit_Bold-s.p.1fcw18se4-gfj.ttf",
+          "startTime": 16,
+          "duration": 19,
+          "transferSize": 57832,
+          "resourceType": "Font",
+          "mimeType": "font/ttf"
+        },
+        {
+          "url": "/_next/static/media/PlusJakartaSans_Bold-s.p.0qnuojqj60ziw.ttf",
+          "startTime": 16,
+          "duration": 22,
+          "transferSize": 80771,
+          "resourceType": "Font",
+          "mimeType": "font/ttf"
+        },
+        {
+          "url": "/_next/static/media/PlusJakartaSans_Medium-s.p.0qnuojqj60ziw.ttf",
+          "startTime": 17,
+          "duration": 22,
+          "transferSize": 80771,
+          "resourceType": "Font",
+          "mimeType": "font/ttf"
+        },
+        {
+          "url": "/_next/static/media/PlusJakartaSans_Regular-s.p.0qnuojqj60ziw.ttf",
+          "startTime": 17,
+          "duration": 28,
+          "transferSize": 80771,
+          "resourceType": "Font",
+          "mimeType": "font/ttf"
+        },
+        {
+          "url": "/_next/image?url=%2Fimages%2Felshali-logo.webp&w=48&q=75",
+          "startTime": 17,
+          "duration": 29,
+          "transferSize": 1738,
+          "resourceType": "Image",
+          "mimeType": "image/avif"
+        },
+        {
+          "url": "/_next/static/chunks/1y49m84vx01ux.css",
+          "startTime": 17,
+          "duration": 19,
+          "transferSize": 14314,
+          "resourceType": "Stylesheet",
+          "mimeType": "text/css"
+        },
+        {
+          "url": "/_next/static/chunks/1pcw6gskne7pf.js",
+          "startTime": 18,
+          "duration": 32,
+          "transferSize": 2811,
+          "resourceType": "Script",
+          "mimeType": "application/javascript"
+        },
+        {
+          "url": "/_next/static/chunks/0li7vzj18bfpo.js",
+          "startTime": 18,
+          "duration": 34,
+          "transferSize": 9830,
+          "resourceType": "Script",
+          "mimeType": "application/javascript"
+        },
+        {
+          "url": "/_next/static/chunks/092r-mewpaf3q.js",
+          "startTime": 18,
+          "duration": 59,
+          "transferSize": 72506,
+          "resourceType": "Script",
+          "mimeType": "application/javascript"
+        },
+        {
+          "url": "/_next/static/chunks/0iumlkwknlbd6.js",
+          "startTime": 18,
+          "duration": 50,
+          "transferSize": 45941,
+          "resourceType": "Script",
+          "mimeType": "application/javascript"
+        },
+        {
+          "url": "/_next/static/chunks/turbopack-2u1d16houkiyo.js",
+          "startTime": 18,
+          "duration": 38,
+          "transferSize": 4686,
+          "resourceType": "Script",
+          "mimeType": "application/javascript"
+        },
+        {
+          "url": "/_next/static/chunks/3txeb5avg2gl-.js",
+          "startTime": 18,
+          "duration": 43,
+          "transferSize": 10348,
+          "resourceType": "Script",
+          "mimeType": "application/javascript"
+        },
+        {
+          "url": "/_next/static/chunks/0ugcga0s-041h.js",
+          "startTime": 18,
+          "duration": 49,
+          "transferSize": 21149,
+          "resourceType": "Script",
+          "mimeType": "application/javascript"
+        },
+        {
+          "url": "/_next/static/chunks/3dx5yid4z8qt4.js",
+          "startTime": 19,
+          "duration": 50,
+          "transferSize": 23649,
+          "resourceType": "Script",
+          "mimeType": "application/javascript"
+        },
+        {
+          "url": "/_next/static/chunks/3xcl8729rerp2.js",
+          "startTime": 19,
+          "duration": 62,
+          "transferSize": 49651,
+          "resourceType": "Script",
+          "mimeType": "application/javascript"
+        },
+        {
+          "url": "/images/hero-logistics.webp",
+          "startTime": 19,
+          "duration": 9,
+          "transferSize": 86308,
+          "resourceType": "Image",
+          "mimeType": "image/webp"
+        },
+        {
+          "url": "/manifest.webmanifest",
+          "startTime": 36,
+          "duration": 15,
+          "transferSize": 1109,
+          "resourceType": "Manifest",
+          "mimeType": "application/manifest+json"
+        },
+        {
+          "url": "/_next/image?url=%2Fimages%2Fwarehouse-interior.webp&w=750&q=80",
+          "startTime": 228,
+          "duration": 7,
+          "transferSize": 39683,
+          "resourceType": "Image",
+          "mimeType": "image/avif"
+        },
+        {
+          "url": "/_next/image?url=%2Fimages%2Fhero-logistics.webp&w=640&q=80",
+          "startTime": 228,
+          "duration": 9,
+          "transferSize": 15734,
+          "resourceType": "Image",
+          "mimeType": "image/avif"
+        },
+        {
+          "url": "/favicon.ico",
+          "startTime": 314,
+          "duration": 4,
+          "transferSize": 2220,
+          "resourceType": "Other",
+          "mimeType": "image/x-icon"
+        },
+        {
+          "url": "/apple-icon.png",
+          "startTime": 320,
+          "duration": 4,
+          "transferSize": 19618,
+          "resourceType": "Other",
+          "mimeType": "image/png"
+        },
+        {
+          "url": "/?_rsc=5CB68i4pnAekjehf",
+          "startTime": 358,
+          "duration": 5,
+          "transferSize": 1140,
+          "resourceType": "Fetch",
+          "mimeType": "text/x-component"
+        },
+        {
+          "url": "/?_rsc=yIp22O3xgPPxC28X",
+          "startTime": 378,
+          "duration": 9,
+          "transferSize": 4316,
+          "resourceType": "Fetch",
+          "mimeType": "text/x-component"
+        },
+        {
+          "url": "/?_rsc=8nTjltbQWvg6NcbE",
+          "startTime": 378,
+          "duration": 9,
+          "transferSize": 3269,
+          "resourceType": "Fetch",
+          "mimeType": "text/x-component"
+        }
+      ]
+    },
+    {
+      "perf": 67,
+      "a11y": 100,
+      "bp": 100,
+      "seo": 100,
+      "fcp": 1344,
+      "lcp": 4835,
+      "tbt": 200,
+      "cls": 0,
+      "lcpDisplay": "4.8 s",
+      "lcpElement": {
+        "selector": "main#main-content > section#hero > div.hero-content > h1",
+        "snippet": "<h1 style=\"font-size:clamp(2.5rem, 5.5vw, 4.5rem);line-height:1.1\">",
+        "nodeLabel": "Reliable\nTransportation.\nTimely Delivery.\nLCV & HCV Road Freight Transport in C…"
+      },
+      "subparts": [
+        {
+          "subpart": "timeToFirstByte",
+          "label": "Time to first byte",
+          "duration": 11.939000030517578
+        },
+        {
+          "subpart": "elementRenderDelay",
+          "label": "Element render delay",
+          "duration": 425.91699996948245
+        }
+      ],
+      "waterfallFirst3s": [
+        {
+          "url": "/",
+          "startTime": 0,
+          "duration": 12,
+          "transferSize": 23924,
+          "resourceType": "Document",
+          "mimeType": "text/html"
+        },
+        {
+          "url": "/_next/static/media/Outfit_Bold-s.p.1fcw18se4-gfj.ttf",
+          "startTime": 23,
+          "duration": 40,
+          "transferSize": 57832,
+          "resourceType": "Font",
+          "mimeType": "font/ttf"
+        },
+        {
+          "url": "/_next/static/media/PlusJakartaSans_Bold-s.p.0qnuojqj60ziw.ttf",
+          "startTime": 23,
+          "duration": 48,
+          "transferSize": 80771,
+          "resourceType": "Font",
+          "mimeType": "font/ttf"
+        },
+        {
+          "url": "/_next/static/media/PlusJakartaSans_Medium-s.p.0qnuojqj60ziw.ttf",
+          "startTime": 23,
+          "duration": 46,
+          "transferSize": 80771,
+          "resourceType": "Font",
+          "mimeType": "font/ttf"
+        },
+        {
+          "url": "/_next/static/media/PlusJakartaSans_Regular-s.p.0qnuojqj60ziw.ttf",
+          "startTime": 24,
+          "duration": 48,
+          "transferSize": 80771,
+          "resourceType": "Font",
+          "mimeType": "font/ttf"
+        },
+        {
+          "url": "/_next/image?url=%2Fimages%2Felshali-logo.webp&w=48&q=75",
+          "startTime": 24,
+          "duration": 60,
+          "transferSize": 1738,
+          "resourceType": "Image",
+          "mimeType": "image/avif"
+        },
+        {
+          "url": "/_next/static/chunks/1y49m84vx01ux.css",
+          "startTime": 24,
+          "duration": 26,
+          "transferSize": 14314,
+          "resourceType": "Stylesheet",
+          "mimeType": "text/css"
+        },
+        {
+          "url": "/_next/static/chunks/1pcw6gskne7pf.js",
+          "startTime": 24,
+          "duration": 60,
+          "transferSize": 2811,
+          "resourceType": "Script",
+          "mimeType": "application/javascript"
+        },
+        {
+          "url": "/_next/static/chunks/0li7vzj18bfpo.js",
+          "startTime": 24,
+          "duration": 64,
+          "transferSize": 9830,
+          "resourceType": "Script",
+          "mimeType": "application/javascript"
+        },
+        {
+          "url": "/_next/static/chunks/092r-mewpaf3q.js",
+          "startTime": 24,
+          "duration": 96,
+          "transferSize": 72506,
+          "resourceType": "Script",
+          "mimeType": "application/javascript"
+        },
+        {
+          "url": "/_next/static/chunks/0iumlkwknlbd6.js",
+          "startTime": 24,
+          "duration": 84,
+          "transferSize": 45941,
+          "resourceType": "Script",
+          "mimeType": "application/javascript"
+        },
+        {
+          "url": "/_next/static/chunks/turbopack-2u1d16houkiyo.js",
+          "startTime": 24,
+          "duration": 82,
+          "transferSize": 4686,
+          "resourceType": "Script",
+          "mimeType": "application/javascript"
+        },
+        {
+          "url": "/_next/static/chunks/3txeb5avg2gl-.js",
+          "startTime": 25,
+          "duration": 83,
+          "transferSize": 10348,
+          "resourceType": "Script",
+          "mimeType": "application/javascript"
+        },
+        {
+          "url": "/_next/static/chunks/0ugcga0s-041h.js",
+          "startTime": 25,
+          "duration": 96,
+          "transferSize": 21149,
+          "resourceType": "Script",
+          "mimeType": "application/javascript"
+        },
+        {
+          "url": "/_next/static/chunks/3dx5yid4z8qt4.js",
+          "startTime": 25,
+          "duration": 95,
+          "transferSize": 23649,
+          "resourceType": "Script",
+          "mimeType": "application/javascript"
+        },
+        {
+          "url": "/_next/static/chunks/3xcl8729rerp2.js",
+          "startTime": 25,
+          "duration": 108,
+          "transferSize": 49651,
+          "resourceType": "Script",
+          "mimeType": "application/javascript"
+        },
+        {
+          "url": "/images/hero-logistics.webp",
+          "startTime": 25,
+          "duration": 23,
+          "transferSize": 86308,
+          "resourceType": "Image",
+          "mimeType": "image/webp"
+        },
+        {
+          "url": "/manifest.webmanifest",
+          "startTime": 64,
+          "duration": 21,
+          "transferSize": 1109,
+          "resourceType": "Manifest",
+          "mimeType": "application/manifest+json"
+        },
+        {
+          "url": "/_next/image?url=%2Fimages%2Fwarehouse-interior.webp&w=750&q=80",
+          "startTime": 385,
+          "duration": 8,
+          "transferSize": 39683,
+          "resourceType": "Image",
+          "mimeType": "image/avif"
+        },
+        {
+          "url": "/_next/image?url=%2Fimages%2Fhero-logistics.webp&w=640&q=80",
+          "startTime": 386,
+          "duration": 10,
+          "transferSize": 15734,
+          "resourceType": "Image",
+          "mimeType": "image/avif"
+        },
+        {
+          "url": "/favicon.ico",
+          "startTime": 484,
+          "duration": 4,
+          "transferSize": 2220,
+          "resourceType": "Other",
+          "mimeType": "image/x-icon"
+        },
+        {
+          "url": "/apple-icon.png",
+          "startTime": 490,
+          "duration": 3,
+          "transferSize": 19618,
+          "resourceType": "Other",
+          "mimeType": "image/png"
+        },
+        {
+          "url": "/?_rsc=5CB68i4pnAekjehf",
+          "startTime": 542,
+          "duration": 6,
+          "transferSize": 1140,
+          "resourceType": "Fetch",
+          "mimeType": "text/x-component"
+        },
+        {
+          "url": "/?_rsc=yIp22O3xgPPxC28X",
+          "startTime": 574,
+          "duration": 8,
+          "transferSize": 4316,
+          "resourceType": "Fetch",
+          "mimeType": "text/x-component"
+        },
+        {
+          "url": "/?_rsc=8nTjltbQWvg6NcbE",
+          "startTime": 575,
+          "duration": 9,
+          "transferSize": 3269,
+          "resourceType": "Fetch",
+          "mimeType": "text/x-component"
+        }
+      ]
+    },
+    {
+      "perf": 66,
+      "a11y": 100,
+      "bp": 100,
+      "seo": 100,
+      "fcp": 1249,
+      "lcp": 4839,
+      "tbt": 215,
+      "cls": 0,
+      "lcpDisplay": "4.8 s",
+      "lcpElement": {
+        "selector": "main#main-content > section#hero > div.hero-content > h1",
+        "snippet": "<h1 style=\"font-size:clamp(2.5rem, 5.5vw, 4.5rem);line-height:1.1\">",
+        "nodeLabel": "Reliable\nTransportation.\nTimely Delivery.\nLCV & HCV Road Freight Transport in C…"
+      },
+      "subparts": [
+        {
+          "subpart": "timeToFirstByte",
+          "label": "Time to first byte",
+          "duration": 12.613
+        },
+        {
+          "subpart": "elementRenderDelay",
+          "label": "Element render delay",
+          "duration": 382.85
+        }
+      ],
+      "waterfallFirst3s": [
+        {
+          "url": "/",
+          "startTime": 0,
+          "duration": 13,
+          "transferSize": 23924,
+          "resourceType": "Document",
+          "mimeType": "text/html"
+        },
+        {
+          "url": "/_next/static/media/Outfit_Bold-s.p.1fcw18se4-gfj.ttf",
+          "startTime": 23,
+          "duration": 25,
+          "transferSize": 57832,
+          "resourceType": "Font",
+          "mimeType": "font/ttf"
+        },
+        {
+          "url": "/_next/static/media/PlusJakartaSans_Bold-s.p.0qnuojqj60ziw.ttf",
+          "startTime": 24,
+          "duration": 34,
+          "transferSize": 80771,
+          "resourceType": "Font",
+          "mimeType": "font/ttf"
+        },
+        {
+          "url": "/_next/static/media/PlusJakartaSans_Medium-s.p.0qnuojqj60ziw.ttf",
+          "startTime": 24,
+          "duration": 34,
+          "transferSize": 80771,
+          "resourceType": "Font",
+          "mimeType": "font/ttf"
+        },
+        {
+          "url": "/_next/static/media/PlusJakartaSans_Regular-s.p.0qnuojqj60ziw.ttf",
+          "startTime": 24,
+          "duration": 35,
+          "transferSize": 80771,
+          "resourceType": "Font",
+          "mimeType": "font/ttf"
+        },
+        {
+          "url": "/_next/image?url=%2Fimages%2Felshali-logo.webp&w=48&q=75",
+          "startTime": 24,
+          "duration": 49,
+          "transferSize": 1738,
+          "resourceType": "Image",
+          "mimeType": "image/avif"
+        },
+        {
+          "url": "/_next/static/chunks/1y49m84vx01ux.css",
+          "startTime": 24,
+          "duration": 25,
+          "transferSize": 14314,
+          "resourceType": "Stylesheet",
+          "mimeType": "text/css"
+        },
+        {
+          "url": "/_next/static/chunks/1pcw6gskne7pf.js",
+          "startTime": 25,
+          "duration": 49,
+          "transferSize": 2811,
+          "resourceType": "Script",
+          "mimeType": "application/javascript"
+        },
+        {
+          "url": "/_next/static/chunks/0li7vzj18bfpo.js",
+          "startTime": 25,
+          "duration": 50,
+          "transferSize": 9830,
+          "resourceType": "Script",
+          "mimeType": "application/javascript"
+        },
+        {
+          "url": "/_next/static/chunks/092r-mewpaf3q.js",
+          "startTime": 25,
+          "duration": 81,
+          "transferSize": 72506,
+          "resourceType": "Script",
+          "mimeType": "application/javascript"
+        },
+        {
+          "url": "/_next/static/chunks/0iumlkwknlbd6.js",
+          "startTime": 25,
+          "duration": 72,
+          "transferSize": 45941,
+          "resourceType": "Script",
+          "mimeType": "application/javascript"
+        },
+        {
+          "url": "/_next/static/chunks/turbopack-2u1d16houkiyo.js",
+          "startTime": 25,
+          "duration": 62,
+          "transferSize": 4686,
+          "resourceType": "Script",
+          "mimeType": "application/javascript"
+        },
+        {
+          "url": "/_next/static/chunks/3txeb5avg2gl-.js",
+          "startTime": 25,
+          "duration": 69,
+          "transferSize": 10348,
+          "resourceType": "Script",
+          "mimeType": "application/javascript"
+        },
+        {
+          "url": "/_next/static/chunks/0ugcga0s-041h.js",
+          "startTime": 26,
+          "duration": 72,
+          "transferSize": 21149,
+          "resourceType": "Script",
+          "mimeType": "application/javascript"
+        },
+        {
+          "url": "/_next/static/chunks/3dx5yid4z8qt4.js",
+          "startTime": 26,
+          "duration": 89,
+          "transferSize": 23649,
+          "resourceType": "Script",
+          "mimeType": "application/javascript"
+        },
+        {
+          "url": "/_next/static/chunks/3xcl8729rerp2.js",
+          "startTime": 26,
+          "duration": 97,
+          "transferSize": 49651,
+          "resourceType": "Script",
+          "mimeType": "application/javascript"
+        },
+        {
+          "url": "/images/hero-logistics.webp",
+          "startTime": 26,
+          "duration": 20,
+          "transferSize": 86308,
+          "resourceType": "Image",
+          "mimeType": "image/webp"
+        },
+        {
+          "url": "/manifest.webmanifest",
+          "startTime": 48,
+          "duration": 31,
+          "transferSize": 1109,
+          "resourceType": "Manifest",
+          "mimeType": "application/manifest+json"
+        },
+        {
+          "url": "/_next/image?url=%2Fimages%2Fwarehouse-interior.webp&w=750&q=80",
+          "startTime": 348,
+          "duration": 7,
+          "transferSize": 39683,
+          "resourceType": "Image",
+          "mimeType": "image/avif"
+        },
+        {
+          "url": "/_next/image?url=%2Fimages%2Fhero-logistics.webp&w=640&q=80",
+          "startTime": 349,
+          "duration": 10,
+          "transferSize": 15734,
+          "resourceType": "Image",
+          "mimeType": "image/avif"
+        },
+        {
+          "url": "/favicon.ico",
+          "startTime": 446,
+          "duration": 4,
+          "transferSize": 2220,
+          "resourceType": "Other",
+          "mimeType": "image/x-icon"
+        },
+        {
+          "url": "/apple-icon.png",
+          "startTime": 453,
+          "duration": 4,
+          "transferSize": 19618,
+          "resourceType": "Other",
+          "mimeType": "image/png"
+        },
+        {
+          "url": "/?_rsc=5CB68i4pnAekjehf",
+          "startTime": 494,
+          "duration": 6,
+          "transferSize": 1140,
+          "resourceType": "Fetch",
+          "mimeType": "text/x-component"
+        },
+        {
+          "url": "/?_rsc=yIp22O3xgPPxC28X",
+          "startTime": 511,
+          "duration": 9,
+          "transferSize": 4316,
+          "resourceType": "Fetch",
+          "mimeType": "text/x-component"
+        },
+        {
+          "url": "/?_rsc=8nTjltbQWvg6NcbE",
+          "startTime": 511,
+          "duration": 8,
+          "transferSize": 3269,
+          "resourceType": "Fetch",
+          "mimeType": "text/x-component"
+        }
+      ]
+    }
+  ],
+  "medianMobile": {
+    "perf": 75,
+    "a11y": 100,
+    "bp": 100,
+    "seo": 100,
+    "fcp": 1789,
+    "lcp": 5058,
+    "tbt": 197,
+    "cls": 0,
+    "lcpDisplay": "5.1 s",
+    "lcpElement": {
+      "selector": "main#main-content > section#hero > div.hero-content > h1",
+      "snippet": "<h1 style=\"font-size:clamp(2.5rem, 5.5vw, 4.5rem);line-height:1.1\">",
+      "nodeLabel": "Reliable\nTransportation.\nTimely Delivery.\nLCV & HCV Road Freight Transport in C…"
+    },
+    "subparts": [
+      {
+        "subpart": "timeToFirstByte",
+        "label": "Time to first byte",
+        "duration": 10.732999969482423
+      },
+      {
+        "subpart": "elementRenderDelay",
+        "label": "Element render delay",
+        "duration": 2240.5500000305174
+      }
+    ],
+    "waterfallFirst3s": [
+      {
+        "url": "/",
+        "startTime": 0,
+        "duration": 11,
+        "transferSize": 23924,
+        "resourceType": "Document",
+        "mimeType": "text/html"
+      },
+      {
+        "url": "/_next/static/media/Outfit_Bold-s.p.1fcw18se4-gfj.ttf",
+        "startTime": 24,
+        "duration": 21,
+        "transferSize": 57832,
+        "resourceType": "Font",
+        "mimeType": "font/ttf"
+      },
+      {
+        "url": "/_next/static/media/PlusJakartaSans_Bold-s.p.0qnuojqj60ziw.ttf",
+        "startTime": 24,
+        "duration": 24,
+        "transferSize": 80771,
+        "resourceType": "Font",
+        "mimeType": "font/ttf"
+      },
+      {
+        "url": "/_next/static/media/PlusJakartaSans_Medium-s.p.0qnuojqj60ziw.ttf",
+        "startTime": 24,
+        "duration": 22,
+        "transferSize": 80771,
+        "resourceType": "Font",
+        "mimeType": "font/ttf"
+      },
+      {
+        "url": "/_next/static/media/PlusJakartaSans_Regular-s.p.0qnuojqj60ziw.ttf",
+        "startTime": 24,
+        "duration": 22,
+        "transferSize": 80771,
+        "resourceType": "Font",
+        "mimeType": "font/ttf"
+      },
+      {
+        "url": "/_next/image?url=%2Fimages%2Felshali-logo.webp&w=96&q=75",
+        "startTime": 25,
+        "duration": 34,
+        "transferSize": 2910,
+        "resourceType": "Image",
+        "mimeType": "image/avif"
+      },
+      {
+        "url": "/_next/static/chunks/1y49m84vx01ux.css",
+        "startTime": 25,
+        "duration": 33,
+        "transferSize": 14314,
+        "resourceType": "Stylesheet",
+        "mimeType": "text/css"
+      },
+      {
+        "url": "/_next/static/chunks/1pcw6gskne7pf.js",
+        "startTime": 25,
+        "duration": 36,
+        "transferSize": 2811,
+        "resourceType": "Script",
+        "mimeType": "application/javascript"
+      },
+      {
+        "url": "/_next/static/chunks/0li7vzj18bfpo.js",
+        "startTime": 25,
+        "duration": 41,
+        "transferSize": 9830,
+        "resourceType": "Script",
+        "mimeType": "application/javascript"
+      },
+      {
+        "url": "/_next/static/chunks/092r-mewpaf3q.js",
+        "startTime": 25,
+        "duration": 72,
+        "transferSize": 72506,
+        "resourceType": "Script",
+        "mimeType": "application/javascript"
+      },
+      {
+        "url": "/_next/static/chunks/0iumlkwknlbd6.js",
+        "startTime": 25,
+        "duration": 65,
+        "transferSize": 45941,
+        "resourceType": "Script",
+        "mimeType": "application/javascript"
+      },
+      {
+        "url": "/_next/static/chunks/turbopack-2u1d16houkiyo.js",
+        "startTime": 25,
+        "duration": 53,
+        "transferSize": 4686,
+        "resourceType": "Script",
+        "mimeType": "application/javascript"
+      },
+      {
+        "url": "/_next/static/chunks/3txeb5avg2gl-.js",
+        "startTime": 25,
+        "duration": 60,
+        "transferSize": 10348,
+        "resourceType": "Script",
+        "mimeType": "application/javascript"
+      },
+      {
+        "url": "/_next/static/chunks/0ugcga0s-041h.js",
+        "startTime": 25,
+        "duration": 62,
+        "transferSize": 21149,
+        "resourceType": "Script",
+        "mimeType": "application/javascript"
+      },
+      {
+        "url": "/_next/static/chunks/3dx5yid4z8qt4.js",
+        "startTime": 25,
+        "duration": 72,
+        "transferSize": 23649,
+        "resourceType": "Script",
+        "mimeType": "application/javascript"
+      },
+      {
+        "url": "/_next/static/chunks/3xcl8729rerp2.js",
+        "startTime": 25,
+        "duration": 81,
+        "transferSize": 49651,
+        "resourceType": "Script",
+        "mimeType": "application/javascript"
+      },
+      {
+        "url": "/images/hero-logistics-mobile.webp",
+        "startTime": 26,
+        "duration": 34,
+        "transferSize": 26679,
+        "resourceType": "Image",
+        "mimeType": "image/webp"
+      },
+      {
+        "url": "/manifest.webmanifest",
+        "startTime": 35,
+        "duration": 38,
+        "transferSize": 1109,
+        "resourceType": "Manifest",
+        "mimeType": "application/manifest+json"
+      },
+      {
+        "url": "/favicon.ico",
+        "startTime": 338,
+        "duration": 5,
+        "transferSize": 2220,
+        "resourceType": "Other",
+        "mimeType": "image/x-icon"
+      },
+      {
+        "url": "/apple-icon.png",
+        "startTime": 344,
+        "duration": 5,
+        "transferSize": 19618,
+        "resourceType": "Other",
+        "mimeType": "image/png"
+      },
+      {
+        "url": "/_next/image?url=%2Fimages%2Fwarehouse-interior.webp&w=750&q=80",
+        "startTime": 1262,
+        "duration": 10,
+        "transferSize": 39683,
+        "resourceType": "Image",
+        "mimeType": "image/avif"
+      },
+      {
+        "url": "/_next/image?url=%2Fimages%2Fhero-logistics.webp&w=750&q=80",
+        "startTime": 1262,
+        "duration": 6,
+        "transferSize": 19460,
+        "resourceType": "Image",
+        "mimeType": "image/avif"
+      },
+      {
+        "url": "/?_rsc=5CB68i4pnAekjehf",
+        "startTime": 1267,
+        "duration": 6,
+        "transferSize": 1140,
+        "resourceType": "Fetch",
+        "mimeType": "text/x-component"
+      },
+      {
+        "url": "/?_rsc=yIp22O3xgPPxC28X",
+        "startTime": 1277,
+        "duration": 6,
+        "transferSize": 4316,
+        "resourceType": "Fetch",
+        "mimeType": "text/x-component"
+      },
+      {
+        "url": "/?_rsc=8nTjltbQWvg6NcbE",
+        "startTime": 1277,
+        "duration": 6,
+        "transferSize": 3269,
+        "resourceType": "Fetch",
+        "mimeType": "text/x-component"
+      }
+    ]
+  },
+  "medianDesktop": {
+    "perf": 67,
+    "a11y": 100,
+    "bp": 100,
+    "seo": 100,
+    "fcp": 1344,
+    "lcp": 4835,
+    "tbt": 200,
+    "cls": 0,
+    "lcpDisplay": "4.8 s",
+    "lcpElement": {
+      "selector": "main#main-content > section#hero > div.hero-content > h1",
+      "snippet": "<h1 style=\"font-size:clamp(2.5rem, 5.5vw, 4.5rem);line-height:1.1\">",
+      "nodeLabel": "Reliable\nTransportation.\nTimely Delivery.\nLCV & HCV Road Freight Transport in C…"
+    },
+    "subparts": [
+      {
+        "subpart": "timeToFirstByte",
+        "label": "Time to first byte",
+        "duration": 11.939000030517578
+      },
+      {
+        "subpart": "elementRenderDelay",
+        "label": "Element render delay",
+        "duration": 425.91699996948245
+      }
+    ],
+    "waterfallFirst3s": [
+      {
+        "url": "/",
+        "startTime": 0,
+        "duration": 12,
+        "transferSize": 23924,
+        "resourceType": "Document",
+        "mimeType": "text/html"
+      },
+      {
+        "url": "/_next/static/media/Outfit_Bold-s.p.1fcw18se4-gfj.ttf",
+        "startTime": 23,
+        "duration": 40,
+        "transferSize": 57832,
+        "resourceType": "Font",
+        "mimeType": "font/ttf"
+      },
+      {
+        "url": "/_next/static/media/PlusJakartaSans_Bold-s.p.0qnuojqj60ziw.ttf",
+        "startTime": 23,
+        "duration": 48,
+        "transferSize": 80771,
+        "resourceType": "Font",
+        "mimeType": "font/ttf"
+      },
+      {
+        "url": "/_next/static/media/PlusJakartaSans_Medium-s.p.0qnuojqj60ziw.ttf",
+        "startTime": 23,
+        "duration": 46,
+        "transferSize": 80771,
+        "resourceType": "Font",
+        "mimeType": "font/ttf"
+      },
+      {
+        "url": "/_next/static/media/PlusJakartaSans_Regular-s.p.0qnuojqj60ziw.ttf",
+        "startTime": 24,
+        "duration": 48,
+        "transferSize": 80771,
+        "resourceType": "Font",
+        "mimeType": "font/ttf"
+      },
+      {
+        "url": "/_next/image?url=%2Fimages%2Felshali-logo.webp&w=48&q=75",
+        "startTime": 24,
+        "duration": 60,
+        "transferSize": 1738,
+        "resourceType": "Image",
+        "mimeType": "image/avif"
+      },
+      {
+        "url": "/_next/static/chunks/1y49m84vx01ux.css",
+        "startTime": 24,
+        "duration": 26,
+        "transferSize": 14314,
+        "resourceType": "Stylesheet",
+        "mimeType": "text/css"
+      },
+      {
+        "url": "/_next/static/chunks/1pcw6gskne7pf.js",
+        "startTime": 24,
+        "duration": 60,
+        "transferSize": 2811,
+        "resourceType": "Script",
+        "mimeType": "application/javascript"
+      },
+      {
+        "url": "/_next/static/chunks/0li7vzj18bfpo.js",
+        "startTime": 24,
+        "duration": 64,
+        "transferSize": 9830,
+        "resourceType": "Script",
+        "mimeType": "application/javascript"
+      },
+      {
+        "url": "/_next/static/chunks/092r-mewpaf3q.js",
+        "startTime": 24,
+        "duration": 96,
+        "transferSize": 72506,
+        "resourceType": "Script",
+        "mimeType": "application/javascript"
+      },
+      {
+        "url": "/_next/static/chunks/0iumlkwknlbd6.js",
+        "startTime": 24,
+        "duration": 84,
+        "transferSize": 45941,
+        "resourceType": "Script",
+        "mimeType": "application/javascript"
+      },
+      {
+        "url": "/_next/static/chunks/turbopack-2u1d16houkiyo.js",
+        "startTime": 24,
+        "duration": 82,
+        "transferSize": 4686,
+        "resourceType": "Script",
+        "mimeType": "application/javascript"
+      },
+      {
+        "url": "/_next/static/chunks/3txeb5avg2gl-.js",
+        "startTime": 25,
+        "duration": 83,
+        "transferSize": 10348,
+        "resourceType": "Script",
+        "mimeType": "application/javascript"
+      },
+      {
+        "url": "/_next/static/chunks/0ugcga0s-041h.js",
+        "startTime": 25,
+        "duration": 96,
+        "transferSize": 21149,
+        "resourceType": "Script",
+        "mimeType": "application/javascript"
+      },
+      {
+        "url": "/_next/static/chunks/3dx5yid4z8qt4.js",
+        "startTime": 25,
+        "duration": 95,
+        "transferSize": 23649,
+        "resourceType": "Script",
+        "mimeType": "application/javascript"
+      },
+      {
+        "url": "/_next/static/chunks/3xcl8729rerp2.js",
+        "startTime": 25,
+        "duration": 108,
+        "transferSize": 49651,
+        "resourceType": "Script",
+        "mimeType": "application/javascript"
+      },
+      {
+        "url": "/images/hero-logistics.webp",
+        "startTime": 25,
+        "duration": 23,
+        "transferSize": 86308,
+        "resourceType": "Image",
+        "mimeType": "image/webp"
+      },
+      {
+        "url": "/manifest.webmanifest",
+        "startTime": 64,
+        "duration": 21,
+        "transferSize": 1109,
+        "resourceType": "Manifest",
+        "mimeType": "application/manifest+json"
+      },
+      {
+        "url": "/_next/image?url=%2Fimages%2Fwarehouse-interior.webp&w=750&q=80",
+        "startTime": 385,
+        "duration": 8,
+        "transferSize": 39683,
+        "resourceType": "Image",
+        "mimeType": "image/avif"
+      },
+      {
+        "url": "/_next/image?url=%2Fimages%2Fhero-logistics.webp&w=640&q=80",
+        "startTime": 386,
+        "duration": 10,
+        "transferSize": 15734,
+        "resourceType": "Image",
+        "mimeType": "image/avif"
+      },
+      {
+        "url": "/favicon.ico",
+        "startTime": 484,
+        "duration": 4,
+        "transferSize": 2220,
+        "resourceType": "Other",
+        "mimeType": "image/x-icon"
+      },
+      {
+        "url": "/apple-icon.png",
+        "startTime": 490,
+        "duration": 3,
+        "transferSize": 19618,
+        "resourceType": "Other",
+        "mimeType": "image/png"
+      },
+      {
+        "url": "/?_rsc=5CB68i4pnAekjehf",
+        "startTime": 542,
+        "duration": 6,
+        "transferSize": 1140,
+        "resourceType": "Fetch",
+        "mimeType": "text/x-component"
+      },
+      {
+        "url": "/?_rsc=yIp22O3xgPPxC28X",
+        "startTime": 574,
+        "duration": 8,
+        "transferSize": 4316,
+        "resourceType": "Fetch",
+        "mimeType": "text/x-component"
+      },
+      {
+        "url": "/?_rsc=8nTjltbQWvg6NcbE",
+        "startTime": 575,
+        "duration": 9,
+        "transferSize": 3269,
+        "resourceType": "Fetch",
+        "mimeType": "text/x-component"
+      }
+    ]
+  }
+}

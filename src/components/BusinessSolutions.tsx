@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import {
   Factory,
   HardHat,
@@ -52,23 +52,8 @@ const solutions = [
 ];
 
 export default function BusinessSolutions() {
-  const sectionRef = useRef<HTMLElement>(null);
+  const sectionRef = useScrollAnimation<HTMLElement>('.reveal');
   const { openQuote } = useQuote();
-
-  useEffect(() => {
-    const els = sectionRef.current?.querySelectorAll('.reveal');
-    if (!els) return;
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) entry.target.classList.add('visible');
-        });
-      },
-      { threshold: 0.1 }
-    );
-    els.forEach((el) => observer.observe(el));
-    return () => observer.disconnect();
-  }, []);
 
   return (
     <section
@@ -92,7 +77,7 @@ export default function BusinessSolutions() {
             <span className="magenta">For Every Business</span>
           </h2>
           <p style={{ textAlign: 'center', maxWidth: '560px', margin: '16px auto 0', color: 'var(--color-slate-500)' }}>
-            ELSALI LOGISTICS supports manufacturers, industries, traders, distributors, logistics companies and corporate enterprises.
+            ELSHALI LOGISTICS supports manufacturers, industries, traders, distributors, logistics companies and corporate enterprises.
           </p>
         </div>
 

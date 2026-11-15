@@ -1,30 +1,30 @@
-'use client';
-
-import Link from 'next/link';
-import { Truck } from 'lucide-react';
+import { Truck, Home, Phone, ArrowRight } from 'lucide-react';
+import PageHero from '@/components/ui/PageHero';
+import Button from '@/components/ui/Button';
+import { siteConfig } from '@/data/site';
 
 export default function NotFound() {
   return (
-    <section className="page-hero" style={{ minHeight: '70vh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
-      <div className="page-hero-glow"></div>
-      <div style={{ marginBottom: '24px', background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)', padding: '24px', borderRadius: '50%' }}>
-        <Truck size={48} color="var(--primary)" />
-      </div>
-      <h1 className="page-hero-title" style={{ marginBottom: '16px' }}>
-        Page <span className="highlight">Not Found</span>
-      </h1>
-      <p className="page-hero-subtitle" style={{ marginBottom: '32px' }}>
-        Sorry, the page you are looking for doesn&#39;t exist or has been moved. Let us help you find the right route.
-      </p>
-      <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap', justifyContent: 'center' }}>
-        <Link href="/" className="btn btn-primary btn-lg">
-          Back to Home
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-        </Link>
-        <Link href="/contact" className="btn btn-outline btn-lg">
-          Contact Us
-        </Link>
-      </div>
-    </section>
+    <div className="subpage-wrapper" style={{ minHeight: '80vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', paddingTop: '100px' }}>
+      <PageHero
+        badge="404 — Route Not Found"
+        badgeIcon={<Truck size={14} />}
+        title="Destination Route"
+        highlight="Not Found"
+        subtitle={`The freight page or link you requested cannot be located. Let ${siteConfig.name} guide you back to our active transport corridors.`}
+      >
+        <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap', justifyContent: 'center', marginTop: '28px' }}>
+          <Button href="/" variant="primary" size="lg">
+            <Home size={16} /> Return to Home
+          </Button>
+          <Button href="/services" variant="outline" size="lg">
+            Our Services <ArrowRight size={16} />
+          </Button>
+          <Button href="/contact" variant="dark" size="lg">
+            <Phone size={16} /> Contact Dispatch
+          </Button>
+        </div>
+      </PageHero>
+    </div>
   );
 }

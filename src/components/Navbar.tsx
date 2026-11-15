@@ -1,11 +1,14 @@
 'use client';
 
 import { useState, useEffect, useCallback, useRef } from 'react';
+import Link from 'next/link';
 import Image from 'next/image';
-import { navLinks } from '@/data/site';
+import { usePathname } from 'next/navigation';
+import { navLinks, siteConfig } from '@/data/site';
 import { useQuote } from './QuoteProvider';
 
 export default function Navbar() {
+  const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('#hero');
@@ -19,8 +22,10 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Scrollspy with IntersectionObserver
+  // Scrollspy with IntersectionObserver (only on homepage)
   useEffect(() => {
+    if (pathname !== '/') return;
+
     const sectionIds = navLinks.map((l) => l.href.replace('#', ''));
     const sections = sectionIds
       .map((id) => document.getElementById(id))
@@ -39,9 +44,9 @@ export default function Navbar() {
 
     sections.forEach((s) => observerRef.current?.observe(s));
     return () => observerRef.current?.disconnect();
-  }, []);
+  }, [pathname]);
 
-  // Body lock
+  // Body lock when mobile menu is open
   useEffect(() => {
     if (mobileOpen) {
       document.body.style.overflow = 'hidden';
@@ -53,7 +58,7 @@ export default function Navbar() {
     };
   }, [mobileOpen]);
 
-  // ESC key
+  // ESC key closes mobile menu
   const handleKeyDown = useCallback(
     (e: KeyboardEvent) => {
       if (e.key === 'Escape' && mobileOpen) setMobileOpen(false);
@@ -66,14 +71,19 @@ export default function Navbar() {
     return () => document.removeEventListener('keydown', handleKeyDown);
   }, [handleKeyDown]);
 
-  const handleNavClick = (href: string) => {
+  const handleNavClick = (href: string, e: React.MouseEvent) => {
     setMobileOpen(false);
-    if (typeof window !== 'undefined' && window.location.pathname !== '/') {
-      window.location.assign(href.startsWith('/') ? href : `/${href}`);
-      return;
+    if (pathname === '/') {
+      e.preventDefault();
+      const targetHash = href.startsWith('/') ? href.slice(1) : href;
+      const el = document.querySelector(targetHash);
+      if (el) {
+        const rect = el.getBoundingClientRect();
+        const offsetTop = window.scrollY + rect.top - 80;
+        window.scrollTo({ top: offsetTop, behavior: 'smooth' });
+        window.history.pushState(null, '', targetHash);
+      }
     }
-    const el = document.querySelector(href);
-    if (el) el.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
@@ -85,11 +95,16 @@ export default function Navbar() {
         id="main-nav"
       >
         {/* Brand */}
-        <a href="#hero" className="navbar-brand" onClick={() => handleNavClick('#hero')}>
+        <Link
+          href="/#hero"
+          className="navbar-brand"
+          onClick={(e) => handleNavClick('#hero', e)}
+          aria-label={`${siteConfig.name} Home`}
+        >
           <div className="navbar-logo-tile">
             <Image
-              src="/images/elsali-logo.webp"
-              alt="ELSALI LOGISTICS Logo"
+              src="/images/elshali-logo.webp"
+              alt={`${siteConfig.name} Official Logo`}
               width={44}
               height={44}
               priority
@@ -97,26 +112,27 @@ export default function Navbar() {
           </div>
           <div className="navbar-brand-text">
             <div className="navbar-brand-name">
-              ELSALI <span>LOGISTICS</span>
+              ELSHALI <span>LOGISTICS</span>
             </div>
           </div>
-        </a>
+        </Link>
 
         {/* Link capsule */}
         <div className="navbar-capsule">
-          {navLinks.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              className={activeSection === link.href ? 'active' : ''}
-              onClick={(e) => {
-                e.preventDefault();
-                handleNavClick(link.href);
-              }}
-            >
-              {link.label}
-            </a>
-          ))}
+          {navLinks.map((link) => {
+            const targetHref = `/${link.href}`;
+            const isActive = pathname === '/' && activeSection === link.href;
+            return (
+              <Link
+                key={link.href}
+                href={targetHref}
+                className={isActive ? 'active' : ''}
+                onClick={(e) => handleNavClick(link.href, e)}
+              >
+                {link.label}
+              </Link>
+            );
+          })}
         </div>
 
         {/* CTA + mobile toggle */}
@@ -124,6 +140,7 @@ export default function Navbar() {
           <button
             className="nav-cta nav-cta-desktop"
             onClick={() => openQuote()}
+            type="button"
           >
             GET A QUOTE
           </button>
@@ -132,6 +149,7 @@ export default function Navbar() {
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
             aria-expanded={mobileOpen}
+            type="button"
           >
             <span></span>
             <span></span>
@@ -146,19 +164,17 @@ export default function Navbar() {
         data-lenis-prevent="true"
         role="dialog"
         aria-modal="true"
+        aria-label="Mobile Navigation"
       >
         {navLinks.map((link) => (
-          <a
+          <Link
             key={link.href}
-            href={link.href}
-            className={activeSection === link.href ? 'active' : ''}
-            onClick={(e) => {
-              e.preventDefault();
-              handleNavClick(link.href);
-            }}
+            href={`/${link.href}`}
+            className={pathname === '/' && activeSection === link.href ? 'active' : ''}
+            onClick={(e) => handleNavClick(link.href, e)}
           >
             {link.label}
-          </a>
+          </Link>
         ))}
         <button
           className="mobile-sheet-cta"
@@ -166,6 +182,7 @@ export default function Navbar() {
             setMobileOpen(false);
             openQuote();
           }}
+          type="button"
         >
           GET A QUOTE
         </button>

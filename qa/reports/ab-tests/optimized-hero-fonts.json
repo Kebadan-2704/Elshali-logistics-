@@ -1,0 +1,71 @@
+{
+  "testName": "optimized-hero-fonts",
+  "mobileMedian": {
+    "perf": 76,
+    "fcp": 1851,
+    "lcp": 4249,
+    "tbt": 302,
+    "cls": 0,
+    "lcpDisplay": "4.2 s"
+  },
+  "desktopMedian": {
+    "perf": 69,
+    "fcp": 1195,
+    "lcp": 3974,
+    "tbt": 211,
+    "cls": 0,
+    "lcpDisplay": "4.0 s"
+  },
+  "mobileRuns": [
+    {
+      "perf": 76,
+      "fcp": 1851,
+      "lcp": 4249,
+      "tbt": 302,
+      "cls": 0,
+      "lcpDisplay": "4.2 s"
+    },
+    {
+      "perf": 61,
+      "fcp": 2085,
+      "lcp": 4576,
+      "tbt": 750,
+      "cls": 0,
+      "lcpDisplay": "4.6 s"
+    },
+    {
+      "perf": 76,
+      "fcp": 1904,
+      "lcp": 4172,
+      "tbt": 325,
+      "cls": 0,
+      "lcpDisplay": "4.2 s"
+    }
+  ],
+  "desktopRuns": [
+    {
+      "perf": 70,
+      "fcp": 1287,
+      "lcp": 3843,
+      "tbt": 194,
+      "cls": 0,
+      "lcpDisplay": "3.8 s"
+    },
+    {
+      "perf": 55,
+      "fcp": 1473,
+      "lcp": 4089,
+      "tbt": 413,
+      "cls": 0,
+      "lcpDisplay": "4.1 s"
+    },
+    {
+      "perf": 69,
+      "fcp": 1195,
+      "lcp": 3974,
+      "tbt": 211,
+      "cls": 0,
+      "lcpDisplay": "4.0 s"
+    }
+  ]
+}

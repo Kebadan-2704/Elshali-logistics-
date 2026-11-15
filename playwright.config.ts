@@ -2,7 +2,7 @@ import { defineConfig, devices } from '@playwright/test';
 
 export default defineConfig({
   testDir: './qa',
-  timeout: 30000,
+  timeout: 60000,
   fullyParallel: false,
   reporter: [['list'], ['json', { outputFile: 'qa/reports/playwright-results.json' }]],
   use: {

@@ -86,6 +86,28 @@ function HubsGrid() {
 export default function Routes() {
   const [activeTab, setActiveTab] = useState<FilterTab>('all');
 
+  const filterTabs = [
+    { key: 'all' as const, label: 'All Corridors & Hubs', icon: Globe },
+    { key: 'tamil-nadu' as const, label: 'Tamil Nadu Hubs', icon: MapPin },
+    { key: 'pan-india' as const, label: 'Pan-India Corridors', icon: Truck },
+  ];
+
+  const handleTabKeyDown = (e: React.KeyboardEvent, index: number) => {
+    if (e.key === 'ArrowRight') {
+      e.preventDefault();
+      const nextIndex = (index + 1) % filterTabs.length;
+      setActiveTab(filterTabs[nextIndex].key);
+      const nextEl = document.getElementById(`tab-${filterTabs[nextIndex].key}`);
+      nextEl?.focus();
+    } else if (e.key === 'ArrowLeft') {
+      e.preventDefault();
+      const prevIndex = (index - 1 + filterTabs.length) % filterTabs.length;
+      setActiveTab(filterTabs[prevIndex].key);
+      const prevEl = document.getElementById(`tab-${filterTabs[prevIndex].key}`);
+      prevEl?.focus();
+    }
+  };
+
   return (
     <section id="routes" className="routes-section" aria-labelledby="routes-heading">
       <div className="container">
@@ -103,17 +125,20 @@ export default function Routes() {
           </p>
         </div>
 
-        {/* Filter pills */}
-        <div className="routes-filters">
-          {([
-            { key: 'all' as const, label: 'All', icon: Globe },
-            { key: 'tamil-nadu' as const, label: 'Tamil Nadu', icon: MapPin },
-            { key: 'pan-india' as const, label: 'Pan India', icon: Truck },
-          ]).map((f) => (
+        {/* Filter pills with ARIA Tablist */}
+        <div className="routes-filters" role="tablist" aria-label="Route category filters">
+          {filterTabs.map((f, i) => (
             <button
               key={f.key}
+              id={`tab-${f.key}`}
+              role="tab"
+              aria-selected={activeTab === f.key}
+              aria-controls={`tabpanel-${f.key}`}
+              tabIndex={activeTab === f.key ? 0 : -1}
               className={`route-filter ${activeTab === f.key ? 'active' : 'inactive'}`}
               onClick={() => setActiveTab(f.key)}
+              onKeyDown={(e) => handleTabKeyDown(e, i)}
+              type="button"
             >
               <f.icon size={14} />
               {f.label}
@@ -121,10 +146,14 @@ export default function Routes() {
           ))}
         </div>
 
-        {/* Content */}
+        {/* Content with ARIA Tabpanel */}
         <AnimatePresence mode="wait">
           <motion.div
             key={activeTab}
+            id={`tabpanel-${activeTab}`}
+            role="tabpanel"
+            aria-labelledby={`tab-${activeTab}`}
+            tabIndex={0}
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -12 }}

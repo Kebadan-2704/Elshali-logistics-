@@ -1,8 +1,8 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import { Truck, ShieldCheck, Clock, Target, Eye, Headset } from 'lucide-react';
+import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
 const values = [
   {
@@ -32,24 +32,7 @@ const values = [
 ];
 
 export default function About() {
-  const sectionRef = useRef<HTMLElement>(null);
-
-  useEffect(() => {
-    const els = sectionRef.current?.querySelectorAll('.reveal');
-    if (!els) return;
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
-    els.forEach((el) => observer.observe(el));
-    return () => observer.disconnect();
-  }, []);
+  const sectionRef = useScrollAnimation<HTMLElement>('.reveal');
 
   return (
     <section
@@ -103,7 +86,7 @@ export default function About() {
 
           {/* Right — copy */}
           <div className="about-copy reveal">
-            <div className="eyebrow magenta">ABOUT ELSALI</div>
+            <div className="eyebrow magenta">ABOUT ELSHALI LOGISTICS</div>
             <h2 id="about-heading" className="section-heading" style={{ fontSize: '40px', color: 'var(--color-ink)' }}>
               Moving Businesses Forward,<br />
               <span className="magenta">One Delivery at a Time.</span>

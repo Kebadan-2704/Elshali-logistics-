@@ -2,35 +2,31 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
-import { ArrowRight, Maximize, Award, Globe } from 'lucide-react';
+import { ArrowRight, Plus } from 'lucide-react';
 import { vehicles } from '@/data/vehicles';
 import { useQuote } from './QuoteProvider';
-
-const rowIcons = [Maximize, Award, Globe, Maximize];
 
 function VehicleRow({
   items,
   defaultActive,
-  height,
 }: {
   items: typeof vehicles;
   defaultActive: number;
-  height: string;
 }) {
   const [activeIndex, setActiveIndex] = useState(defaultActive);
   const { openQuote } = useQuote();
 
   return (
-    <div className="vehicles-row" style={{ height }}>
+    <div className="vehicles-row">
       {items.map((v, i) => {
         const isActive = activeIndex === i;
-        const Icon = rowIcons[i % rowIcons.length];
 
         return (
           <article
             key={v.id}
             className={`vehicle-card ${isActive ? 'active' : ''}`}
             onMouseEnter={() => setActiveIndex(i)}
+            onClick={() => setActiveIndex(i)}
           >
             {/* Background image via next/image */}
             <div className="vehicle-card-bg">
@@ -61,7 +57,10 @@ function VehicleRow({
                     <button
                       type="button"
                       className="vehicle-request-btn"
-                      onClick={() => openQuote(v.name)}
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        openQuote(v.name);
+                      }}
                       aria-label={`REQUEST VEHICLE — ${v.name}`}
                     >
                       REQUEST VEHICLE
@@ -76,10 +75,14 @@ function VehicleRow({
                     <button
                       type="button"
                       className="vehicle-collapsed-btn"
-                      onClick={() => setActiveIndex(i)}
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        setActiveIndex(i);
+                      }}
                       aria-label={`Expand details for ${v.name}`}
+                      aria-expanded="false"
                     >
-                      <Icon size={16} aria-hidden="true" />
+                      <Plus size={16} aria-hidden="true" />
                     </button>
                   </div>
                 )}
@@ -118,9 +121,9 @@ export default function Vehicles() {
           </p>
         </div>
 
-        {/* Two rows */}
-        <VehicleRow items={row1} defaultActive={0} height="380px" />
-        <VehicleRow items={row2} defaultActive={0} height="417px" />
+        {/* Two rows without hardcoded fixed heights */}
+        <VehicleRow items={row1} defaultActive={0} />
+        <VehicleRow items={row2} defaultActive={0} />
       </div>
     </section>
   );

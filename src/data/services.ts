@@ -115,6 +115,6 @@ export const services: Service[] = [
       'Factory-to-warehouse transit',
       'Heavy equipment & raw material movement',
     ],
-    tone: 'frost',
+    tone: 'light',
   },
 ];

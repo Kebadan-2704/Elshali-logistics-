@@ -1,26 +1,28 @@
-'use client';
-
-import Image from 'next/image';
-import { useQuote } from './QuoteProvider';
-import { Phone, ArrowRight } from 'lucide-react';
+import { Phone } from 'lucide-react';
 import { siteConfig } from '@/data/site';
+import QuoteButton from './QuoteButton';
 
 export default function Hero() {
-  const { openQuote } = useQuote();
-
   return (
     <section id="hero" className="hero" aria-label="Hero">
-      {/* Background image */}
+      {/* Background: Pure CSS gradient on mobile, highway fleet photography on desktop */}
       <div className="hero-bg">
-        <Image
-          src="/images/hero-logistics.webp"
-          alt="Semi-truck freight convoy on highway at sunset"
-          fill
-          priority
-          sizes="100vw"
-          quality={80}
-          style={{ objectFit: 'cover', objectPosition: 'center' }}
-        />
+        <picture className="hero-desktop-picture">
+          <img
+            src="/images/hero-logistics.webp"
+            alt="ELSHALI LOGISTICS commercial road transport fleet on highway"
+            fetchPriority="high"
+            decoding="async"
+            style={{
+              position: 'absolute',
+              inset: 0,
+              width: '100%',
+              height: '100%',
+              objectFit: 'cover',
+              objectPosition: '70% center',
+            }}
+          />
+        </picture>
       </div>
 
       {/* Overlays */}
@@ -31,7 +33,7 @@ export default function Hero() {
         {/* Eyebrow */}
         <div className="hero-eyebrow">
           <span className="hero-eyebrow-dash" aria-hidden="true" />
-          <span className="hero-eyebrow-text">ELSALI LOGISTICS</span>
+          <span className="hero-eyebrow-text">ELSHALI LOGISTICS</span>
         </div>
 
         {/* H1 */}
@@ -41,17 +43,23 @@ export default function Hero() {
           <span className="pink-gradient">Timely Delivery.</span>
         </h1>
 
+        <p
+          style={{
+            fontSize: 'clamp(1.05rem, 2.2vw, 1.35rem)',
+            fontWeight: 500,
+            lineHeight: 1.5,
+            color: 'rgba(255, 255, 255, 0.88)',
+            marginTop: '16px',
+            maxWidth: '560px',
+            letterSpacing: 'normal',
+          }}
+        >
+          LCV &amp; HCV Road Freight Transport in Coimbatore, Tamil Nadu and Pan-India
+        </p>
+
         {/* Buttons */}
         <div className="hero-buttons">
-          <button
-            className="btn-primary-pill"
-            onClick={() => openQuote()}
-          >
-            GET A QUOTE
-            <span className="arrow-badge" aria-hidden="true">
-              <ArrowRight size={16} />
-            </span>
-          </button>
+          <QuoteButton />
 
           <a
             href={`tel:${siteConfig.phone.replace(/\s+/g, '')}`}

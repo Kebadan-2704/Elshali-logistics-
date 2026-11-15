@@ -8,7 +8,7 @@ export default function Footer() {
       <div className="footer-grid">
         {/* Col 1 — Brand */}
         <div>
-          <a href="#hero" style={{ display: 'inline-flex', alignItems: 'center', gap: '12px', textDecoration: 'none' }}>
+          <Link href="/#hero" style={{ display: 'inline-flex', alignItems: 'center', gap: '12px', textDecoration: 'none' }} aria-label={`${siteConfig.name} Home`}>
             <div style={{
               width: 80,
               height: 63,
@@ -21,14 +21,14 @@ export default function Footer() {
               flexShrink: 0,
             }}>
               <Image
-                src="/images/elsali-logo.webp"
-                alt="ELSALI LOGISTICS"
+                src="/images/elshali-logo.webp"
+                alt={`${siteConfig.name} Official Logo`}
                 width={80}
                 height={63}
                 style={{ objectFit: 'contain' }}
               />
             </div>
-          </a>
+          </Link>
           <p className="footer-brand-desc">
             {siteConfig.description}
           </p>
@@ -39,7 +39,7 @@ export default function Footer() {
 
         {/* Col 2 — Company */}
         <div>
-          <h4 className="footer-col-title">COMPANY</h4>
+          <h3 className="footer-col-title">COMPANY</h3>
           <ul className="footer-links">
             <li><Link href="/about">About Us</Link></li>
             <li><Link href="/company">Company Profile</Link></li>
@@ -51,7 +51,7 @@ export default function Footer() {
 
         {/* Col 3 — Services */}
         <div>
-          <h4 className="footer-col-title">SERVICES</h4>
+          <h3 className="footer-col-title">SERVICES</h3>
           <ul className="footer-links">
             <li><Link href="/services">LCV &amp; HCV Freight</Link></li>
             <li><Link href="/business-solutions">Business Solutions</Link></li>
@@ -64,7 +64,7 @@ export default function Footer() {
 
         {/* Col 4 — Vehicles & Quote */}
         <div>
-          <h4 className="footer-col-title">FLEET &amp; QUOTE</h4>
+          <h3 className="footer-col-title">FLEET &amp; QUOTE</h3>
           <ul className="footer-links">
             <li><Link href="/vehicles">All Fleet Vehicles</Link></li>
             <li><Link href="/vehicles">Mini / Dost (1.5–2.5 T)</Link></li>
@@ -76,53 +76,51 @@ export default function Footer() {
 
         {/* Col 5 — Contact */}
         <div>
-          <h4 className="footer-col-title">CONTACT</h4>
-          <ul className="footer-links">
-            <li>
-              <span className="footer-contact-label">Contact Person</span><br />
-              <span className="footer-contact-value">{siteConfig.contactPerson}</span>
-            </li>
-            <li>
-              <span className="footer-contact-label">Phone</span><br />
-              <a href={`tel:${siteConfig.phone}`} className="footer-contact-value">{siteConfig.phone}</a>
-            </li>
-            <li>
-              <span className="footer-contact-label">Additional Numbers</span><br />
-              <a href={`tel:${siteConfig.phone2}`} className="footer-contact-value">{siteConfig.phone2}</a><br />
-              <a href={`tel:${siteConfig.phone3}`} className="footer-contact-value">{siteConfig.phone3}</a><br />
-              <a href={`tel:${siteConfig.phone4}`} className="footer-contact-value">{siteConfig.phone4}</a><br />
-              <a href={`tel:${siteConfig.phone5}`} className="footer-contact-value">{siteConfig.phone5}</a>
-            </li>
-            <li>
-              <span className="footer-contact-label">WhatsApp</span><br />
+          <h3 className="footer-col-title">CONTACT</h3>
+          <div className="footer-contact-compact">
+            <div className="footer-contact-header">
+              <span className="footer-contact-name">{siteConfig.contactPerson}</span>
+              <span className="footer-contact-gstin">GSTIN: {siteConfig.gstin}</span>
+            </div>
+
+            <div className="footer-contact-phone-wrap">
+              <a href={`tel:${siteConfig.phone}`} className="footer-contact-primary-phone">
+                +91 {siteConfig.phone}
+              </a>
               <a
                 href={`https://wa.me/91${siteConfig.whatsapp}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="footer-contact-value"
+                className="footer-whatsapp-badge"
+                aria-label="Chat on WhatsApp"
               >
-                {siteConfig.whatsapp}
+                WhatsApp
               </a>
-            </li>
-            <li>
-              <span className="footer-contact-label">Email</span><br />
-              <a href={`mailto:${siteConfig.email}`} className="footer-contact-value">{siteConfig.email}</a>
-            </li>
-            <li>
-              <span className="footer-contact-label">GSTIN</span><br />
-              <span className="footer-contact-value">{siteConfig.gstin}</span>
-            </li>
-            <li>
-              <span className="footer-contact-label">Address</span><br />
-              <span className="footer-contact-value">{siteConfig.address}</span>
-            </li>
-          </ul>
+            </div>
+
+            <div className="footer-contact-alt">
+              <span className="footer-alt-label">Alt:</span>{' '}
+              <a href={`tel:${siteConfig.phone2}`}>{siteConfig.phone2}</a>
+              <span className="footer-dot">·</span>
+              <a href={`tel:${siteConfig.phone3}`}>{siteConfig.phone3}</a>
+            </div>
+
+            <div>
+              <a href={`mailto:${siteConfig.email}`} className="footer-contact-email">
+                {siteConfig.email}
+              </a>
+            </div>
+
+            <address className="footer-contact-address">
+              {siteConfig.address}
+            </address>
+          </div>
         </div>
       </div>
 
       {/* Bottom */}
       <div className="footer-bottom">
-        <p>© {new Date().getFullYear()} ELSALI LOGISTICS. All Rights Reserved.</p>
+        <p>© {new Date().getFullYear()} {siteConfig.name}. All Rights Reserved.</p>
         <div className="footer-bottom-links">
           <Link href="/privacy">Privacy Policy</Link>
           <Link href="/terms">Terms &amp; Conditions</Link>

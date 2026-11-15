@@ -2,28 +2,42 @@ import dynamic from 'next/dynamic';
 import Hero from '@/components/Hero';
 import About from '@/components/About';
 
+const SectionSkeleton = ({ minHeight = '500px' }: { minHeight?: string }) => (
+  <div
+    style={{
+      minHeight,
+      background: '#060B16',
+      width: '100%',
+    }}
+    aria-hidden="true"
+  />
+);
+
 const ServicesStack = dynamic(() => import('@/components/ServicesStack'), {
-  loading: () => <div style={{ minHeight: '600px', background: 'var(--color-navy-950-alt)' }} />,
+  loading: () => <SectionSkeleton minHeight="600px" />,
 });
 const Vehicles = dynamic(() => import('@/components/Vehicles'), {
-  loading: () => <div style={{ minHeight: '500px', background: '#ffffff' }} />,
+  loading: () => <SectionSkeleton minHeight="500px" />,
 });
 const Routes = dynamic(() => import('@/components/Routes'), {
-  loading: () => <div style={{ minHeight: '500px', background: 'var(--color-navy-950)' }} />,
+  loading: () => <SectionSkeleton minHeight="500px" />,
+});
+const ClientMarquee = dynamic(() => import('@/components/ClientMarquee'), {
+  loading: () => <SectionSkeleton minHeight="400px" />,
 });
 const WhyChooseUs = dynamic(() => import('@/components/WhyChooseUs'), {
-  loading: () => <div style={{ minHeight: '500px', background: '#ffffff' }} />,
+  loading: () => <SectionSkeleton minHeight="500px" />,
 });
 const Process = dynamic(() => import('@/components/Process'), {
-  loading: () => <div style={{ minHeight: '400px', background: 'var(--color-navy-950)' }} />,
+  loading: () => <SectionSkeleton minHeight="400px" />,
 });
 const BusinessSolutions = dynamic(() => import('@/components/BusinessSolutions'), {
-  loading: () => <div style={{ minHeight: '400px', background: '#ffffff' }} />,
+  loading: () => <SectionSkeleton minHeight="400px" />,
 });
 const Contact = dynamic(() => import('@/components/Contact'), {
-  loading: () => <div style={{ minHeight: '500px', background: 'var(--color-navy-950)' }} />,
+  loading: () => <SectionSkeleton minHeight="500px" />,
 });
-const CtaBanner = dynamic(() => import('@/components/CtaBanner'));
+import CtaBand from '@/components/ui/CtaBand';
 
 export default function Home() {
   return (
@@ -33,11 +47,12 @@ export default function Home() {
       <ServicesStack />
       <Vehicles />
       <Routes />
+      <ClientMarquee />
       <WhyChooseUs />
       <Process />
       <BusinessSolutions />
       <Contact />
-      <CtaBanner />
+      <CtaBand />
     </>
   );
 }

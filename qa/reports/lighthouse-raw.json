@@ -1,0 +1,337 @@
+[
+  {
+    "route": "/",
+    "mobile": {
+      "perf": 75,
+      "a11y": 100,
+      "bp": 100,
+      "seo": 100,
+      "lcp": {
+        "displayValue": "4.0 s",
+        "numericValue": 3952
+      },
+      "cls": {
+        "displayValue": "0.193",
+        "numericValue": 0.1932
+      },
+      "tbt": {
+        "displayValue": "190 ms",
+        "numericValue": 193
+      },
+      "fcp": {
+        "displayValue": "1.2 s",
+        "numericValue": 1155
+      },
+      "topOpportunities": [
+        {
+          "id": "unused-javascript",
+          "title": "Reduce unused JavaScript",
+          "savingsMs": 300,
+          "savingsBytes": 54286,
+          "displayValue": "Est savings of 53 KiB"
+        }
+      ],
+      "failingA11y": []
+    },
+    "desktop": {
+      "perf": 78,
+      "a11y": 100,
+      "bp": 100,
+      "seo": 100,
+      "lcp": {
+        "displayValue": "3.9 s",
+        "numericValue": 3869
+      },
+      "cls": {
+        "displayValue": "0",
+        "numericValue": 0
+      },
+      "tbt": {
+        "displayValue": "40 ms",
+        "numericValue": 44
+      },
+      "fcp": {
+        "displayValue": "0.9 s",
+        "numericValue": 915
+      },
+      "topOpportunities": [
+        {
+          "id": "unused-javascript",
+          "title": "Reduce unused JavaScript",
+          "savingsMs": 180,
+          "savingsBytes": 54187,
+          "displayValue": "Est savings of 53 KiB"
+        }
+      ],
+      "failingA11y": []
+    }
+  },
+  {
+    "route": "/vehicles",
+    "mobile": {
+      "perf": 95,
+      "a11y": 100,
+      "bp": 100,
+      "seo": 100,
+      "lcp": {
+        "displayValue": "2.9 s",
+        "numericValue": 2869
+      },
+      "cls": {
+        "displayValue": "0",
+        "numericValue": 0
+      },
+      "tbt": {
+        "displayValue": "40 ms",
+        "numericValue": 44
+      },
+      "fcp": {
+        "displayValue": "0.8 s",
+        "numericValue": 769
+      },
+      "topOpportunities": [
+        {
+          "id": "unused-javascript",
+          "title": "Reduce unused JavaScript",
+          "savingsMs": 0,
+          "savingsBytes": 101714,
+          "displayValue": "Est savings of 99 KiB"
+        }
+      ],
+      "failingA11y": []
+    },
+    "desktop": {
+      "perf": 81,
+      "a11y": 100,
+      "bp": 100,
+      "seo": 100,
+      "lcp": {
+        "displayValue": "3.5 s",
+        "numericValue": 3461
+      },
+      "cls": {
+        "displayValue": "0",
+        "numericValue": 0
+      },
+      "tbt": {
+        "displayValue": "40 ms",
+        "numericValue": 42
+      },
+      "fcp": {
+        "displayValue": "0.8 s",
+        "numericValue": 769
+      },
+      "topOpportunities": [
+        {
+          "id": "unused-javascript",
+          "title": "Reduce unused JavaScript",
+          "savingsMs": 140,
+          "savingsBytes": 101714,
+          "displayValue": "Est savings of 99 KiB"
+        }
+      ],
+      "failingA11y": []
+    }
+  },
+  {
+    "route": "/services",
+    "mobile": {
+      "perf": 95,
+      "a11y": 100,
+      "bp": 100,
+      "seo": 100,
+      "lcp": {
+        "displayValue": "3.0 s",
+        "numericValue": 3012
+      },
+      "cls": {
+        "displayValue": "0",
+        "numericValue": 0
+      },
+      "tbt": {
+        "displayValue": "40 ms",
+        "numericValue": 40
+      },
+      "fcp": {
+        "displayValue": "0.9 s",
+        "numericValue": 912
+      },
+      "topOpportunities": [
+        {
+          "id": "unused-javascript",
+          "title": "Reduce unused JavaScript",
+          "savingsMs": 150,
+          "savingsBytes": 101714,
+          "displayValue": "Est savings of 99 KiB"
+        }
+      ],
+      "failingA11y": []
+    },
+    "desktop": {
+      "perf": 82,
+      "a11y": 100,
+      "bp": 100,
+      "seo": 100,
+      "lcp": {
+        "displayValue": "3.1 s",
+        "numericValue": 3076
+      },
+      "cls": {
+        "displayValue": "0",
+        "numericValue": 0
+      },
+      "tbt": {
+        "displayValue": "40 ms",
+        "numericValue": 38
+      },
+      "fcp": {
+        "displayValue": "0.9 s",
+        "numericValue": 911
+      },
+      "topOpportunities": [
+        {
+          "id": "unused-javascript",
+          "title": "Reduce unused JavaScript",
+          "savingsMs": 150,
+          "savingsBytes": 101714,
+          "displayValue": "Est savings of 99 KiB"
+        }
+      ],
+      "failingA11y": []
+    }
+  },
+  {
+    "route": "/contact",
+    "mobile": {
+      "perf": 95,
+      "a11y": 100,
+      "bp": 100,
+      "seo": 100,
+      "lcp": {
+        "displayValue": "3.0 s",
+        "numericValue": 2973
+      },
+      "cls": {
+        "displayValue": "0",
+        "numericValue": 0
+      },
+      "tbt": {
+        "displayValue": "30 ms",
+        "numericValue": 28
+      },
+      "fcp": {
+        "displayValue": "0.8 s",
+        "numericValue": 809
+      },
+      "topOpportunities": [
+        {
+          "id": "unused-javascript",
+          "title": "Reduce unused JavaScript",
+          "savingsMs": 110,
+          "savingsBytes": 101278,
+          "displayValue": "Est savings of 99 KiB"
+        }
+      ],
+      "failingA11y": []
+    },
+    "desktop": {
+      "perf": 82,
+      "a11y": 100,
+      "bp": 100,
+      "seo": 100,
+      "lcp": {
+        "displayValue": "3.1 s",
+        "numericValue": 3136
+      },
+      "cls": {
+        "displayValue": "0",
+        "numericValue": 0
+      },
+      "tbt": {
+        "displayValue": "30 ms",
+        "numericValue": 29
+      },
+      "fcp": {
+        "displayValue": "0.8 s",
+        "numericValue": 831
+      },
+      "topOpportunities": [
+        {
+          "id": "unused-javascript",
+          "title": "Reduce unused JavaScript",
+          "savingsMs": 120,
+          "savingsBytes": 101269,
+          "displayValue": "Est savings of 99 KiB"
+        }
+      ],
+      "failingA11y": []
+    }
+  },
+  {
+    "route": "/quote",
+    "mobile": {
+      "perf": 95,
+      "a11y": 100,
+      "bp": 100,
+      "seo": 100,
+      "lcp": {
+        "displayValue": "2.9 s",
+        "numericValue": 2935
+      },
+      "cls": {
+        "displayValue": "0",
+        "numericValue": 0
+      },
+      "tbt": {
+        "displayValue": "30 ms",
+        "numericValue": 27
+      },
+      "fcp": {
+        "displayValue": "0.8 s",
+        "numericValue": 760
+      },
+      "topOpportunities": [
+        {
+          "id": "unused-javascript",
+          "title": "Reduce unused JavaScript",
+          "savingsMs": 150,
+          "savingsBytes": 101278,
+          "displayValue": "Est savings of 99 KiB"
+        }
+      ],
+      "failingA11y": []
+    },
+    "desktop": {
+      "perf": 83,
+      "a11y": 100,
+      "bp": 100,
+      "seo": 100,
+      "lcp": {
+        "displayValue": "2.9 s",
+        "numericValue": 2922
+      },
+      "cls": {
+        "displayValue": "0",
+        "numericValue": 0
+      },
+      "tbt": {
+        "displayValue": "30 ms",
+        "numericValue": 32
+      },
+      "fcp": {
+        "displayValue": "0.8 s",
+        "numericValue": 762
+      },
+      "topOpportunities": [
+        {
+          "id": "unused-javascript",
+          "title": "Reduce unused JavaScript",
+          "savingsMs": 150,
+          "savingsBytes": 101278,
+          "displayValue": "Est savings of 99 KiB"
+        }
+      ],
+      "failingA11y": []
+    }
+  }
+]

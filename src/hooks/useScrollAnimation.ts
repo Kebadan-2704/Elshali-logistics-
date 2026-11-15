@@ -1,10 +1,25 @@
 'use client';
+
 import { useEffect, useRef } from 'react';
 
-export function useScrollAnimation() {
-  const ref = useRef<HTMLDivElement>(null);
+/**
+ * Universal scroll-triggered reveal animation hook.
+ * Attaches an IntersectionObserver to child elements matching selector,
+ * adding the 'visible' CSS class when scrolled into view.
+ */
+export function useScrollAnimation<T extends HTMLElement = HTMLElement>(
+  selector = '.reveal, .animate-fade-up',
+  threshold = 0.1
+) {
+  const ref = useRef<T>(null);
 
   useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+
+    const elements = el.querySelectorAll(selector);
+    if (!elements.length) return;
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -13,17 +28,13 @@ export function useScrollAnimation() {
           }
         });
       },
-      { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
+      { threshold, rootMargin: '0px 0px -40px 0px' }
     );
 
-    const el = ref.current;
-    if (el) {
-      const elements = el.querySelectorAll('.animate-fade-up');
-      elements.forEach((element) => observer.observe(element));
-    }
+    elements.forEach((element) => observer.observe(element));
 
     return () => observer.disconnect();
-  }, []);
+  }, [selector, threshold]);
 
   return ref;
 }

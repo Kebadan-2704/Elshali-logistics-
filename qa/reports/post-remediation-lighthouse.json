@@ -1,0 +1,92 @@
+{
+  "mobileMedian": {
+    "perf": 75,
+    "a11y": 100,
+    "bp": 100,
+    "seo": 100,
+    "fcp": 1823,
+    "lcp": 5060,
+    "tbt": 303,
+    "cls": 0
+  },
+  "desktopMedian": {
+    "perf": 61,
+    "a11y": 100,
+    "bp": 100,
+    "seo": 100,
+    "fcp": 1242,
+    "lcp": 4831,
+    "tbt": 297,
+    "cls": 0
+  },
+  "mobileRuns": [
+    {
+      "perf": 75,
+      "a11y": 100,
+      "bp": 100,
+      "seo": 100,
+      "fcp": 1823,
+      "lcp": 5060,
+      "tbt": 193,
+      "cls": 0,
+      "lcpDisplay": "5.1 s"
+    },
+    {
+      "perf": 75,
+      "a11y": 100,
+      "bp": 100,
+      "seo": 100,
+      "fcp": 1155,
+      "lcp": 4975,
+      "tbt": 303,
+      "cls": 0,
+      "lcpDisplay": "5.0 s"
+    },
+    {
+      "perf": 62,
+      "a11y": 100,
+      "bp": 100,
+      "seo": 100,
+      "fcp": 2036,
+      "lcp": 5270,
+      "tbt": 544,
+      "cls": 0,
+      "lcpDisplay": "5.3 s"
+    }
+  ],
+  "desktopRuns": [
+    {
+      "perf": 68,
+      "a11y": 100,
+      "bp": 100,
+      "seo": 100,
+      "fcp": 1115,
+      "lcp": 4827,
+      "tbt": 216,
+      "cls": 0,
+      "lcpDisplay": "4.8 s"
+    },
+    {
+      "perf": 61,
+      "a11y": 100,
+      "bp": 100,
+      "seo": 100,
+      "fcp": 1242,
+      "lcp": 4831,
+      "tbt": 297,
+      "cls": 0,
+      "lcpDisplay": "4.8 s"
+    },
+    {
+      "perf": 54,
+      "a11y": 100,
+      "bp": 100,
+      "seo": 100,
+      "fcp": 1409,
+      "lcp": 4832,
+      "tbt": 406,
+      "cls": 0,
+      "lcpDisplay": "4.8 s"
+    }
+  ]
+}

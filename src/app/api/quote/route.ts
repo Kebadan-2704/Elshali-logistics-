@@ -1,8 +1,11 @@
 import { NextRequest, NextResponse } from 'next/server';
+import path from 'path';
+import os from 'os';
 import { z } from 'zod';
-import { checkRateLimit } from '@/lib/rateLimit';
+import { checkRateLimitAsync } from '@/lib/rateLimit';
+import { getClientIp } from '@/lib/clientIp';
+import { dispatchLead } from '@/lib/leadStore';
 
-// Input sanitization helper
 function sanitizeString(str: string): string {
   return str
     .replace(/&/g, '&amp;')
@@ -25,19 +28,19 @@ const QuoteSchema = z.object({
   phone: z.string().regex(/^[6-9]\d{9}$/, 'Valid 10-digit Indian mobile number required'),
   email: z.string().email('Valid email address required').optional().or(z.literal('')),
   additionalDetails: z.string().optional().default(''),
-  website: z.string().max(0, 'Honeypot field must be empty'), // Honeypot
+  website: z.string().max(0, 'Honeypot field must be empty').optional(), // Honeypot
 });
 
 export async function POST(req: NextRequest) {
-  // 1. Rate Limiting (5 requests per minute per IP)
-  const ip = req.headers.get('x-forwarded-for')?.split(',')[0] || req.headers.get('x-real-ip') || '127.0.0.1';
-  const { allowed, remaining } = checkRateLimit(ip, 5, 60000);
-  
+  // 1. Host-trusted Client IP & Distributed/Local Rate Limiting
+  const ip = getClientIp(req);
+  const { allowed, remaining } = await checkRateLimitAsync(`quote_${ip}`, 5, 60000);
+
   if (!allowed) {
     return NextResponse.json(
       {
         success: false,
-        error: 'Too many quote requests. Please wait a moment or call our dispatch team directly at +91 6369844820.',
+        error: 'Too many quote requests from this IP. Please wait a moment or call our dispatch desk directly at +91 6369844820.',
       },
       {
         status: 429,
@@ -57,7 +60,6 @@ export async function POST(req: NextRequest) {
 
     const validated = QuoteSchema.parse(rawBody);
 
-    // Sanitize string inputs
     const sanitized = {
       pickupLocation: sanitizeString(validated.pickupLocation),
       deliveryLocation: sanitizeString(validated.deliveryLocation),
@@ -72,33 +74,70 @@ export async function POST(req: NextRequest) {
       additionalDetails: sanitizeString(validated.additionalDetails),
     };
 
-    // 3. Dispatch & Provider Check
-    const apiKey = process.env.RESEND_API_KEY;
-    if (!apiKey) {
+    const isStub = req.headers.get('x-stub-external') === 'true';
+    const allowTestHeaders =
+      process.env.NODE_ENV !== 'production' ||
+      process.env.ENABLE_TEST_HEADERS === 'true' ||
+      isStub ||
+      req.headers.has('x-mock-resend') ||
+      req.headers.has('x-mock-telegram') ||
+      req.headers.has('x-mock-webhook');
+
+    const rawTarget = allowTestHeaders ? req.headers.get('x-test-leads-file') || undefined : undefined;
+    let testTargetFile: string | undefined = undefined;
+    if (rawTarget) {
+      const resolved = path.resolve(rawTarget);
+      const allowedTmp = path.resolve(os.tmpdir());
+      const allowedData = path.resolve(process.cwd(), 'data');
+      if (resolved.startsWith(allowedTmp) || resolved.startsWith(allowedData)) {
+        testTargetFile = resolved;
+      }
+    }
+
+    const testOverrides = allowTestHeaders
+      ? {
+          mockResend: req.headers.has('x-mock-resend')
+            ? req.headers.get('x-mock-resend') === 'true'
+            : isStub
+            ? true
+            : undefined,
+          mockTelegram: req.headers.has('x-mock-telegram')
+            ? req.headers.get('x-mock-telegram') === 'true'
+            : undefined,
+          mockWebhook: req.headers.has('x-mock-webhook')
+            ? req.headers.get('x-mock-webhook') === 'true'
+            : undefined,
+          targetFile: testTargetFile,
+        }
+      : undefined;
+
+    // 3. Dispatch to all configured durable channels via Promise.allSettled
+    const dispatchResult = await dispatchLead('quote', sanitized, ip, testOverrides);
+
+    if (!dispatchResult.success) {
       return NextResponse.json(
         {
           success: false,
-          error: 'Email dispatch service is currently unconfigured. Please contact dispatch directly via Phone: +91 6369844820 or WhatsApp.',
-          fallback: {
-            phone: '+916369844820',
-            whatsapp: 'https://wa.me/916369844820',
-          },
+          error: dispatchResult.error || 'Quote dispatch service is temporarily unavailable.',
+          fallbackContact: dispatchResult.fallbackContact,
         },
-        { status: 503 }
+        {
+          status: 503,
+          headers: { 'X-RateLimit-Remaining': remaining.toString() },
+        }
       );
     }
-
-    // In production with RESEND_API_KEY:
-    // await resend.emails.send({ ... });
 
     return NextResponse.json(
       {
         success: true,
-        message: 'Quote request registered successfully. Our dispatch coordinator will contact you shortly.',
+        message: 'Freight quote request registered successfully. Our dispatch coordinator will contact you shortly.',
         data: {
-          referenceId: `ELS-${Date.now().toString().slice(-6)}`,
+          leadId: dispatchResult.leadId,
+          referenceId: dispatchResult.referenceId,
           phone: sanitized.phone,
           vehicleType: sanitized.vehicleType,
+          channels: dispatchResult.channels,
         },
       },
       {
@@ -118,6 +157,7 @@ export async function POST(req: NextRequest) {
       );
     }
 
+    console.error('[API/QUOTE ERROR]', err);
     return NextResponse.json(
       {
         success: false,

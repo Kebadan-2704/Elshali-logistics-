@@ -1,0 +1,71 @@
+{
+  "testName": "suspect-c-no-extra-fonts",
+  "mobileMedian": {
+    "perf": 72,
+    "fcp": 2102,
+    "lcp": 4352,
+    "tbt": 356,
+    "cls": 0,
+    "lcpDisplay": "4.4 s"
+  },
+  "desktopMedian": {
+    "perf": 63,
+    "fcp": 1372,
+    "lcp": 4031,
+    "tbt": 281,
+    "cls": 0,
+    "lcpDisplay": "4.0 s"
+  },
+  "mobileRuns": [
+    {
+      "perf": 72,
+      "fcp": 2102,
+      "lcp": 4352,
+      "tbt": 356,
+      "cls": 0,
+      "lcpDisplay": "4.4 s"
+    },
+    {
+      "perf": 66,
+      "fcp": 2057,
+      "lcp": 4451,
+      "tbt": 540,
+      "cls": 0,
+      "lcpDisplay": "4.5 s"
+    },
+    {
+      "perf": 74,
+      "fcp": 1929,
+      "lcp": 4226,
+      "tbt": 374,
+      "cls": 0,
+      "lcpDisplay": "4.2 s"
+    }
+  ],
+  "desktopRuns": [
+    {
+      "perf": 63,
+      "fcp": 1372,
+      "lcp": 4031,
+      "tbt": 281,
+      "cls": 0,
+      "lcpDisplay": "4.0 s"
+    },
+    {
+      "perf": 64,
+      "fcp": 1484,
+      "lcp": 4007,
+      "tbt": 249,
+      "cls": 0,
+      "lcpDisplay": "4.0 s"
+    },
+    {
+      "perf": 47,
+      "fcp": 1646,
+      "lcp": 4126,
+      "tbt": 610,
+      "cls": 0,
+      "lcpDisplay": "4.1 s"
+    }
+  ]
+}

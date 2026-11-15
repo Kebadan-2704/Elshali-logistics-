@@ -1,73 +1,112 @@
 import type { Metadata } from 'next';
-import Link from 'next/link';
-import { ArrowLeft, FileCheck } from 'lucide-react';
+import { FileCheck } from 'lucide-react';
+import Breadcrumb from '@/components/ui/Breadcrumb';
+import PageHero from '@/components/ui/PageHero';
+import Section from '@/components/ui/Section';
+import Card from '@/components/ui/Card';
+import CtaBand from '@/components/ui/CtaBand';
+import { siteConfig, LEGAL_REVIEWED } from '@/data/site';
+import { getCanonicalUrl, getOgImageUrl } from '@/lib/siteUrl';
 
 export const metadata: Metadata = {
-  title: 'Terms & Conditions | ELSALI LOGISTICS',
-  description: 'Terms and Conditions governing freight transport, vehicle placement, and commercial carriage with ELSALI LOGISTICS.',
+  title: 'Terms of Carriage & Service | ELSHALI LOGISTICS',
+  description:
+    'Commercial carriage terms, freight quotation policies, shipper obligations, and vehicle placement guidelines for ELSHALI LOGISTICS.',
+  alternates: {
+    canonical: getCanonicalUrl('/terms'),
+  },
+  openGraph: {
+    title: 'Terms of Carriage & Service | ELSHALI LOGISTICS',
+    description: 'Commercial carriage terms and vehicle placement guidelines for ELSHALI LOGISTICS.',
+    url: getCanonicalUrl('/terms'),
+    siteName: siteConfig.name,
+    images: [{ url: getOgImageUrl(), width: 800, height: 600, alt: 'ELSHALI LOGISTICS' }],
+    locale: 'en_IN',
+  },
 };
 
 export default function TermsPage() {
   return (
-    <div style={{ background: 'var(--color-navy-950)', minHeight: '100vh', padding: '120px 24px 80px', color: 'white' }}>
-      <div style={{ maxWidth: 860, margin: '0 auto' }}>
-        <Link
-          href="/"
-          style={{
-            display: 'inline-flex',
-            alignItems: 'center',
-            gap: 8,
-            color: 'var(--color-pink-400)',
-            textDecoration: 'none',
-            fontSize: 14,
-            fontWeight: 700,
-            marginBottom: 32,
-          }}
-        >
-          <ArrowLeft size={16} /> Back to Home
-        </Link>
+    <div className="subpage-wrapper" style={{ minHeight: '100vh', paddingTop: '100px' }}>
+      <Breadcrumb items={[{ label: 'Terms & Conditions' }]} />
 
-        <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 16 }}>
-          <div style={{ width: 44, height: 44, borderRadius: 12, background: 'rgba(184, 0, 109, 0.2)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--color-pink-400)' }}>
-            <FileCheck size={22} />
+      <PageHero
+        badge="Operating Terms"
+        badgeIcon={<FileCheck size={14} />}
+        title="Commercial Carriage &"
+        highlight="Service Terms"
+        subtitle={`Standard commercial conditions governing vehicle placement, freight quotations, and road transit with ${siteConfig.name}.`}
+      />
+
+      <Section containerClassName="max-w-4xl">
+        <Card variant="glass" style={{ padding: '40px 32px' }}>
+          <div
+            style={{
+              padding: '16px 20px',
+              borderRadius: '12px',
+              background: 'rgba(236, 72, 153, 0.08)',
+              border: '1px solid rgba(236, 72, 153, 0.25)',
+              marginBottom: '32px',
+              fontSize: '13px',
+              color: '#CBD5E1',
+              lineHeight: 1.6,
+            }}
+          >
+            <strong style={{ color: '#EC4899' }}>Notice to Shippers &amp; Consignors:</strong> These standard commercial conditions represent provisional operating guidelines for vehicle placement, freight quotations, and road carriage. Formal contractual carriage agreements and liability clauses remain subject to verified statutory review by legal counsel for {siteConfig.legalName}.
+            {!LEGAL_REVIEWED && (
+              <div style={{ marginTop: '8px', fontSize: '12px', color: '#94A3B8' }}>
+                Last updated: November 2026. Version 1.0 (Operational Guidelines — Subject to formal legal counsel review).
+              </div>
+            )}
           </div>
-          <h1 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800 }}>Terms &amp; Conditions</h1>
-        </div>
 
-        <div style={{ background: 'rgba(255, 255, 255, 0.05)', border: '1px solid rgba(255, 255, 255, 0.1)', borderRadius: 12, padding: '12px 16px', marginBottom: 32, color: 'var(--color-slate-400)', fontSize: 13 }}>
-          <strong>NOTE:</strong> DRAFT TEMPLATE FOR ELSALI LOGISTICS — REVIEW BY LEGAL BEFORE PUBLISHING.
-        </div>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '32px', color: '#CBD5E1', fontSize: '15px', lineHeight: 1.8 }}>
+            <div>
+              <h2 style={{ fontSize: '20px', fontWeight: 700, color: '#FFFFFF', marginBottom: '12px' }}>
+                1. Carriage &amp; Service Engagement
+              </h2>
+              <p>
+                By booking freight carriage or requesting vehicle placement with {siteConfig.name}, the shipper or consignor accepts the operational terms detailed herein. {siteConfig.name} facilitates commercial road transportation via light commercial vehicles (LCV) and heavy commercial vehicles (HCV) across Tamil Nadu and pan-India transit corridors.
+              </p>
+            </div>
 
-        <div style={{ display: 'flex', flexDirection: 'column', gap: 28, fontSize: 15, lineHeight: 1.7, color: 'var(--color-slate-300)' }}>
-          <section>
-            <h2 style={{ fontSize: 20, color: 'white', marginBottom: 12 }}>1. Carriage &amp; Service Agreement</h2>
-            <p>
-              By booking freight carriage or requesting commercial vehicle placement with ELSALI LOGISTICS, the consignor/shipper agrees to the operating terms set forth herein. ELSALI LOGISTICS provides LCV and HCV freight transportation solutions across regional Tamil Nadu corridors and pan-India transit networks.
-            </p>
-          </section>
+            <div style={{ height: '1px', background: 'rgba(255, 255, 255, 0.08)' }} />
 
-          <section>
-            <h2 style={{ fontSize: 20, color: 'white', marginBottom: 12 }}>2. Quotations &amp; Freight Rates</h2>
-            <p>
-              Freight rate quotes provided via our online quote portal or dispatch phone lines are estimates based on declared cargo weight, vehicle category, loading dates, and route distances. Rates are confirmed upon vehicle placement and consignment note issuance. Toll charges, loading/unloading detention fees, and statutory entry permits are charged per actuals.
-            </p>
-          </section>
+            <div>
+              <h2 style={{ fontSize: '20px', fontWeight: 700, color: '#FFFFFF', marginBottom: '12px' }}>
+                2. Quotations, Freight Rates &amp; Placement
+              </h2>
+              <p>
+                Freight rate quotations issued online, by email, or via dispatch communication represent commercial estimates formulated upon stated cargo dimensions, commodity weights, loading dates, and route distances. Rates become firm upon vehicle assignment and consignment note issuance. Highway tolls, detention beyond standard loading allowances, and local entry permits apply as mutually agreed.
+              </p>
+            </div>
 
-          <section>
-            <h2 style={{ fontSize: 20, color: 'white', marginBottom: 12 }}>3. Shippers Declaration &amp; Cargo Legality</h2>
-            <p>
-              The consignor is strictly responsible for ensuring cargo contents comply with Indian Motor Vehicles Act, Central GST/e-Way Bill statutory requirements, and state commercial transport regulations. Hazardous, contraband, or undeclared goods are strictly prohibited.
-            </p>
-          </section>
+            <div style={{ height: '1px', background: 'rgba(255, 255, 255, 0.08)' }} />
 
-          <section>
-            <h2 style={{ fontSize: 20, color: 'white', marginBottom: 12 }}>4. Limitation of Liability</h2>
-            <p>
-              While ELSALI LOGISTICS exercises utmost commercial diligence in vehicle maintenance, verified driver allocation, and transit safety, transit times are subject to highway conditions and statutory checkposts. Cargo transit insurance is recommended for all high-value consignments.
-            </p>
-          </section>
-        </div>
-      </div>
+            <div>
+              <h2 style={{ fontSize: '20px', fontWeight: 700, color: '#FFFFFF', marginBottom: '12px' }}>
+                3. Shipper Declarations &amp; Statutory Compliance
+              </h2>
+              <p>
+                The consignor warrants that all goods presented for carriage comply with the Motor Vehicles Act, Central Goods and Services Tax (CGST) requirements, valid electronic E-Way bills, and applicable state transit permits. Carriage of undeclared hazardous or contraband goods is strictly barred.
+              </p>
+            </div>
+
+            <div style={{ height: '1px', background: 'rgba(255, 255, 255, 0.08)' }} />
+
+            <div>
+              <h2 style={{ fontSize: '20px', fontWeight: 700, color: '#FFFFFF', marginBottom: '12px' }}>
+                4. Transit Diligence &amp; Insurance Recommendations
+              </h2>
+              <p>
+                {siteConfig.name} exercises commercial care in vehicle vetting, driver verification, and transit monitoring. However, highway transit remains subject to weather conditions, checkpost verifications, and external road constraints. Shippers are strongly advised to secure comprehensive transit insurance covering the full declared invoice value of the cargo.
+              </p>
+            </div>
+          </div>
+        </Card>
+      </Section>
+
+      <CtaBand />
     </div>
   );
 }

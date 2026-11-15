@@ -1,6 +1,5 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
 import {
   BadgePercent,
   Zap,
@@ -13,6 +12,7 @@ import {
 } from 'lucide-react';
 import { whyItems } from '@/data/why';
 import { useQuote } from './QuoteProvider';
+import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
 const iconMap: Record<string, React.ElementType> = {
   'badge-percent': BadgePercent,
@@ -26,23 +26,8 @@ const iconMap: Record<string, React.ElementType> = {
 };
 
 export default function WhyChooseUs() {
-  const sectionRef = useRef<HTMLElement>(null);
+  const sectionRef = useScrollAnimation<HTMLElement>('.reveal');
   const { openQuote } = useQuote();
-
-  useEffect(() => {
-    const els = sectionRef.current?.querySelectorAll('.reveal');
-    if (!els) return;
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) entry.target.classList.add('visible');
-        });
-      },
-      { threshold: 0.1 }
-    );
-    els.forEach((el) => observer.observe(el));
-    return () => observer.disconnect();
-  }, []);
 
   return (
     <section
@@ -62,7 +47,7 @@ export default function WhyChooseUs() {
           </h2>
           <p>
             We understand that timely transport and dependable vehicle placement are critical
-            to your supply chain. Here&apos;s why businesses trust ELSALI LOGISTICS.
+            to your supply chain. Here&apos;s why businesses trust ELSHALI LOGISTICS.
           </p>
         </div>
 

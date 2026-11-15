@@ -1,11 +1,11 @@
 'use client';
 
 import { useRef } from 'react';
+import Link from 'next/link';
 import Image from 'next/image';
 import { useScroll, useTransform, motion, useReducedMotion } from 'motion/react';
 import { SquareCheckBig, ArrowRight } from 'lucide-react';
 import { services } from '@/data/services';
-import { useQuote } from './QuoteProvider';
 
 const N = services.length; // 9
 
@@ -139,7 +139,6 @@ export default function ServicesStack() {
     target: ref,
     offset: ['start start', 'end end'],
   });
-  const { openQuote } = useQuote();
 
   return (
     <section
@@ -164,12 +163,12 @@ export default function ServicesStack() {
             <h2 id="services-heading" className="services-left-title">
               OUR<br />SERVICES
             </h2>
-            <button className="services-view-btn" onClick={() => openQuote()}>
+            <Link href="/services" className="services-view-btn">
               View all services
               <span className="badge" aria-hidden="true">
                 <ArrowRight size={14} />
               </span>
-            </button>
+            </Link>
           </div>
         </div>
 

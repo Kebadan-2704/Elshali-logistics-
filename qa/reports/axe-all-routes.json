@@ -1,0 +1,73 @@
+{
+  "totalViolations": 0,
+  "routes": {
+    "/": {
+      "total": 0,
+      "violations": []
+    },
+    "/about": {
+      "total": 0,
+      "violations": []
+    },
+    "/business-solutions": {
+      "total": 0,
+      "violations": []
+    },
+    "/company": {
+      "total": 0,
+      "violations": []
+    },
+    "/contact": {
+      "total": 0,
+      "violations": []
+    },
+    "/documentation": {
+      "total": 0,
+      "violations": []
+    },
+    "/industrial": {
+      "total": 0,
+      "violations": []
+    },
+    "/pan-india": {
+      "total": 0,
+      "violations": []
+    },
+    "/privacy": {
+      "total": 0,
+      "violations": []
+    },
+    "/process": {
+      "total": 0,
+      "violations": []
+    },
+    "/quote": {
+      "total": 0,
+      "violations": []
+    },
+    "/regular-transport": {
+      "total": 0,
+      "violations": []
+    },
+    "/routes": {
+      "total": 0,
+      "violations": []
+    },
+    "/services": {
+      "total": 0,
+      "violations": []
+    },
+    "/terms": {
+      "total": 0,
+      "violations": []
+    },
+    "/vehicles": {
+      "total": 0,
+      "violations": []
+    },
+    "/why-choose-us": {
+      "total": 0,
+      "violations": []
+    }
+  }
+}
