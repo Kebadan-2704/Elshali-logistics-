@@ -9,22 +9,12 @@ export default function Footer() {
         {/* Col 1 — Brand */}
         <div>
           <Link href="/#hero" style={{ display: 'inline-flex', alignItems: 'center', gap: '12px', textDecoration: 'none' }} aria-label={`${siteConfig.name} Home`}>
-            <div style={{
-              width: 80,
-              height: 63,
-              borderRadius: 12,
-              overflow: 'hidden',
-              background: 'white',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              flexShrink: 0,
-            }}>
+            <div className="footer-logo-tile">
               <Image
-                src="/images/elshali-logo.webp"
-                alt={`${siteConfig.name} Official Logo`}
-                width={80}
-                height={63}
+                src="/images/elshali-badge.webp"
+                alt={`${siteConfig.name} Official Brand`}
+                width={70}
+                height={70}
                 style={{ objectFit: 'contain' }}
               />
             </div>

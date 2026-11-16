@@ -1,25 +1,31 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
+import Image from 'next/image';
 
-/**
- * High-performance, non-blocking brand initialization bar.
- * Runs an executive 400ms magenta hairline progress at the top of the viewport
- * without obscuring hero content, delaying LCP, or causing cumulative layout shift.
- */
+const MILESTONES = [
+  { pct: 0, text: 'INITIALIZING LOGISTICS DESK' },
+  { pct: 28, text: 'MAPPING TAMIL NADU CORRIDORS' },
+  { pct: 58, text: 'SYNCHRONIZING FLEET DISPATCH' },
+  { pct: 85, text: 'PREPARING CARGO SOLUTIONS' },
+  { pct: 100, text: 'READY • ELSHALI LOGISTICS' },
+];
+
 export default function SplashScreen() {
   const [progress, setProgress] = useState(0);
   const [visible, setVisible] = useState(false);
+  const [fadingOut, setFadingOut] = useState(false);
+  const dismissedRef = useRef(false);
 
   useEffect(() => {
     // 1. Session check — only show on fresh visit
     try {
-      if (sessionStorage.getItem('elshali_splash_shown') === 'true') {
+      if (sessionStorage.getItem('elshali_logo_preloader_seen') === 'true') {
         return;
       }
-      sessionStorage.setItem('elshali_splash_shown', 'true');
+      sessionStorage.setItem('elshali_logo_preloader_seen', 'true');
     } catch {
-      // Ignore private storage restrictions
+      // Storage unavailable or blocked
     }
 
     // 2. Prefers reduced motion
@@ -42,60 +48,122 @@ export default function SplashScreen() {
       return;
     }
 
-    let animationFrameId: number;
+    let frameId: number;
 
     const rafId = requestAnimationFrame(() => {
       setVisible(true);
-      const start = performance.now();
-      const duration = 400;
+      const startTime = performance.now();
+      const duration = 1200; // 1.2s smooth executive intro
 
-      const frame = () => {
-        const elapsed = performance.now() - start;
+      const tick = (now: number) => {
+        if (dismissedRef.current) return;
+        const elapsed = now - startTime;
         const pct = Math.min(100, Math.round((elapsed / duration) * 100));
         setProgress(pct);
 
         if (pct < 100) {
-          animationFrameId = requestAnimationFrame(frame);
+          frameId = requestAnimationFrame(tick);
         } else {
-          setTimeout(() => setVisible(false), 150);
+          // Trigger fade out
+          setFadingOut(true);
+          setTimeout(() => {
+            setVisible(false);
+          }, 450);
         }
       };
 
-      animationFrameId = requestAnimationFrame(frame);
+      frameId = requestAnimationFrame(tick);
     });
 
     return () => {
       cancelAnimationFrame(rafId);
-      if (animationFrameId) cancelAnimationFrame(animationFrameId);
+      if (frameId) cancelAnimationFrame(frameId);
     };
   }, []);
 
+  const handleDismiss = () => {
+    if (dismissedRef.current) return;
+    dismissedRef.current = true;
+    setProgress(100);
+    setFadingOut(true);
+    setTimeout(() => {
+      setVisible(false);
+    }, 300);
+  };
+
   if (!visible) return null;
+
+  // Determine current status message
+  const currentMilestone =
+    [...MILESTONES].reverse().find((m) => progress >= m.pct) || MILESTONES[0];
 
   return (
     <div
-      aria-hidden="true"
-      style={{
-        position: 'fixed',
-        top: 0,
-        left: 0,
-        width: '100%',
-        height: '3px',
-        zIndex: 99999,
-        pointerEvents: 'none',
-        background: 'rgba(236, 72, 153, 0.15)',
-      }}
+      role="status"
+      aria-live="polite"
+      aria-label="Loading ELSHALI LOGISTICS"
+      onClick={handleDismiss}
+      className={`preloader-overlay ${fadingOut ? 'preloader-fade-out' : ''}`}
     >
-      <div
-        style={{
-          height: '100%',
-          width: `${progress}%`,
-          background: 'linear-gradient(90deg, #EC4899, #F43F5E, #FB7185)',
-          boxShadow: '0 0 12px rgba(236, 72, 153, 0.8)',
-          transition: 'width 60ms linear, opacity 150ms ease',
-          opacity: progress >= 100 ? 0 : 1,
-        }}
-      />
+      {/* Ambient background glow orbs */}
+      <div className="preloader-glow-orb-1" aria-hidden="true" />
+      <div className="preloader-glow-orb-2" aria-hidden="true" />
+
+      {/* Main card */}
+      <div className="preloader-content" onClick={(e) => e.stopPropagation()}>
+        {/* Glowing Logo Badge with Ripple Ring */}
+        <div className="preloader-logo-wrapper">
+          <div className="preloader-pulse-ring" aria-hidden="true" />
+          <div className="preloader-pulse-ring-delayed" aria-hidden="true" />
+          <div className="preloader-logo-badge">
+            <Image
+              src="/images/elshali-badge.webp"
+              alt="ELSHALI LOGISTICS Brand Logo"
+              width={120}
+              height={120}
+              priority
+              className="preloader-logo-img"
+            />
+          </div>
+        </div>
+
+        {/* Brand Name Typography */}
+        <div className="preloader-brand-title">
+          <span className="preloader-brand-white">ELSHALI</span>{' '}
+          <span className="preloader-brand-pink">LOGISTICS</span>
+        </div>
+
+        {/* Brand Subtitle */}
+        <div className="preloader-brand-sub">
+          CARGO SOLUTIONS &amp; FREIGHT TRANSPORT
+        </div>
+
+        {/* High-tech Progress Track */}
+        <div className="preloader-progress-box">
+          <div className="preloader-progress-track">
+            <div
+              className="preloader-progress-bar"
+              style={{ width: `${progress}%` }}
+            />
+          </div>
+
+          {/* Metrics row */}
+          <div className="preloader-metrics-row">
+            <span className="preloader-status-text">{currentMilestone.text}</span>
+            <span className="preloader-pct-text">{progress}%</span>
+          </div>
+        </div>
+
+        {/* Quick Skip hint */}
+        <button
+          type="button"
+          onClick={handleDismiss}
+          className="preloader-skip-btn"
+          aria-label="Tap to enter: skip intro animation"
+        >
+          TAP TO ENTER &rarr;
+        </button>
+      </div>
     </div>
   );
 }

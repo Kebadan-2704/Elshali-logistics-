@@ -103,11 +103,12 @@ export default function Navbar() {
         >
           <div className="navbar-logo-tile">
             <Image
-              src="/images/elshali-logo.webp"
-              alt={`${siteConfig.name} Official Logo`}
-              width={44}
-              height={44}
+              src="/images/elshali-badge-128.webp"
+              alt={`${siteConfig.name} Brand Emblem`}
+              width={42}
+              height={42}
               priority
+              className="navbar-logo-img"
             />
           </div>
           <div className="navbar-brand-text">
