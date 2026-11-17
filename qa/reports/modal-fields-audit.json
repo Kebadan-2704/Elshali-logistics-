@@ -1,87 +1,87 @@
 [
   {
-    "id": "q-pickup",
-    "name": "",
+    "id": "q-pickup-modal",
+    "name": "pickupLocation",
     "tag": "INPUT",
     "type": "text",
     "required": true,
     "value": ""
   },
   {
-    "id": "q-delivery",
-    "name": "",
+    "id": "q-delivery-modal",
+    "name": "deliveryLocation",
     "tag": "INPUT",
     "type": "text",
     "required": true,
     "value": ""
   },
   {
-    "id": "q-material",
-    "name": "",
+    "id": "q-material-modal",
+    "name": "materialType",
     "tag": "INPUT",
     "type": "text",
     "required": true,
     "value": ""
   },
   {
-    "id": "q-weight",
-    "name": "",
+    "id": "q-weight-modal",
+    "name": "weight",
     "tag": "INPUT",
     "type": "text",
     "required": false,
     "value": ""
   },
   {
-    "id": "q-vehicle",
-    "name": "",
+    "id": "q-vehicle-modal",
+    "name": "vehicleType",
     "tag": "SELECT",
     "type": "select-one",
     "required": true,
-    "value": "32 Ft SXL / MXL"
+    "value": "Mini / Dost"
   },
   {
-    "id": "q-date",
-    "name": "",
+    "id": "q-date-modal",
+    "name": "requiredDate",
     "tag": "INPUT",
     "type": "date",
     "required": true,
     "value": ""
   },
   {
-    "id": "q-name",
-    "name": "",
+    "id": "q-name-modal",
+    "name": "fullName",
     "tag": "INPUT",
     "type": "text",
     "required": true,
     "value": ""
   },
   {
-    "id": "q-company",
-    "name": "",
+    "id": "q-company-modal",
+    "name": "companyName",
     "tag": "INPUT",
     "type": "text",
     "required": false,
     "value": ""
   },
   {
-    "id": "q-phone",
-    "name": "",
+    "id": "q-phone-modal",
+    "name": "phone",
     "tag": "INPUT",
     "type": "tel",
     "required": true,
     "value": ""
   },
   {
-    "id": "q-email",
-    "name": "",
+    "id": "q-email-modal",
+    "name": "email",
     "tag": "INPUT",
     "type": "email",
     "required": false,
     "value": ""
   },
   {
-    "id": "q-details",
-    "name": "",
+    "id": "q-details-modal",
+    "name": "additionalDetails",
     "tag": "TEXTAREA",
     "type": "textarea",
     "required": false,

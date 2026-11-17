@@ -66,22 +66,31 @@ html[data-preloader="skip"] .elp {
   filter: drop-shadow(0 0 8px #ff3d63) drop-shadow(0 0 18px #ff3d63);
 }
 
+html:has(.elp:not(.elp-out)),
+body:has(.elp:not(.elp-out)) {
+  overflow: hidden !important;
+}
+
 .elp-word {
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   overflow: hidden;
+  max-width: 100vw;
+  box-sizing: border-box;
   padding: 2px 8px;
   font-family: var(--font-heading, var(--font-outfit), 'Outfit', system-ui, sans-serif);
   font-weight: 800;
   color: var(--elp-ink);
+  text-align: center;
 }
 
 .elp-a {
   display: flex;
-  font-size: clamp(30px, 8.4vmin, 60px);
+  font-size: clamp(26px, 8vmin, 60px);
   letter-spacing: 0.06em;
+  max-width: 100%;
 }
 
 .elp-a span {
@@ -95,12 +104,14 @@ html[data-preloader="skip"] .elp {
 }
 
 .elp-b {
-  font-size: clamp(12px, 3vmin, 20px);
-  letter-spacing: 0.5em;
-  padding-left: 0.5em;
+  font-size: clamp(9px, 2.5vmin, 18px);
+  letter-spacing: clamp(0.15em, 1.2vw, 0.45em);
+  padding-left: clamp(0.15em, 1.2vw, 0.45em);
   margin-top: 6px;
   color: var(--elp-muted);
   opacity: 0;
+  white-space: nowrap;
+  max-width: 100%;
 }
 
 .elp-rule {

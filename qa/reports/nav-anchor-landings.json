@@ -1,22 +1,22 @@
 {
   "#about": {
-    "top": 194,
-    "clearOfNav": false
+    "top": 80,
+    "clearOfNav": true
   },
   "#services": {
-    "top": 199,
-    "clearOfNav": false
+    "top": 80,
+    "clearOfNav": true
   },
   "#vehicles": {
-    "top": 287,
+    "top": 432,
     "clearOfNav": false
   },
   "#routes": {
-    "top": 214,
-    "clearOfNav": false
+    "top": 84,
+    "clearOfNav": true
   },
   "#contact": {
-    "top": 242,
+    "top": 794,
     "clearOfNav": false
   }
 }

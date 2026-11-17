@@ -45,3 +45,6 @@ jobs:
       - name: Run Playwright comprehensive QA audit suite
         run: npx playwright test qa/full-audit.spec.ts --project=chromium
 
+      - name: Run Playwright animated brand preloader tests
+        run: npx playwright test qa/preloader.spec.ts --project=chromium
+

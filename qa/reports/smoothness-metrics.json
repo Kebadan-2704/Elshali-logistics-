@@ -1,11 +1,20 @@
 {
-  "frameCount": 591,
+  "frameCount": 575,
   "p50": 16.7,
   "p95": 16.8,
-  "p99": 33.3,
-  "worst": 50,
-  "framesOver50ms": 0,
-  "longTaskCount": 0,
-  "longTasks": [],
-  "clsValue": 0
+  "p99": 33.4,
+  "worst": 100,
+  "framesOver50ms": 3,
+  "longTaskCount": 2,
+  "longTasks": [
+    {
+      "duration": 87,
+      "startTime": 6367.5
+    },
+    {
+      "duration": 97,
+      "startTime": 6500
+    }
+  ],
+  "clsValue": 0.0091
 }

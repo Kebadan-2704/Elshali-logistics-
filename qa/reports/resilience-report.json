@@ -1,4 +1,4 @@
 {
-  "nav_hidden_in_print": false,
+  "nav_hidden_in_print": true,
   "forced_colors_supported": true
 }

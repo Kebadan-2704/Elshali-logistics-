@@ -44,7 +44,10 @@ export default function Preloader({ logoSrc }: Props) {
     let pageLoaded = document.readyState === 'complete';
     const anims: Animation[] = [];
     const prevOverflow = html.style.overflow;
+    const prevBodyOverflow = document.body.style.overflow;
     html.style.overflow = 'hidden';
+    document.body.style.overflow = 'hidden';
+    html.dataset.preloaderActive = 'true';
 
     const later = (fn: () => void, ms: number) => {
       timers.push(window.setTimeout(fn, ms));
@@ -69,7 +72,9 @@ export default function Preloader({ logoSrc }: Props) {
       } catch {}
       setLeaving(true);
       later(() => {
+        delete html.dataset.preloaderActive;
         html.style.overflow = prevOverflow;
+        document.body.style.overflow = prevBodyOverflow;
         setGone(true);
       }, 500);
     };
@@ -222,7 +227,9 @@ export default function Preloader({ logoSrc }: Props) {
       });
       window.removeEventListener('load', onLoad);
       window.removeEventListener('resize', size);
+      delete html.dataset.preloaderActive;
       html.style.overflow = prevOverflow;
+      document.body.style.overflow = prevBodyOverflow;
     };
   }, []);
 
