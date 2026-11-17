@@ -5,7 +5,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { QuoteProvider } from '@/components/QuoteProvider';
 import SmoothScroll from '@/components/SmoothScroll';
-import SplashScreen from '@/components/SplashScreen';
+import Preloader from '@/components/Preloader';
 import IdleWidgets from '@/components/IdleWidgets';
 import { siteConfig, getSiteUrl, getCanonicalUrl, getOgImageUrl } from '@/data/site';
 
@@ -88,8 +88,24 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en-IN" className={`${outfit.variable} ${plusJakartaSans.variable}`}>
+    <html
+      lang="en-IN"
+      className={`${outfit.variable} ${plusJakartaSans.variable}`}
+      suppressHydrationWarning
+    >
       <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html:
+              "try{if(sessionStorage.getItem('elshali_preloader_seen'))document.documentElement.dataset.preloader='skip'}catch(e){}",
+          }}
+        />
+        <link
+          rel="preload"
+          as="image"
+          href="/images/elshali-emblem.webp"
+          type="image/webp"
+        />
         <link
           rel="preload"
           as="image"
@@ -162,7 +178,7 @@ export default function RootLayout({
         />
       </head>
       <body>
-        <SplashScreen />
+        <Preloader logoSrc="/images/elshali-emblem.webp" />
         <QuoteProvider>
           <SmoothScroll>
             <a href="#main-content" className="skip-to-main">
