@@ -113,6 +113,13 @@ export default function RootLayout({
           media="(min-width: 769px)"
           type="image/webp"
         />
+        <link
+          rel="preload"
+          as="image"
+          href="/images/hero-logistics-mobile.webp"
+          media="(max-width: 768px)"
+          type="image/webp"
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

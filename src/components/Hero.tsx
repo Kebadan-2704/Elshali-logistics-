@@ -5,24 +5,25 @@ import QuoteButton from './QuoteButton';
 export default function Hero() {
   return (
     <section id="hero" className="hero" aria-label="Hero">
-      {/* Background: Pure CSS gradient on mobile, highway fleet photography on desktop */}
+      {/* Background: Responsive highway fleet photography with dynamic ambient glow and transit grid */}
       <div className="hero-bg">
-        <picture className="hero-desktop-picture">
+        <picture className="hero-picture">
+          <source
+            media="(max-width: 768px)"
+            srcSet="/images/hero-logistics-mobile.webp"
+            type="image/webp"
+          />
           <img
             src="/images/hero-logistics.webp"
             alt="ELSHALI LOGISTICS commercial road transport fleet on highway"
             fetchPriority="high"
             decoding="async"
-            style={{
-              position: 'absolute',
-              inset: 0,
-              width: '100%',
-              height: '100%',
-              objectFit: 'cover',
-              objectPosition: '70% center',
-            }}
+            className="hero-img"
           />
         </picture>
+        <div className="hero-glow-orb-top" aria-hidden="true" />
+        <div className="hero-glow-orb-bottom" aria-hidden="true" />
+        <div className="hero-grid-pattern" aria-hidden="true" />
       </div>
 
       {/* Overlays */}
