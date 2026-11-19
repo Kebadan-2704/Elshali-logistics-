@@ -1,11 +1,11 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 import { ArrowRight, Phone, Gauge, Maximize2, Box } from 'lucide-react';
 import { vehicles, Vehicle } from '@/data/vehicles';
 import { siteConfig } from '@/data/site';
 import { useQuote } from '@/components/QuoteProvider';
-import VehicleSchematic from './VehicleSchematic';
 
 export default function VehiclesGrid() {
   const { openQuote } = useQuote();
@@ -118,17 +118,53 @@ export default function VehiclesGrid() {
               </span>
             </div>
 
-            {/* Schematic */}
+            {/* 3D Model Stage */}
             <div
               style={{
-                background: 'rgba(6, 11, 22, 0.6)',
+                position: 'relative',
+                background: 'radial-gradient(ellipse at bottom, rgba(184, 0, 109, 0.15) 0%, rgba(6, 11, 22, 0.8) 75%)',
                 borderRadius: '14px',
-                padding: '12px 8px',
-                border: '1px solid rgba(255, 255, 255, 0.05)',
+                padding: '8px',
+                border: '1px solid rgba(255, 255, 255, 0.06)',
                 marginBottom: '18px',
+                overflow: 'hidden',
+                aspectRatio: '16 / 9',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
               }}
             >
-              <VehicleSchematic type={v.schematic} />
+              <Image
+                src={v.image3d}
+                alt={`${v.name} 3D commercial model`}
+                width={640}
+                height={360}
+                style={{
+                  width: '100%',
+                  height: '100%',
+                  objectFit: 'contain',
+                  filter: 'drop-shadow(0 12px 24px rgba(0, 0, 0, 0.6))',
+                  transition: 'transform 0.3s ease',
+                }}
+              />
+              <span
+                style={{
+                  position: 'absolute',
+                  top: '10px',
+                  right: '10px',
+                  background: 'rgba(6, 11, 22, 0.8)',
+                  backdropFilter: 'blur(8px)',
+                  border: '1px solid rgba(236, 72, 153, 0.4)',
+                  borderRadius: '6px',
+                  padding: '2px 8px',
+                  fontSize: '10px',
+                  fontWeight: 700,
+                  color: '#EC4899',
+                  letterSpacing: '0.05em',
+                }}
+              >
+                ✦ 3D MODEL
+              </span>
             </div>
 
             {/* Title & Description */}
@@ -183,24 +219,27 @@ export default function VehiclesGrid() {
               </div>
             </div>
 
-            {/* Ideal for */}
+            {/* Key Feature */}
             <div
               style={{
                 fontSize: '12px',
-                color: '#94A3B8',
-                marginBottom: '20px',
-                padding: '8px 10px',
-                background: 'rgba(255, 255, 255, 0.03)',
+                color: '#34D399',
+                background: 'rgba(52, 211, 153, 0.08)',
+                border: '1px solid rgba(52, 211, 153, 0.2)',
                 borderRadius: '8px',
-                lineHeight: 1.4,
+                padding: '8px 12px',
+                marginBottom: '20px',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '6px',
               }}
             >
-              <strong style={{ color: '#E2E8F0' }}>Best For: </strong>
-              {v.idealFor}
+              <span>✓</span>
+              <span>{v.keyFeature}</span>
             </div>
 
-            {/* Actions */}
-            <div style={{ display: 'flex', gap: '10px', marginTop: 'auto' }}>
+            {/* CTAs */}
+            <div style={{ marginTop: 'auto', display: 'flex', gap: '10px' }}>
               <button
                 type="button"
                 onClick={() => openQuote(v.name)}
@@ -210,18 +249,19 @@ export default function VehiclesGrid() {
                   alignItems: 'center',
                   justifyContent: 'center',
                   gap: '8px',
+                  padding: '12px 16px',
                   background: 'linear-gradient(135deg, #B8006D, #EC4899)',
                   color: '#FFFFFF',
+                  borderRadius: '10px',
+                  border: 'none',
                   fontSize: '13px',
                   fontWeight: 700,
-                  padding: '12px 16px',
-                  borderRadius: '12px',
-                  border: 'none',
                   cursor: 'pointer',
-                  transition: 'opacity 0.2s ease',
+                  boxShadow: '0 8px 20px -4px rgba(184, 0, 109, 0.4)',
                 }}
               >
-                Request Rate <ArrowRight size={14} />
+                REQUEST QUOTE
+                <ArrowRight size={14} />
               </button>
               <a
                 href={`tel:${siteConfig.phone.replace(/\s+/g, '')}`}
@@ -229,12 +269,11 @@ export default function VehiclesGrid() {
                   display: 'inline-flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  background: 'rgba(255, 255, 255, 0.06)',
-                  border: '1px solid rgba(255, 255, 255, 0.12)',
-                  color: '#F8FAFC',
                   padding: '12px 14px',
-                  borderRadius: '12px',
-                  textDecoration: 'none',
+                  background: 'rgba(255, 255, 255, 0.05)',
+                  border: '1px solid rgba(255, 255, 255, 0.1)',
+                  borderRadius: '10px',
+                  color: '#FFFFFF',
                 }}
                 aria-label={`Call dispatch for ${v.name}`}
               >

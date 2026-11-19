@@ -12,6 +12,7 @@ export interface Vehicle {
   keyFeature: string;
   description: string;
   schematic: 'mini' | 'pickup' | '14ft' | '17ft' | '20ft' | '24ft' | '26ft' | '32ft';
+  image3d: string;
 }
 
 export const vehicles: Vehicle[] = [
@@ -29,6 +30,7 @@ export const vehicles: Vehicle[] = [
     keyFeature: 'Agile navigation in dense city commercial zones & loading docks',
     description: 'Compact delivery vehicle for intra-city and short-haul industrial parcel needs.',
     schematic: 'mini',
+    image3d: '/vehicles/v1-mini-dost-3d.webp',
   },
   {
     id: 2,
@@ -44,6 +46,7 @@ export const vehicles: Vehicle[] = [
     keyFeature: 'Heavy chassis reinforced for industrial cluster transport',
     description: 'Dependable workhorse for local and regional manufacturing goods transport.',
     schematic: 'pickup',
+    image3d: '/vehicles/v2-tata-pickup-3d.webp',
   },
   {
     id: 3,
@@ -59,6 +62,7 @@ export const vehicles: Vehicle[] = [
     keyFeature: 'Tamper-evident container seal for secure interstate transit',
     description: 'Medium-range freight carrier for direct factory-to-warehouse distribution.',
     schematic: '14ft',
+    image3d: '/vehicles/v3-14ft-3d.webp',
   },
   {
     id: 4,
@@ -74,6 +78,7 @@ export const vehicles: Vehicle[] = [
     keyFeature: 'High volumetric capacity for lightweight, bulky manufacturing goods',
     description: 'Versatile mid-capacity freighter engineered for commercial manufacturing shipments.',
     schematic: '17ft',
+    image3d: '/vehicles/v4-17ft-3d.webp',
   },
   {
     id: 5,
@@ -89,6 +94,7 @@ export const vehicles: Vehicle[] = [
     keyFeature: '6-wheeler heavy axle rating for dense industrial freight loads',
     description: 'Heavy commercial vehicle built for high-density industrial and steel carriage.',
     schematic: '20ft',
+    image3d: '/vehicles/v5-20ft-3d.webp',
   },
   {
     id: 6,
@@ -104,6 +110,7 @@ export const vehicles: Vehicle[] = [
     keyFeature: 'High volumetric cubic rating with GPS-tracked transit coordination',
     description: 'Large-volume interstate carrier for plant-to-plant manufacturing transfers.',
     schematic: '24ft',
+    image3d: '/vehicles/v6-24ft-3d.webp',
   },
   {
     id: 7,
@@ -119,6 +126,7 @@ export const vehicles: Vehicle[] = [
     keyFeature: 'Dual-driver continuous highway transit for time-critical dispatches',
     description: 'High-capacity carrier for heavyweight long-haul industrial freight movement.',
     schematic: '26ft',
+    image3d: '/vehicles/v7-26ft-3d.webp',
   },
   {
     id: 8,
@@ -134,5 +142,6 @@ export const vehicles: Vehicle[] = [
     keyFeature: 'Maximum national highway payload with certified heavy lashing points',
     description: 'Flagship multi-axle heavy trailer for maximum payload industrial transport.',
     schematic: '32ft',
+    image3d: '/vehicles/v8-32ft-3d.webp',
   },
 ];

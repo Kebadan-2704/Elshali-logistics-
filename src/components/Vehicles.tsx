@@ -1,7 +1,8 @@
 'use client';
 
-import { useState, useMemo } from 'react';
-import { ArrowRight, Phone, ShieldCheck, Gauge, Box, Maximize2, Sparkles } from 'lucide-react';
+import { useState, useMemo, useRef, useCallback } from 'react';
+import Image from 'next/image';
+import { ArrowRight, Phone, ShieldCheck, Gauge, Box, Maximize2, Sparkles, Cuboid } from 'lucide-react';
 import { vehicles } from '@/data/vehicles';
 import { siteConfig } from '@/data/site';
 import { useQuote } from './QuoteProvider';
@@ -16,8 +17,29 @@ const CATEGORIES = [
 
 export default function Vehicles() {
   const [activeCategory, setActiveCategory] = useState<string>('all');
-  const [selectedVehicleId, setSelectedVehicleId] = useState<number>(vehicles[0].id);
+  // Default to 6 (24 Ft High-Cube Multi-Axle) to immediately showcase the 3D model the client inspected
+  const [selectedVehicleId, setSelectedVehicleId] = useState<number>(6);
+  const [viewMode, setViewMode] = useState<'studio' | 'cad'>('studio');
   const { openQuote } = useQuote();
+
+  // 3D tilt state for interactive depth
+  const [tilt, setTilt] = useState<{ x: number; y: number }>({ x: 0, y: 0 });
+  const stageRef = useRef<HTMLDivElement>(null);
+
+  const handleMouseMove = useCallback((e: React.MouseEvent<HTMLDivElement>) => {
+    if (!stageRef.current) return;
+    const rect = stageRef.current.getBoundingClientRect();
+    const xPos = (e.clientX - rect.left) / rect.width - 0.5;
+    const yPos = (e.clientY - rect.top) / rect.height - 0.5;
+    setTilt({
+      x: -yPos * 10, // rotateX degrees
+      y: xPos * 14,  // rotateY degrees
+    });
+  }, []);
+
+  const handleMouseLeave = useCallback(() => {
+    setTilt({ x: 0, y: 0 });
+  }, []);
 
   const filteredVehicles = useMemo(() => {
     if (activeCategory === 'all') return vehicles;
@@ -45,8 +67,8 @@ export default function Vehicles() {
             Engineered Fleet Solutions For<br />
             <span className="pink">Every Industrial Cargo Requirement</span>
           </h2>
-          <p style={{ color: 'var(--color-slate-400)', maxWidth: '640px', margin: '14px auto 0', fontSize: '15px' }}>
-            Zero stock photos. Verified payload ratings, cargo deck dimensions, and placement-ready commercial vehicle configurations across South India and Pan-India corridors.
+          <p style={{ color: 'var(--color-slate-400)', maxWidth: '660px', margin: '14px auto 0', fontSize: '15px' }}>
+            Photorealistic 3D commercial vehicle models with verified payload ratings, cargo deck dimensions, and placement-ready commercial vehicle configurations across South India and Pan-India corridors.
           </p>
 
           {/* Category Filter Pills */}
@@ -62,7 +84,6 @@ export default function Vehicles() {
                   className={`fleet-filter-btn ${isActive ? 'active' : ''}`}
                   onClick={() => {
                     setActiveCategory(cat.id);
-                    // If current selection is not in filtered list, select first of filtered
                     const inCategory = cat.id === 'all' || vehicles.some(v => v.category === cat.id && v.id === selectedVehicleId);
                     if (!inCategory) {
                       const firstInCat = vehicles.find(v => v.category === cat.id);
@@ -78,26 +99,100 @@ export default function Vehicles() {
           </div>
         </div>
 
-        {/* Featured Vehicle Blueprint Inspector (Hero Showcase) */}
+        {/* Featured Vehicle 3D Stage & Inspector */}
         <div className="fleet-inspector-card">
           <div className="fleet-inspector-grid">
-            {/* Left: Interactive Schematic Blueprint */}
+            {/* Left: 3D Studio Showcase / CAD Blueprint */}
             <div className="fleet-schematic-pane">
               <div className="fleet-schematic-header">
-                <span className="fleet-spec-badge">
-                  <Sparkles size={13} className="text-pink-400" />
-                  VERIFIED COMMERCIAL SCHEMATIC
-                </span>
-                <span className="fleet-category-tag">{activeVehicle.categoryLabel}</span>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flexWrap: 'wrap' }}>
+                  <span className="fleet-spec-badge">
+                    <Sparkles size={13} className="text-pink-400" />
+                    {viewMode === 'studio' ? '3D STUDIO MODEL' : 'VERIFIED CAD BLUEPRINT'}
+                  </span>
+                  <span className="fleet-category-tag">{activeVehicle.categoryLabel}</span>
+                </div>
+
+                {/* View Mode Toggle Switch */}
+                <div className="fleet-view-toggle" role="group" aria-label="Vehicle Visualization Mode">
+                  <button
+                    type="button"
+                    className={`fleet-toggle-btn ${viewMode === 'studio' ? 'active' : ''}`}
+                    onClick={() => setViewMode('studio')}
+                  >
+                    <Cuboid size={13} />
+                    <span>3D Model</span>
+                  </button>
+                  <button
+                    type="button"
+                    className={`fleet-toggle-btn ${viewMode === 'cad' ? 'active' : ''}`}
+                    onClick={() => setViewMode('cad')}
+                  >
+                    <Maximize2 size={13} />
+                    <span>CAD Blueprint</span>
+                  </button>
+                </div>
               </div>
 
-              {/* Vector SVG Blueprint */}
-              <VehicleSchematic type={activeVehicle.schematic} className="fleet-schematic-display" />
+              {/* 3D Visualizer Stage */}
+              {viewMode === 'studio' ? (
+                <div
+                  ref={stageRef}
+                  className="fleet-3d-stage"
+                  onMouseMove={handleMouseMove}
+                  onMouseLeave={handleMouseLeave}
+                  style={{
+                    transform: `perspective(1000px) rotateX(${tilt.x}deg) rotateY(${tilt.y}deg)`,
+                  }}
+                >
+                  {/* Holographic HUD Overlay */}
+                  <div className="fleet-3d-hud">
+                    <div className="fleet-hud-chip top-left">
+                      <span className="fleet-hud-dot" />
+                      <span>1:1 COMMERCIAL RATIO</span>
+                    </div>
+                    <div className="fleet-hud-chip top-right">
+                      <span>DECK: {activeVehicle.deckDimensions}</span>
+                    </div>
+                  </div>
+
+                  {/* 3D Render Image */}
+                  <div className="fleet-3d-image-wrap">
+                    <Image
+                      src={activeVehicle.image3d}
+                      alt={`3D CGI model of ${activeVehicle.name}`}
+                      width={1024}
+                      height={576}
+                      priority
+                      className="fleet-3d-image"
+                    />
+                  </div>
+
+                  {/* Floor Reflection and Glow Underbody */}
+                  <div className="fleet-3d-floor-glow" aria-hidden="true" />
+
+                  {/* Bottom Spec Floating Tags */}
+                  <div className="fleet-3d-bottom-bar">
+                    <div className="fleet-hud-chip bottom-left">
+                      <span>MAX PAYLOAD: {activeVehicle.payload}</span>
+                    </div>
+                    <div className="fleet-hud-chip bottom-right">
+                      <span>BODY: {activeVehicle.bodyType}</span>
+                    </div>
+                  </div>
+                </div>
+              ) : (
+                /* Vector CAD Blueprint */
+                <VehicleSchematic type={activeVehicle.schematic} className="fleet-schematic-display" />
+              )}
 
               <div className="fleet-schematic-footer">
                 <div className="fleet-schematic-feature">
                   <ShieldCheck size={14} className="text-emerald-400" />
                   <span>{activeVehicle.keyFeature}</span>
+                </div>
+                <div className="fleet-interactive-hint">
+                  {viewMode === 'studio' ? '✦ Hover to tilt in 3D perspective' : '✦ Technical dimension matrix'}
                 </div>
               </div>
             </div>
@@ -181,10 +276,10 @@ export default function Vehicles() {
           </div>
         </div>
 
-        {/* Fleet Quick Selector Matrix (All 8 Vehicles) */}
+        {/* Fleet Quick Selector Matrix (All 8 Vehicles in 3D) */}
         <div className="fleet-selector-heading">
           <div className="eyebrow pink" style={{ fontSize: '11px', letterSpacing: '0.1em' }}>
-            CLICK TO INSPECT FULL SPECIFICATIONS &amp; BOOK
+            SELECT ANY VEHICLE TO INSPECT 3D MODEL &amp; TECHNICAL BLUEPRINT
           </div>
         </div>
 
@@ -204,8 +299,18 @@ export default function Vehicles() {
                   <span className="fleet-matrix-cat">{v.categoryLabel}</span>
                 </div>
 
-                <div className="fleet-matrix-schematic">
-                  <VehicleSchematic type={v.schematic} />
+                {/* 3D Vehicle Render Showcase */}
+                <div className="fleet-matrix-visual">
+                  <div className="fleet-matrix-thumb-stage">
+                    <Image
+                      src={v.image3d}
+                      alt={`${v.name} 3D commercial model`}
+                      width={480}
+                      height={270}
+                      className="fleet-matrix-thumb-img"
+                    />
+                    <span className="fleet-matrix-3d-pill">✦ 3D</span>
+                  </div>
                 </div>
 
                 <div className="fleet-matrix-info">
@@ -218,7 +323,7 @@ export default function Vehicles() {
                 </div>
 
                 <div className="fleet-matrix-btn-tag">
-                  {isSelected ? 'CURRENTLY INSPECTING' : 'INSPECT SPECS & RATE &rarr;'}
+                  {isSelected ? 'CURRENTLY INSPECTING' : 'INSPECT 3D MODEL & RATE →'}
                 </div>
               </button>
             );

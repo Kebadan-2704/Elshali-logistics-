@@ -1563,6 +1563,226 @@ section {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.fleet-view-toggle {
+  display: inline-flex;
+  align-items: center;
+  background: rgba(6, 11, 22, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 9999px;
+  padding: 3px;
+  gap: 2px;
+}
+
+.fleet-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px;
+  border-radius: 9999px;
+  border: none;
+  background: transparent;
+  color: var(--color-slate-400);
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.fleet-toggle-btn:hover {
+  color: #FFFFFF;
+}
+
+.fleet-toggle-btn.active {
+  background: linear-gradient(135deg, #B8006D, #EC4899);
+  color: #FFFFFF;
+  box-shadow: 0 4px 14px rgba(184, 0, 109, 0.4);
+}
+
+.fleet-3d-stage {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9.5;
+  border-radius: 18px;
+  background: radial-gradient(ellipse at 50% 85%, rgba(184, 0, 109, 0.22) 0%, rgba(10, 18, 36, 0.85) 55%, rgba(6, 11, 22, 0.98) 100%);
+  border: 1px solid rgba(236, 72, 153, 0.25);
+  box-shadow: 0 20px 50px -15px rgba(0, 0, 0, 0.8), 0 0 35px -10px rgba(184, 0, 109, 0.35);
+  margin: 12px 0 18px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform-style: preserve-3d;
+  transition: transform 0.15s ease-out, box-shadow 0.3s ease;
+}
+
+.fleet-3d-stage:hover {
+  box-shadow: 0 28px 65px -15px rgba(0, 0, 0, 0.9), 0 0 45px -8px rgba(236, 72, 153, 0.45);
+  border-color: rgba(236, 72, 153, 0.5);
+}
+
+.fleet-3d-image-wrap {
+  position: relative;
+  width: 94%;
+  height: 94%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.fleet-3d-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.75));
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.fleet-3d-stage:hover .fleet-3d-image {
+  transform: scale(1.03);
+}
+
+.fleet-3d-floor-glow {
+  position: absolute;
+  bottom: 8%;
+  left: 15%;
+  right: 15%;
+  height: 25px;
+  background: radial-gradient(ellipse at center, rgba(236, 72, 153, 0.5) 0%, rgba(184, 0, 109, 0.2) 50%, transparent 80%);
+  filter: blur(14px);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.fleet-3d-hud {
+  position: absolute;
+  top: 14px;
+  left: 16px;
+  right: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.fleet-3d-bottom-bar {
+  position: absolute;
+  bottom: 14px;
+  left: 16px;
+  right: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.fleet-hud-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(6, 11, 22, 0.8);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: #E2E8F0;
+}
+
+.fleet-hud-chip.top-left {
+  border-color: rgba(52, 211, 153, 0.35);
+  color: #A7F3D0;
+}
+
+.fleet-hud-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #10B981;
+  box-shadow: 0 0 8px #10B981;
+  animation: hudPulse 2s infinite ease-in-out;
+}
+
+@keyframes hudPulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.85); }
+}
+
+.fleet-interactive-hint {
+  font-size: 11px;
+  color: #EC4899;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+@media (max-width: 640px) {
+  .fleet-interactive-hint {
+    display: none;
+  }
+}
+
+.fleet-matrix-visual {
+  margin: 4px 0 14px;
+}
+
+.fleet-matrix-thumb-stage {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 12px;
+  background: radial-gradient(ellipse at bottom, rgba(184, 0, 109, 0.18) 0%, rgba(6, 11, 22, 0.85) 75%);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.fleet-matrix-card:hover .fleet-matrix-thumb-stage {
+  border-color: rgba(236, 72, 153, 0.4);
+  background: radial-gradient(ellipse at bottom, rgba(184, 0, 109, 0.28) 0%, rgba(8, 16, 32, 0.9) 75%);
+}
+
+.fleet-matrix-card.selected .fleet-matrix-thumb-stage {
+  border-color: #EC4899;
+  box-shadow: inset 0 0 20px rgba(184, 0, 109, 0.3);
+}
+
+.fleet-matrix-thumb-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.65));
+  transition: transform 0.3s ease;
+}
+
+.fleet-matrix-card:hover .fleet-matrix-thumb-img {
+  transform: scale(1.05);
+}
+
+.fleet-matrix-3d-pill {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: rgba(6, 11, 22, 0.8);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(236, 72, 153, 0.45);
+  border-radius: 6px;
+  padding: 2px 6px;
+  font-size: 9px;
+  font-weight: 800;
+  color: #EC4899;
+  letter-spacing: 0.05em;
 }
 
 .fleet-spec-badge {
